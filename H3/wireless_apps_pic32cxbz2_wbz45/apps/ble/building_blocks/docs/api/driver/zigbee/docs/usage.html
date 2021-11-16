@@ -1,0 +1,428 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="../../../assets/css/just-the-docs-default.css"> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-16"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-2724382-16'); </script> <script type="text/javascript" src="../../../assets/js/vendor/lunr.min.js"></script> <script type="text/javascript" src="../../../assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.6.1 --> <title>Zigbee Library Usage | Microchip MPLAB Harmony Wireless help</title> <meta name="generator" content="Jekyll v3.9.0" /> <meta property="og:title" content="Zigbee Library Usage" /> <meta property="og:locale" content="en_US" /> <meta name="description" content="Harmony 3 Wireless package" /> <meta property="og:description" content="Harmony 3 Wireless package" /> <link rel="canonical" href="usage.html" /> <meta property="og:url" content="http://10.16.32.120:4000/wireless/driver/zigbee/docs/usage.html" /> <meta property="og:site_name" content="Microchip MPLAB Harmony Wireless help" /> <script type="application/ld+json"> {"@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://10.16.32.120:4000/wireless/assets/images/vendor/microchip_mplab_harmony_logo_150_transparent.png"}},"url":"http://10.16.32.120:4000/wireless/driver/zigbee/docs/usage.html","headline":"Zigbee Library Usage","description":"Harmony 3 Wireless package","@context":"https://schema.org"}</script> <!-- End Jekyll SEO tag --> </head> <body> <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="svg-link" viewBox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-search" viewBox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <symbol id="svg-menu" viewBox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewBox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <symbol id="svg-doc" viewBox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header"> <a href="../../../index.html" class="site-title lh-tight"> <div class="site-logo"></div> </a> <a href="usage.html#" id="menu-button" class="site-button"> <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg> </a> </div> <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list"><li class="nav-list-item"><a href="../../../index.html" class="nav-list-link">Harmony 3 Wireless Package</a></li><li class="nav-list-item"><a href="usage.html#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="../../readme.html" class="nav-list-link">Driver libraries</a><ul class="nav-list "><li class="nav-list-item "><a href="../../ble/docs/readme.html" class="nav-list-link">BLE Driver Library</a></li><li class="nav-list-item "><a href="../../pic32cx-bz/docs/readme.html" class="nav-list-link">PIC32CX-BZ Device Support Component Library</a></li><li class="nav-list-item "><a href="readme.html" class="nav-list-link">Zigbee Driver Library</a></li></ul></li><li class="nav-list-item"><a href="usage.html#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="../../../release_notes.html" class="nav-list-link">Release notes</a><ul class="nav-list "><li class="nav-list-item "><a href="../../ble/docs/release_notes.html" class="nav-list-link">BLE Driver Library</a></li><li class="nav-list-item "><a href="release_notes.html" class="nav-list-link">Zigbee Driver Library</a></li></ul></li><li class="nav-list-item"><a href="../../../mplab_harmony_license.html" class="nav-list-link">License</a></li><li class="nav-list-item"><a href="../../pic32cx-bz/docs/release_notes.html" class="nav-list-link">Microchip PIC32CX-BZ2 Device Support Release Notes</a></li></ul> </nav> <footer class="site-footer"> This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll. </footer> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Microchip MPLAB Harmony Wireless help" aria-label="Search Microchip MPLAB Harmony Wireless help" autocomplete="off"> <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> <nav aria-label="Auxiliary" class="aux-nav"> <ul class="aux-nav-list"> <li class="aux-nav-list-item"> <a href="https://support.microchip.com" class="site-button" > Obtain Support from Microchip </a> </li> </ul> </nav> </div> <div id="main-content-wrap" class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="usage.html">Wireless libraries</a></li> <li class="breadcrumb-nav-list-item"><a href="usage.html">Zigbee Library</a></li> <li class="breadcrumb-nav-list-item"><span>Zigbee Library Usage</span></li> </ol> </nav> <div id="main-content" class="main-content" role="main"> <h1 id="zigbee-library-usage"> <a href="usage.html#zigbee-library-usage" aria-labelledby="zigbee-library-usage" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Zigbee Library Usage </h1> <h2 id="zigbee-program-model"> <a href="usage.html#zigbee-program-model" aria-labelledby="zigbee-program-model" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Zigbee Program Model </h2> <p>This section describes the overall programming model of zigbee. There will be 3 major events which the stack would provide to the user application. They are ,</p> <ul> <li>Zigbee Events which is defined as “EVENT_ZIGBEE”</li> <li>ZCL and Cluster Events defined as “EVENT_CLUSTER”</li> <li>Board Specific Package Events defined as “EVENT_BSP”</li> </ul> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="k">enum</span>
+<span class="p">{</span>
+    <span class="cm">/* BSP Events */</span>
+    <span class="n">EVENT_BSP</span><span class="p">,</span>
+
+    <span class="cm">/* Cluster Events */</span>
+    <span class="n">EVENT_CLUSTER</span><span class="p">,</span>
+
+    <span class="cm">/* Zigbee Events */</span>
+    <span class="n">EVENT_ZIGBEE</span><span class="p">,</span>
+<span class="p">}</span> <span class="n">APP_Zigbee_EventGroup_t</span><span class="p">;</span>
+</code></pre></div></div> <p>These events are illustrated and explained as part of the following sequence flow.</p> <h3 id="commissioning-flow"> <a href="usage.html#commissioning-flow" aria-labelledby="commissioning-flow" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Commissioning Flow </h3> <p>The overall zigbee Commissioning procedure(Centralised) is explained in this section to have a better understanding on the stack architecture and how the System is split in order to handle these events as part of user application.</p> <p><img src="assets/commissioningproceduresequence.png" alt="01" /></p> <h3 id="communication-flow"> <a href="usage.html#communication-flow" aria-labelledby="communication-flow" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Communication Flow </h3> <p>Once the device gets commissioned , middleware / app smart layer will take care of configuring some of the reportable attributes by default(as per technical specification), so that the data exchange would happen periodically. The configuration sequence and the data exchange model is given below,</p> <p><img src="assets/zcl_indications.png" alt="02" /></p> <h3 id="zigbee-events-event_zigbee"> <a href="usage.html#zigbee-events-event_zigbee" aria-labelledby="zigbee-events-event_zigbee" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Zigbee Events( EVENT_ZIGBEE) </h3> <p>The above 2 sections i.e., Commissioning Flow and Communication Flow detailed the overall sequence of the zigbee commissioning and data flow. And in this and further sections below ,the explanation would be towards the events generated by the stack and Middleware to the user application layer.</p> <ul> <li> <p>EVENT_DISCONNECTED: This event is triggered when the device is disconnected from its potential parent / Commissioned device.</p> </li> <li> <p>EVENT_COMMISSIONING_STARTED : This event is triggered when the device has just started its commissioning procedure. The list of commissioning types include , Touchlink , Steering , Finding and Binding and Formation.</p> </li> <li> <p>EVENT_COMMISSIONING_COMPLETE: This event is triggered when the device has completed it’s commissioning procedure. The list of Commissioning options available are, <img src="assets/commissioninglistdevices.png" alt="03" /></p> </li> <li> <p>EVENT_COMMISSIONING_STEERING_COMPLETE: This event is triggered when the device has completed one of its commissioning procedure ( i.e., steering).</p> </li> <li> <p>EVENT_COMMISSIONING_TOUCHLINK_COMPLETE: This event is triggered when the device has completed one of its commissioning procedure ( i.e., Touchlink).</p> </li> <li> <p>EVENT_COMMISSIONING_FINDBIND_COMPLETE: This event is triggered when the device has completed one of its commissioning procedure ( i.e., Finding &amp; Binding).</p> </li> <li> <p>EVENT_STARTED_CENTRALIZED_NETWORK: This event is triggered when the device has completed one of its commissioning procedure ( i.e., Formation).</p> </li> <li> <p>EVENT_STARTED_DISTRIBUTED_NETWORK: This event is triggered when the device being a router forms its own network ( i.e., distributed network).</p> </li> <li> <p>EVENT_COMMISSIONING_FAILURE: This event is triggered when the commissioning procedure failed . The possible failures across commissioning are as folows,</p> </li> </ul> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">case</span> <span class="n">EVENT_COMMISSIONING_FAILURE</span><span class="p">:</span>
+    <span class="p">{</span>
+        <span class="k">switch</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">eventData</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">case</span> <span class="n">BDB_COMMISSIONING_NO_NETWORK</span><span class="p">:</span>
+            <span class="k">break</span><span class="p">;</span>
+
+            <span class="k">case</span> <span class="n">BDB_COMMISSIONING_NOT_SUPPORTED</span><span class="p">:</span>
+            <span class="k">break</span><span class="p">;</span>
+
+            <span class="k">case</span> <span class="n">BDB_COMMISSIONING_NO_SCAN_RESPONSE</span><span class="p">:</span>
+            <span class="k">break</span><span class="p">;</span>
+
+            <span class="k">case</span> <span class="n">BDB_COMMISSIONING_NO_IDENTIFY_QUERY_RESPONSE</span><span class="p">:</span>
+            <span class="k">break</span><span class="p">;</span>
+
+            <span class="nl">default:</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>    
+</code></pre></div></div> <ul> <li> <p>EVENT_JOINED_TO_AN_EXISTING_NETWORK: This event is triggered when the device as part of its Steering ( Commissioning Method) joins to an exiting network.</p> </li> <li> <p>EVENT_WAKEUP: This event is triggered when the device wakes up from a sleep timer.</p> </li> <li> <p>EVENT_LEFT_FROM_NETWORK: This event is triggered when the device leaves the network.</p> </li> <li> <p>EVENT_CHILD_JOINED: This event is triggered when a child device joins.</p> </li> <li> <p>EVENT_CHILD_REMOVED: This event is triggered when a child is being removed due to various specification reasons.</p> </li> <li> <p>EVENT_NWK_UPDATE: This event is triggered for specific network parameters update , which includes Channel , PANID , ShortAddress , etc.,</p> </li> <li> <p>EVENT_RESET_TO_FACTORY_DEFAULTS: This event is triggered on a device when it receives ResetToFactoryDefaults.</p> </li> </ul> <h3 id="zcl-cluster-events-event_cluster"> <a href="usage.html#zcl-cluster-events-event_cluster" aria-labelledby="zcl-cluster-events-event_cluster" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ZCL Cluster Events( EVENT_CLUSTER) </h3> <p>This event group would cover all the commands and attribute indications for any given cluster for the specific device type. For instance a Combined Interface device type would support all of the below clusters. <img src="assets/combinedinterface.png" alt="04" /></p> <p>Each of the clusters supported above will have attributes and Commands. In this event group , any over the air packet received for any command or attribute or reporting periodic attribute values are passed on to the user application scope for further operation.</p> <p>For instance on a Combined Interface there will be nearly 37 Cluster Command indications , 13 Attribute Indications and 8 reporting attribute indication events to the user application.</p> <p>Command / Attribute / Report Indication Flow : <img src="assets/commandindication.png" alt="05" /></p> <p>The List of Commands are given below ( Self-explanatory by its definition),</p> <ul> <li>CMD_ZCL_RESET_TO_FACTORY_DEFAULTSH</li> <li>CMD_ZCL_IDENTIFY</li> <li>CMD_ZCL_IDENTIFY_QUERY</li> <li>CMD_ZCL_TRIGGER_EFFECT</li> <li>CMD_ZCL_IDENTIFY_QUERY_RESPONSE</li> <li>CMD_ZCL_ADD_GROUP</li> <li>CMD_ZCL_VIEW_GROUP</li> <li>CMD_ZCL_GET_GROUP_MEMBERSHIP</li> <li>CMD_ZCL_REMOVE_GROUP</li> <li>CMD_ZCL_REMOVE_ALL_GROUP</li> <li>CMD_ZCL_ADD_GROUP_IF_IDENTIFYING</li> <li>CMD_ZCL_ADD_GROUP_RESPONSE</li> <li>CMD_ZCL_VIEW_GROUP_RESPONSE</li> <li>CMD_ZCL_GET_GROUP_MEMBERSHIP_RESPONSE</li> <li>CMD_ZCL_REMOVE_GROUP_RESPONSE</li> <li>CMD_ZCL_ALARM</li> <li>CMD_ZCL_GET_ALARM_RESPONSE</li> <li>CMD_ZCL_ADD_SCENE_RESP</li> <li>CMD_ZCL_VIEW_SCENE_RESP</li> <li>CMD_ZCL_REMOVE_SCENE_RESP</li> <li>CMD_ZCL_REMOVE_ALL_SCENES_RESP</li> <li>CMD_ZCL_STORE_SCENE_RESP</li> <li>CMD_ZCL_GET_SCENE_MEMBERSHIP_RESP</li> <li>CMD_ZCL_ENHANCED_ADD_SCENE_RESP</li> <li>CMD_ZCL_ENHANCED_VIEW_SCENE_RESP</li> <li>CMD_ZCL_COPY_SCENE_RESP</li> <li>CMD_ZCL_ACE_GET_ZONE_STATUS</li> <li>CMD_ZCL_ACE_ARM</li> <li>CMD_ZCL_ACE_GET_ZONE_INFO</li> <li>CMD_ZCL_ACE_GET_ZONE_ID_MAP</li> <li>CMD_ZCL_ACE_BYPASS</li> <li>CMD_ZCL_ACE_GET_BYPASSED_ZONE_LIST</li> <li>CMD_ZCL_ACE_EMERGENCY</li> <li>CMD_ZCL_ACE_FIRE</li> <li>CMD_ZCL_ACE_PANIC</li> <li>CMD_ZCL_ACE_GET_PANEL_STATUS</li> <li>CMD_ZCL_ZONE_STATUS_CHANGE_NOTIFY</li> <li>CMD_ZCL_ZONE_ENROLL_REQ</li> </ul> <p>The List of Attribute Indications are given below,</p> <ul> <li>CMD_ZCL_ATTR_COLOR_CONTROL</li> <li>CMD_ZCL_ATTR_IDENTIFY</li> <li>CMD_ZCL_ATTR_LEVEL_CONTROL</li> <li>CMD_ZCL_ATTR_ONOFF</li> <li>CMD_ZCL_ATTR_ILLUMINANCE_MEASUREMENT</li> <li>CMD_ZCL_ATTR_OCCUPANCY</li> <li>CMD_ZCL_ATTR_HUMIDITY_MEASUREMENT</li> <li>CMD_ZCL_ATTR_TIME</li> <li>CMD_ZCL_ATTR_THERMOSTAT_UI_CONF</li> <li>CMD_ZCL_ATTR_TEMPERATURE_MEASUREMENT</li> <li>CMD_ZCL_ATTR_THERMOSTAT</li> <li>CMD_ZCL_ATTR_FANCONTROL</li> <li>CMD_ZCL_ATTR_IASZONE</li> </ul> <p>The List of Report Indications are given below,</p> <ul> <li>CMD_ZCL_REPORTING_ONOFF</li> <li>CMD_ZCL_REPORTING_LEVEL</li> <li>CMD_ZCL_REPORTING_LIGHT_SENSOR</li> <li>CMD_ZCL_REPORTING_OCCUPANCY</li> <li>CMD_ZCL_REPORTING_COLOR_CONTROL</li> <li>CMD_ZCL_REPORTING_THERMOSTAT</li> <li>CMD_ZCL_REPORTING_TEMPERATURE_MEASUREMENT</li> <li>CMD_ZCL_REPORTING_HUMIDITY_MEASUREMENT</li> </ul> <p>NOTE: Based on the device type selected, clusters / Commands / Attributes events are auto generated for users.</p> <h3 id="bsp-cluster-events-event_cluster"> <a href="usage.html#bsp-cluster-events-event_cluster" aria-labelledby="bsp-cluster-events-event_cluster" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> BSP Cluster Events( EVENT_CLUSTER) </h3> <p>This event group is focused on all the board supported packages (BSP) which would include LEDs, Sensors , Buttons , etc.,. The list of BSP events are as follows,</p> <p>Commands related to LED</p> <ul> <li>CMD_LED_OPEN</li> <li>CMD_LED_ON</li> <li>CMD_LED_OFF</li> <li>CMD_LED_TOGGLE</li> <li>CMD_LED_BRIGHTNESS</li> <li>CMD_LED_COLOR_HS</li> <li>CMD_LED_COLOR_XY</li> </ul> <p>Commands related to Buttons</p> <ul> <li>CMD_BUTTON_OPEN</li> <li>CMD_BUTTON_READ</li> </ul> <p>Commands related to Sensor</p> <ul> <li>CMD_SENSOR_OPEN</li> <li>CMD_SENSOR_READ</li> </ul> <p>Middleware is handling some of the intelligence( as part of the Implementation) on how a device could possibly drive some of these BSP items based on any over the air packet received. For instance , as part of the LED commands , users are expected to do the following.</p> <ul> <li>CMD_LED_OPEN -&gt; User’s LED initialization .</li> <li>CMD_LED_ON -&gt; User’s LED Port Name / Number</li> <li>CMD_LED_COLOR_HS -&gt; User’s Hue and Saturation implementation.</li> <li>CMD_LED_COLOR_XY -&gt; User’s Color X and Color Y Coordinates implementation.</li> </ul> <p>And this is applicable for other peripherals such as buttons and sensors as well. This is explained in the previous section i.e., as part of Command / Attribute / Report Indication Flow diagram.</p> <h2 id="initializing-the-library"> <a href="usage.html#initializing-the-library" aria-labelledby="initializing-the-library" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Initializing the library </h2> <h3 id="initializing-zigbee-stack"> <a href="usage.html#initializing-zigbee-stack" aria-labelledby="initializing-zigbee-stack" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Initializing Zigbee Stack </h3> <p>Before using any Zigbee Stack relevant API, Zigbee component must be initialized. It is strongly recommended that Zigbee component to be initialized during system initialization. Zigbee component only operates with RTOS, the relevant parameters of RTOS must be assigned to Zigbee component.</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Zigbee Queue definition</span>
+    <span class="cp">#define QUEUE_LENGTH_ZIGBEE (16)
+</span>    <span class="cp">#define QUEUE_ITEM_SIZE_ZIGBEE (sizeof(void *))
+</span>
+    <span class="c1">//Zigbee library Initialization Data</span>
+    <span class="n">OSAL_QUEUE_HANDLE_TYPE</span> <span class="n">zigbeeRequestQueueHandle</span><span class="p">;</span>
+    <span class="n">OSAL_API_LIST_TYPE</span>     <span class="n">osalAPIList</span><span class="p">;</span>
+
+    <span class="c1">// Create ZIGBEE Stack Message QUEUE</span>
+    <span class="n">OSAL_QUEUE_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">zigbeeRequestQueueHandle</span><span class="p">,</span> <span class="n">QUEUE_LENGTH_ZIGBEE</span><span class="p">,</span> <span class="n">QUEUE_ITEM_SIZE_ZIGBEE</span><span class="p">);</span>
+
+    <span class="c1">// Initialize ZIGBEE Stack</span>
+	
+    <span class="c1">// Retrieve Zigbee's data from Information Base</span>
+    <span class="n">ZB_CS_SYS_IBData_t</span> <span class="n">zgbIBdata</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+    <span class="n">zgbIBdata</span><span class="p">.</span><span class="n">validityCheck</span><span class="p">.</span><span class="n">extMacDevAddrValid</span> <span class="o">=</span> <span class="n">IB_GetMACAddr</span><span class="p">(</span><span class="o">&amp;</span><span class="n">zgbIBdata</span><span class="p">.</span><span class="n">extMacDevAddr</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+    <span class="c1">// Initialize ZIGBEE Stack</span>
+    <span class="n">Zigbee_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">osalAPIList</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">zigbeeRequestQueueHandle</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">zgbIBdata</span><span class="p">);</span>
+</code></pre></div></div> <p>Zigbee Stack provides various APIs for application, and those APIs belong to the specific module within dedicated group. The sequence of initialization is already taken care in the stack and device application. However , user could always try with various options provided as part of the stack Module to verify and experiment.The details on all the modules and its<br /> API are provided as part of the API document.</p> <ul> <li>BDB: The base device behaviour (BDB) provides an interface for initialization, commissioning and operating procedures of a base device operating on the ZigBee-PRO stack to ensure profile interoperability.</li> <li>APS: The application support sub-layer (APS) provides an interface between the network layer (NWK) and the application. layer (APL) through a general set of services. The sections below describe the most common tasks performed with the use of APS.</li> <li>ZDO: The ZigBee Device Objects (ZDO) component of the Zigbee stack provides an interface between the application framework, that is a collection of application objects, the device profile, and the APS layer. ZDO offers several asynchronous requests for performing basic networking operations, such as network formation and join, and a set of functions that help obtain network information from internal stack structures. A considerable part of network related functionality is maintained by ZigBee Device Profile (ZDP) requests. The sections below describe the most common tasks performed with the use of ZDO component.</li> <li>ZCL: Zigbee Cluster Library related functionalities.</li> <li>ZGP: The zigbee green power(ZGP) provides an interface to commission, control or get the information from the Green power device.</li> <li>ConfigServer: The Zigbee stack provides an extensive set of configuration parameters which determine different aspects of network and node behavior. These parameters are accessible for an application via the Configuration Server interface (ConfigServer or CS for short).</li> <li>System Environment : System Environment Components used in the Zigbee Stack</li> </ul> <p>BDB Module examples:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Initialization of BDB component is invoked from the application by using the following public API </span>
+    <span class="n">BDB_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+    
+    <span class="c1">//Top Level Commissioning</span>
+    <span class="n">BDB_InvokeCommissioning</span> <span class="p">(</span><span class="n">BDB_CommissioningMode_t</span> <span class="n">mode</span><span class="p">,</span> <span class="kt">uint16_t</span> <span class="n">groupId</span><span class="p">,</span> <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">callback</span><span class="p">)</span> <span class="p">(</span><span class="n">BDB_CommissioningStatus_t</span><span class="p">))();</span>
+</code></pre></div></div> <p>APS module examples:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Sends data to a node in the network. </span>
+    <span class="n">APS_DataReq</span> <span class="p">(</span><span class="n">APS_DataReq_t</span> <span class="o">*</span><span class="k">const</span> <span class="n">req</span><span class="p">);</span>
+
+    <span class="c1">//Registers a new endpoint in the APS layer.</span>
+    <span class="n">APS_RegisterEndpointReq</span> <span class="p">(</span><span class="n">APS_RegisterEndpointReq_t</span> <span class="o">*</span><span class="k">const</span> <span class="n">req</span><span class="p">);</span>
+	
+	<span class="c1">//Unregisters an endpoint from the APS layer.</span>
+	<span class="n">APS_UnregisterEndpointReq</span> <span class="p">(</span><span class="n">APS_UnregisterEndpointReq_t</span> <span class="o">*</span><span class="k">const</span> <span class="n">req</span><span class="p">);</span>
+	
+	<span class="c1">//Bind to a remote device or a group.</span>
+	<span class="n">APS_BindReq</span> <span class="p">(</span><span class="n">APS_BindReq_t</span> <span class="o">*</span><span class="k">const</span> <span class="n">req</span><span class="p">);</span>
+	
+	<span class="c1">//Unbind device from a group or from other device. </span>
+	<span class="n">APS_UnbindReq</span> <span class="p">(</span><span class="n">APS_UnbindReq_t</span> <span class="o">*</span><span class="k">const</span> <span class="n">req</span><span class="p">);</span>
+</code></pre></div></div> <p>ZDO module examples:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Performs network formation for coordinator and network join for router or end device. </span>
+    <span class="n">ZDO_StartNetworkReq</span> <span class="p">(</span><span class="n">ZDO_StartNetworkReq_t</span> <span class="o">*</span><span class="n">req</span><span class="p">);</span>
+
+    <span class="c1">//Resets the stack without sending any commands to the network. </span>
+    <span class="n">ZDO_ResetNetworkReq</span> <span class="p">(</span><span class="n">ZDO_ResetNetworkReq_t</span> <span class="o">*</span><span class="n">req</span><span class="p">);</span>
+	
+	<span class="c1">//To Send a ZDP requests</span>
+	<span class="n">ZDO_ZdpReq</span> <span class="p">(</span><span class="n">ZDO_ZdpReq_t</span> <span class="o">*</span><span class="n">zdpReq</span><span class="p">);</span>
+	
+	<span class="c1">//Requests for LQI and RSSI. </span>
+	<span class="n">ZDO_GetLqiRssi</span> <span class="p">(</span><span class="n">ZDO_GetLqiRssi_t</span> <span class="o">*</span><span class="n">lqiRssi</span><span class="p">);</span>
+	
+	<span class="c1">//Retrieves parent's short and extended addresses. </span>
+	<span class="n">ZDO_GetParentAddr</span> <span class="p">(</span><span class="n">NodeAddr_t</span> <span class="o">*</span><span class="n">parentAddr</span><span class="p">);</span>
+	
+	<span class="c1">//Retrieves children's short and extended addresses. </span>
+	<span class="n">ZDO_GetChildrenAddr</span> <span class="p">(</span><span class="n">ZDO_GetChildrenAddr_t</span> <span class="o">*</span><span class="n">childrenAddr</span><span class="p">);</span>
+	
+	<span class="c1">//Sets channel to ZDO information base. </span>
+	<span class="n">ZDO_SetChannel</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">channel</span><span class="p">);</span>
+	
+	<span class="c1">//Starts sending sync requests (polling the parent); </span>
+	<span class="n">ZDO_StartSyncReq</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+	
+	<span class="c1">//Stops sending sync requests (polling the parent);</span>
+	<span class="n">ZDO_StopSyncReq</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+	
+	<span class="c1">//Sets Tx power. </span>
+	<span class="n">ZDO_SetTxPowerReq</span> <span class="p">(</span><span class="n">ZDO_SetTxPowerReq_t</span> <span class="o">*</span><span class="n">req</span><span class="p">);</span>
+	
+	<span class="c1">//Retrieves the neighbor table. </span>
+	<span class="n">ZDO_GetNeibTable</span> <span class="p">(</span><span class="n">ZDO_Neib_t</span> <span class="o">*</span><span class="n">table</span><span class="p">);</span>
+	
+	<span class="c1">//Returns the network status. </span>
+	<span class="n">ZDO_GetNwkStatus</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+	
+	<span class="c1">//Determines the missing short address corresponding to the given extended address or the missing extended address corresponding to the given short address. </span>
+	<span class="n">ZDO_ResolveAddrReq</span> <span class="p">(</span><span class="n">ZDO_ResolveAddrReq_t</span> <span class="o">*</span><span class="n">req</span><span class="p">);</span>
+</code></pre></div></div> <p>ZCL Module example:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Registers an application endpoint. </span>
+    <span class="n">ZCL_RegisterEndpoint</span> <span class="p">(</span><span class="n">ZCL_DeviceEndpoint_t</span> <span class="o">*</span><span class="n">endpoint</span><span class="p">);</span>
+	
+	<span class="c1">//Unregisters an application endpoint. </span>
+    <span class="n">ZCL_UnregisterEndpoint</span> <span class="p">(</span><span class="n">ZCL_DeviceEndpoint_t</span> <span class="o">*</span><span class="n">endpoint</span><span class="p">);</span>
+	
+	<span class="c1">//Resets the ZCL component. </span>
+    <span class="n">ZCL_ResetReq</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+	
+	<span class="c1">//Finds an attribute in ZCL and returns its value. </span>
+	<span class="n">ZCL_ReadAttributeValue</span> <span class="p">(</span><span class="n">Endpoint_t</span> <span class="n">endpointId</span><span class="p">,</span> <span class="n">ClusterId_t</span> <span class="n">clusterId</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">clusterSide</span><span class="p">,</span> <span class="n">ZCL_AttributeId_t</span> <span class="n">attrId</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">attrType</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">attrValue</span><span class="p">)</span>
+	
+	<span class="c1">//Finds an attribute in ZCL and rewrites its value by the new one. </span>
+    <span class="n">ZCL_WriteAttributeValue</span> <span class="p">(</span><span class="n">Endpoint_t</span> <span class="n">endpointId</span><span class="p">,</span> <span class="n">ClusterId_t</span> <span class="n">clusterId</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">clusterSide</span><span class="p">,</span> <span class="n">ZCL_AttributeId_t</span> <span class="n">attrId</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">attrType</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">attrValue</span><span class="p">)</span>
+	
+	<span class="c1">//Sends a general ZCL command related to attributes to a remote device.</span>
+	<span class="n">ZCL_AttributeReq</span> <span class="p">(</span><span class="n">ZCL_Request_t</span> <span class="o">*</span><span class="n">req</span><span class="p">);</span>
+	
+	<span class="c1">//Sends a cluster-specific command.</span>
+	<span class="n">ZCL_CommandReq</span> <span class="p">(</span><span class="n">ZCL_Request_t</span> <span class="o">*</span><span class="n">req</span><span class="p">)</span>
+	
+	<span class="c1">//This function returns bytes amount of a type by the type's ID. </span>
+    <span class="n">ZCL_GetAttributeLength</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">typeId</span><span class="p">,</span> <span class="k">const</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">value</span><span class="p">)</span>
+</code></pre></div></div> <p>ZGP Module examples:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Getting the green power cluster information and adding the event handler for the zgp proxy attribute event </span>
+    <span class="c1">//Initializing zgp high generic and cluster generic feature </span>
+    <span class="c1">//Initializing the zgp NVM table which contains the ID of GPD, security keys, frame counters and sink address list, commissioned id, endpoint etc </span>
+    <span class="c1">//Initializing the zgp client cluster </span>
+    <span class="n">ZGPH_ProxyBasicInit</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+    
+    <span class="c1">//To Initialize zgp high sink,</span>
+    <span class="n">ZGPH_SinkBasicInit</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+	
+	<span class="c1">//To initialize the lowzgp(mainly dStub/cStub)</span>
+	<span class="n">ZGPL_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+	
+	<span class="c1">//To initiate gpd data request from high sink/proxy.</span>
+	<span class="n">ZGPL_GpdfDataRequest</span><span class="p">(</span><span class="n">ZGP_GpdfDataReq_t</span> <span class="o">*</span><span class="n">zgpGpdfDataReq</span><span class="p">);</span>
+	
+	<span class="c1">//To get the proxy/sink mode(commissioning/operational)</span>
+	<span class="n">ZGPL_GetDeviceMode</span><span class="p">(</span><span class="n">bool</span> <span class="n">isProxy</span><span class="p">,</span> <span class="n">zgpMode_t</span> <span class="n">mode</span><span class="p">);</span>
+	
+	<span class="c1">//ZGP reset request. </span>
+	<span class="n">ZGP_ResetReq</span><span class="p">(</span><span class="n">ZGP_ResetReq_t</span> <span class="o">*</span><span class="n">reqParams</span><span class="p">);</span>
+	
+	<span class="c1">//To configure the zgp channel </span>
+	<span class="n">ZGP_SetChannel</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">channel</span><span class="p">);</span>
+	
+	<span class="c1">//To get the configured zgp channel </span>
+    <span class="n">ZGP_GetChannel</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="n">channel</span><span class="p">);</span>
+	
+	<span class="c1">//To check whether the zgp device is in factory new state or not</span>
+	<span class="n">ZGP_IsDeviceFactoryNew</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</code></pre></div></div> <p>ConfigServer Module example:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Gets the value of the parameter specified by its ID and writes it to the provided address in memory. </span>
+    <span class="n">CS_ReadParameter</span> <span class="p">(</span><span class="n">CS_MemoryItemId_t</span> <span class="n">parameterId</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">memoryPtr</span><span class="p">);</span>
+	
+	<span class="c1">//Sets a value of a certain Configuration Server parameter specified by its ID. </span>
+    <span class="n">CS_WriteParameter</span> <span class="p">(</span><span class="n">CS_MemoryItemId_t</span> <span class="n">parameterId</span><span class="p">,</span> <span class="k">const</span> <span class="kt">void</span> <span class="o">*</span><span class="n">parameterValue</span><span class="p">);</span>
+	
+	<span class="c1">//Gets a pointer to the memory allocated for a specific internal structure. </span>
+    <span class="n">CS_GetMemory</span> <span class="p">(</span><span class="n">CS_MemoryItemId_t</span> <span class="n">memoryId</span><span class="p">,</span> <span class="kt">void</span> <span class="o">**</span><span class="n">memoryPtr</span><span class="p">)</span>
+</code></pre></div></div> <p>System Environment Module example:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Subscribe a receiver to an event. The same receiver may be subscribed to multiple events by calling this function several times. </span>
+    <span class="n">SYS_SubscribeToEvent</span> <span class="p">(</span><span class="n">SYS_EventId_t</span> <span class="n">id</span><span class="p">,</span> <span class="n">SYS_EventReceiver_t</span> <span class="o">*</span><span class="n">recv</span><span class="p">);</span>
+	
+	<span class="c1">//Unsubscribe a receiver from an event</span>
+    <span class="n">SYS_UnsubscribeFromEvent</span> <span class="p">(</span><span class="n">SYS_EventId_t</span> <span class="n">id</span><span class="p">,</span> <span class="n">SYS_EventReceiver_t</span> <span class="o">*</span><span class="n">recv</span><span class="p">)</span>
+	
+	<span class="c1">//Post an event to be delivered to all subscribed receivers </span>
+    <span class="n">SYS_PostEvent</span> <span class="p">(</span><span class="n">SYS_EventId_t</span> <span class="n">id</span><span class="p">,</span> <span class="n">SYS_EventData_t</span> <span class="n">data</span><span class="p">)</span>
+	
+	<span class="c1">//Posts a task to the task manager, which is later processed by the task handler of the corresponding stack layer. </span>
+	<span class="n">SYS_PostTask</span> <span class="p">(</span><span class="n">SYS_TaskId_t</span> <span class="n">taskId</span><span class="p">)</span>
+	
+	<span class="c1">//This function is called by the stack or from the main() function to process tasks. </span>
+	<span class="n">SYS_RunTask</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+	
+	<span class="c1">//Generates a random two-bytes number. </span>
+	<span class="n">SYS_GetRandomNumber</span> <span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</code></pre></div></div> <h3 id="initializing-zigbee-tasks"> <a href="usage.html#initializing-zigbee-tasks" aria-labelledby="initializing-zigbee-tasks" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Initializing Zigbee Tasks </h3> <p>Zigbee Stack has several components(tasks) within and those components(tasks) has to be initialized during startup.</p> <p>Example of initializing Zigbee Tasks:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">void</span> <span class="nf">ZB_SysTaskInit</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="cp">#if defined(_SYS_ZDO_TASK_) &amp;&amp; !defined(ZAPPSI_HOST)
+</span>          <span class="n">SYS_PostTask</span><span class="p">(</span><span class="n">ZDO_TASK_ID</span><span class="p">);</span> <span class="c1">// ZDO task must be started first to initialize the stack</span>
+        <span class="cp">#elif defined(ZAPPSI_HOST)
+</span>          <span class="n">SYS_InitZsiMem</span><span class="p">();</span>
+          <span class="n">SYS_PostTask</span><span class="p">(</span><span class="n">ZSI_TASK_ID</span><span class="p">);</span>
+        <span class="cp">#elif defined(_SYS_ZGP_TASK_)
+</span>          <span class="n">SYS_PostTask</span><span class="p">(</span><span class="n">ZGP_TASK_ID</span><span class="p">);</span>
+        <span class="cp">#else
+</span>          <span class="n">SYS_PostTask</span><span class="p">(</span><span class="n">APL_TASK_ID</span><span class="p">);</span> <span class="c1">// If there isn't ZDO e.g. HAL SE target is used</span>
+        <span class="cp">#endif </span><span class="cm">/* _SYS_ZDO_TAKS_ */</span><span class="cp">
+</span><span class="p">}</span>
+</code></pre></div></div> <h2 id="using-the-library"> <a href="usage.html#using-the-library" aria-labelledby="using-the-library" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Using the library </h2> <p>Zigbee Stack would generate events to inform application if there is any status changed or activity. Application shall get these events from Zigbee Stack if the callback event is registered.</p> <p>Registering a callback event from Application :</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">void</span> <span class="nf">APP_ZigbeeStackInit</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">ZB_EventRegister</span><span class="p">(</span><span class="n">APP_ZigbeeStackCb</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div></div> <p>Handling Zigbee Stack callback event:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">void</span> <span class="nf">APP_ZigbeeStackCb</span><span class="p">(</span><span class="n">ZB_AppGenericCallbackParam_t</span> <span class="o">*</span><span class="n">cb</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="n">APP_Msg_T</span>   <span class="n">appMsg</span><span class="p">;</span>
+      <span class="kt">void</span> <span class="o">*</span><span class="n">paramPtr</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+      <span class="n">ZB_AppGenericCallbackParam_t</span><span class="o">*</span> <span class="n">newCB</span> <span class="o">=</span> 
+          <span class="p">(</span><span class="n">ZB_AppGenericCallbackParam_t</span><span class="o">*</span><span class="p">)</span> <span class="n">OSAL_Malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">ZB_AppGenericCallbackParam_t</span><span class="p">));</span>
+  
+      <span class="n">appMsg</span><span class="p">.</span><span class="n">msgId</span> <span class="o">=</span> <span class="n">APP_MSG_ZB_STACK_CB</span><span class="p">;</span>
+      <span class="n">memcpy</span><span class="p">(</span><span class="n">newCB</span><span class="p">,</span><span class="n">cb</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">ZB_AppGenericCallbackParam_t</span><span class="p">));</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">cb</span><span class="o">-&gt;</span><span class="n">paramSize</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="p">{</span>
+        <span class="n">paramPtr</span> <span class="o">=</span> <span class="n">OSAL_Malloc</span><span class="p">(</span><span class="n">cb</span><span class="o">-&gt;</span><span class="n">paramSize</span><span class="p">);</span>
+        <span class="n">memcpy</span><span class="p">(</span><span class="n">paramPtr</span><span class="p">,</span><span class="n">cb</span><span class="o">-&gt;</span><span class="n">parameters</span><span class="p">,</span> <span class="n">cb</span><span class="o">-&gt;</span><span class="n">paramSize</span><span class="p">);</span>
+        <span class="n">newCB</span><span class="o">-&gt;</span><span class="n">parameters</span> <span class="o">=</span> <span class="n">paramPtr</span><span class="p">;</span>
+      <span class="p">}</span>
+     <span class="n">memcpy</span><span class="p">(</span><span class="n">appMsg</span><span class="p">.</span><span class="n">msgData</span><span class="p">,</span><span class="o">&amp;</span><span class="n">newCB</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">newCB</span><span class="p">));</span>
+     <span class="cp">#ifdef H3_INDEPENDENT 
+</span>       <span class="n">OSAL_QUEUE_Send</span><span class="p">(</span><span class="o">&amp;</span><span class="n">g_appQueue</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">appMsg</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+     <span class="cp">#else
+</span>       <span class="n">OSAL_QUEUE_Send</span><span class="p">(</span><span class="o">&amp;</span><span class="n">appData</span><span class="p">.</span><span class="n">appQueue</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">appMsg</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+     <span class="cp">#endif 
+</span>    <span class="p">}</span>
+</code></pre></div></div> <p>There are 2 group of events i.e., APP_MSG_ZB_STACK_CB and APP_MSG_ZB_STACK_EVT needs to be handled. APP_MSG_ZB_STACK_CB is mapped to zigbee stack callbacks and APP_MSG_ZB_STACK_EVT is mapped to application. These are detailed below :</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    
+    <span class="kt">void</span> <span class="nf">APP_Tasks</span> <span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+    <span class="p">{</span>
+	  <span class="n">APP_Msg_T</span>    <span class="n">appMsg</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+	  <span class="n">APP_Msg_T</span>   <span class="o">*</span><span class="n">p_appMsg</span><span class="p">;</span>
+	  <span class="n">p_appMsg</span><span class="o">=</span><span class="n">appMsg</span><span class="p">;</span>
+
+	 <span class="n">ZB_AppGenericCallbackParam_t</span> <span class="n">cb</span><span class="p">;</span>
+	 <span class="cm">/* Check the application's current state. */</span>
+	 <span class="k">switch</span> <span class="p">(</span> <span class="n">appData</span><span class="p">.</span><span class="n">state</span> <span class="p">)</span>
+     <span class="p">{</span>
+	   <span class="cm">/* Application's initial state. */</span>
+	  <span class="k">case</span> <span class="n">APP_STATE_INIT</span><span class="p">:</span>
+	  <span class="p">{</span>
+		<span class="n">bool</span> <span class="n">appInitialized</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+		<span class="c1">//appData.appQueue = xQueueCreate( 10, sizeof(APP_Msg_T) );</span>
+
+		<span class="k">if</span> <span class="p">(</span><span class="n">appInitialized</span><span class="p">)</span>
+		<span class="p">{</span>
+
+			<span class="n">appData</span><span class="p">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">APP_STATE_SERVICE_TASKS</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">break</span><span class="p">;</span>
+	  <span class="p">}</span>
+
+	  <span class="k">case</span> <span class="n">APP_STATE_SERVICE_TASKS</span><span class="p">:</span>
+	  <span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">OSAL_QUEUE_Receive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">appData</span><span class="p">.</span><span class="n">appQueue</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">appMsg</span><span class="p">,</span> <span class="n">OSAL_WAIT_FOREVER</span><span class="p">))</span>
+		<span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">p_appMsg</span><span class="o">-&gt;</span><span class="n">msgId</span> <span class="o">==</span> <span class="n">APP_MSG_ZB_STACK_CB</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="c1">// Pass Zigbee Stack Callback Event Message to User Application for handling</span>
+				<span class="kt">uint32_t</span> <span class="o">*</span><span class="n">paramPtr</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+				<span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">paramPtr</span><span class="p">,</span><span class="n">p_appMsg</span><span class="o">-&gt;</span><span class="n">msgData</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">paramPtr</span><span class="p">));</span>
+				<span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cb</span><span class="p">,</span> <span class="n">paramPtr</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">cb</span><span class="p">));</span>
+				<span class="k">switch</span> <span class="p">(</span><span class="n">cb</span><span class="p">.</span><span class="n">eModuleID</span><span class="p">)</span>
+				<span class="p">{</span>
+				  <span class="k">case</span> <span class="n">ZIGBEE_BDB</span><span class="p">:</span>
+					<span class="n">ZB_BDB_CallBack</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cb</span><span class="p">);</span>
+				  <span class="k">break</span><span class="p">;</span>
+
+				  <span class="k">case</span> <span class="n">ZIGBEE_ZDO</span><span class="p">:</span>
+					<span class="n">ZB_ZDO_CallBack</span><span class="p">[</span><span class="n">cb</span><span class="p">.</span><span class="n">uCallBackID</span><span class="p">]((</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="n">cb</span><span class="p">.</span><span class="n">parameters</span><span class="p">);</span>
+				  <span class="k">break</span><span class="p">;</span>
+
+				  <span class="k">case</span> <span class="n">ZIGBEE_ZCL</span><span class="p">:</span>
+					  <span class="n">ZB_ZCL_CallBack</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cb</span><span class="p">);</span>
+				  <span class="k">break</span><span class="p">;</span>
+
+				  <span class="nl">default:</span>
+					<span class="c1">//appSnprintf("[APP CB]  Default case\r\n");</span>
+				  <span class="k">break</span><span class="p">;</span>
+				<span class="p">}</span>
+				<span class="kt">void</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+				<span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ptr</span><span class="p">,</span> <span class="n">p_appMsg</span><span class="o">-&gt;</span><span class="n">msgData</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">ptr</span><span class="p">));</span>
+				<span class="n">OSAL_Free</span><span class="p">(</span><span class="n">ptr</span><span class="p">);</span>
+				<span class="n">OSAL_Free</span><span class="p">(</span><span class="n">cb</span><span class="p">.</span><span class="n">parameters</span><span class="p">);</span>
+				
+			<span class="p">}</span>
+			<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">p_appMsg</span><span class="o">-&gt;</span><span class="n">msgId</span><span class="o">==</span><span class="n">APP_MSG_ZB_STACK_EVT</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="c1">// Pass Zigbee Stack Event Message to User Application for handling</span>
+				<span class="n">process_ZB_evt</span><span class="p">();</span>
+			<span class="p">}</span>
+			<span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">p_appMsg</span><span class="o">-&gt;</span><span class="n">msgId</span> <span class="o">==</span> <span class="n">APP_MSG_UART_CMD_READY</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">process_UART_evt</span><span class="p">((</span><span class="kt">char</span><span class="o">*</span><span class="p">)(</span><span class="n">p_appMsg</span><span class="o">-&gt;</span><span class="n">msgData</span><span class="p">));</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+		<span class="k">break</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="cm">/* TODO: implement your application state machine.*/</span>
+
+
+	<span class="cm">/* The default state should never be executed. */</span>
+	<span class="nl">default:</span>
+	<span class="p">{</span>
+		<span class="cm">/* TODO: Handle error in application's state machine. */</span>
+		<span class="k">break</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+</code></pre></div></div> <p>As part of the Application event(APP_MSG_ZB_STACK_EVT) , the control is handled within process_ZB_evt() function.</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">void</span> <span class="nf">process_ZB_evt</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+    <span class="p">{</span>
+
+    <span class="k">switch</span> <span class="p">(</span><span class="n">appState</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// node is in initial state</span>
+        <span class="k">case</span> <span class="n">APP_INITIAL_STATE</span><span class="p">:</span>                 <span class="c1">// Initial (after RESET) state</span>
+          <span class="n">initApp</span><span class="p">();</span>                            <span class="c1">// Init application</span>
+        <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="n">APP_START_WAIT_STATE</span><span class="p">:</span>              <span class="c1">//do nothing wait for user input to start commissioning</span>
+        <span class="c1">// appSnprintf("App in wait State\r\n");</span>
+        <span class="k">break</span><span class="p">;</span>
+
+        <span class="cp">#if ZB_COMMISSIONING_ON_STARTUP == 1
+</span>        <span class="k">case</span> <span class="n">APP_START_NETWORK_STATE</span><span class="p">:</span>
+        <span class="p">{</span>
+          <span class="n">LCD_PRINT</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="s">"                            "</span><span class="p">);</span>
+          <span class="n">LCD_PRINT</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"Started Commissioning"</span><span class="p">);</span>
+          <span class="n">BDB_InvokeCommissioning</span><span class="p">(</span><span class="o">&amp;</span><span class="n">commissioningReq</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="n">APP_IN_NETWORK_STATE</span><span class="p">:</span>              <span class="c1">// Normal operating</span>
+        <span class="p">{</span> 
+          <span class="k">if</span> <span class="p">(</span><span class="n">findAndBind</span><span class="p">)</span>
+          <span class="p">{</span>
+            <span class="n">commissioningReq</span><span class="p">.</span><span class="n">mode</span><span class="p">.</span><span class="n">findingAndBinding</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+            <span class="n">appState</span> <span class="o">=</span> <span class="n">APP_FINDING_BINDING_STATE</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="k">else</span>
+          <span class="p">{</span>
+            <span class="n">appState</span> <span class="o">=</span> <span class="n">APP_IN_NETWORK_IDLE_STATE</span><span class="p">;</span>
+          <span class="p">}</span>
+           <span class="n">APP_EvtUpload</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="n">APP_IN_NETWORK_PERMITJOIN_STATE</span><span class="p">:</span>
+        <span class="p">{</span>
+          <span class="n">commissioningReq</span><span class="p">.</span><span class="n">mode</span><span class="p">.</span><span class="n">nwkSteering</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>     <span class="c1">//To do PermitJoin</span>
+          <span class="n">BDB_InvokeCommissioning</span><span class="p">(</span><span class="o">&amp;</span><span class="n">commissioningReq</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="n">APP_FINDING_BINDING_STATE</span><span class="p">:</span>
+        <span class="p">{</span>
+          <span class="n">AppBindReq_t</span> <span class="o">*</span><span class="n">currBindReq</span> <span class="o">=</span> <span class="n">deviceBindReqs</span><span class="p">[</span><span class="n">epIndex</span><span class="o">++</span><span class="p">];</span>
+          <span class="n">appInitiatorReq</span><span class="p">.</span><span class="n">initiatorEndpoint</span> <span class="o">=</span> <span class="n">currBindReq</span><span class="o">-&gt;</span><span class="n">srcEndpoint</span><span class="p">;</span>
+          <span class="n">appInitiatorReq</span><span class="p">.</span><span class="n">clientClustersCount</span> <span class="o">=</span> <span class="n">currBindReq</span><span class="o">-&gt;</span><span class="n">remoteServersCnt</span><span class="p">;</span>
+          <span class="n">appInitiatorReq</span><span class="p">.</span><span class="n">serverClustersCount</span> <span class="o">=</span> <span class="n">currBindReq</span><span class="o">-&gt;</span><span class="n">remoteClientsCnt</span><span class="p">;</span>
+          <span class="n">appInitiatorReq</span><span class="p">.</span><span class="n">clientClustersList</span> <span class="o">=</span> <span class="n">currBindReq</span><span class="o">-&gt;</span><span class="n">remoteServers</span><span class="p">;</span>
+          <span class="n">appInitiatorReq</span><span class="p">.</span><span class="n">serverClustersList</span> <span class="o">=</span> <span class="n">currBindReq</span><span class="o">-&gt;</span><span class="n">remoteClients</span><span class="p">;</span>
+          <span class="n">appInitiatorReq</span><span class="p">.</span><span class="n">callback</span> <span class="o">=</span> <span class="n">currBindReq</span><span class="o">-&gt;</span><span class="n">callback</span><span class="p">;</span>
+          <span class="n">appInitiatorReq</span><span class="p">.</span><span class="n">groupId</span> <span class="o">=</span> <span class="n">currBindReq</span><span class="o">-&gt;</span><span class="n">groupId</span><span class="p">;</span>
+          <span class="n">commissioningReq</span><span class="p">.</span><span class="n">initiatorReq</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">appInitiatorReq</span><span class="p">;</span>
+          <span class="n">BDB_InvokeCommissioning</span><span class="p">(</span><span class="o">&amp;</span><span class="n">commissioningReq</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">APP_IN_NETWORK_IDLE_STATE</span><span class="p">:</span>
+        <span class="k">break</span><span class="p">;</span>
+        <span class="cp">#endif
+</span>        <span class="nl">default:</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></div> <p>As part of the Zigbee Stack Callback event(APP_MSG_ZB_STACK_CB) , the control is handled with these list of functions.</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">ZB_BDB_CallBack</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cb</span><span class="p">);</span>
+   <span class="n">ZB_ZCL_CallBack</span><span class="p">(</span><span class="o">&amp;</span><span class="n">cb</span><span class="p">);</span>
+   <span class="n">ZB_ZDO_CallBack</span><span class="p">[</span><span class="n">cb</span><span class="p">.</span><span class="n">uCallBackID</span><span class="p">]((</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="n">cb</span><span class="p">.</span><span class="n">parameters</span><span class="p">);</span>
+   
+   <span class="kt">void</span> <span class="nf">ZB_BDB_CallBack</span><span class="p">(</span><span class="n">ZB_AppGenericCallbackParam_t</span><span class="o">*</span> <span class="n">cb</span><span class="p">)</span>
+   <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">cb</span><span class="o">-&gt;</span><span class="n">uCallBackID</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">case</span> <span class="n">BDB_Connected_ID</span><span class="p">:</span>
+          <span class="n">RAISE_CALLBACKS_TO_BDBEVENTS_SUBSCRIBERS</span><span class="p">(</span><span class="n">appBdbEventsubscribersQueue</span><span class="p">,</span> <span class="n">connected</span><span class="p">);</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">BDB_Event_Disconnected_ID</span><span class="p">:</span>
+          <span class="n">RAISE_CALLBACKS_TO_BDBEVENTS_SUBSCRIBERS</span><span class="p">(</span><span class="n">appBdbEventsubscribersQueue</span><span class="p">,</span> <span class="n">disconnected</span><span class="p">);</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">BDB_Event_IdentifyStartIndication_ID</span><span class="p">:</span>
+        <span class="p">{</span>
+          <span class="kt">uint16_t</span> <span class="n">argument</span> <span class="o">=</span> <span class="o">*</span><span class="p">((</span><span class="kt">uint16_t</span><span class="o">*</span><span class="p">)</span><span class="n">cb</span><span class="o">-&gt;</span><span class="n">parameters</span><span class="p">);</span>
+          <span class="n">RAISE_CALLBACKS_TO_BDBEVENTS_SUBSCRIBERS_WITH_SINGLE_ARGUMENT</span><span class="p">(</span><span class="n">appBdbEventsubscribersQueue</span><span class="p">,</span> <span class="n">identifyStartIndication</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="p">...</span>
+		<span class="k">break</span><span class="p">;</span>
+		<span class="p">...</span>
+	<span class="err">}</span>
+	
+   <span class="kt">void</span> <span class="n">ZB_ZCL_CallBack</span><span class="p">(</span><span class="n">ZB_AppGenericCallbackParam_t</span><span class="o">*</span> <span class="n">cb</span><span class="p">)</span>
+   <span class="err">{</span>
+    <span class="n">ZB_AppGenericCallbackParam_t</span> <span class="o">*</span><span class="n">cbParam</span> <span class="o">=</span> <span class="p">(</span><span class="n">ZB_AppGenericCallbackParam_t</span> <span class="o">*</span><span class="p">)</span><span class="n">cb</span><span class="p">;</span>
+  
+    <span class="k">switch</span><span class="p">(</span><span class="n">cbParam</span><span class="o">-&gt;</span><span class="n">uCallBackID</span><span class="p">)</span>
+    <span class="err">{</span>
+    <span class="k">case</span> <span class="n">ZCL_CLUSTER_COMMAND_IND</span><span class="p">:</span>
+    <span class="err">{</span>
+      <span class="kt">void</span> <span class="o">**</span><span class="n">paramPtr</span> <span class="o">=</span> <span class="n">cbParam</span><span class="o">-&gt;</span><span class="n">parameters</span><span class="p">;</span>
+      <span class="n">ZCL_CommandInd_t</span> <span class="o">*</span><span class="n">zclCmdIndCallback</span> <span class="o">=</span> <span class="p">(</span><span class="n">ZCL_CommandInd_t</span> <span class="o">*</span><span class="p">)(</span><span class="o">*</span><span class="n">paramPtr</span><span class="p">);</span>
+      <span class="n">zclCmdIndCallback</span><span class="o">-&gt;</span><span class="n">status</span> <span class="o">=</span> <span class="n">zclCmdIndCallback</span><span class="o">-&gt;</span><span class="n">callbackFn</span><span class="p">(</span><span class="n">zclCmdIndCallback</span><span class="o">-&gt;</span><span class="n">addressing</span><span class="p">,</span>
+                                                                <span class="n">zclCmdIndCallback</span><span class="o">-&gt;</span><span class="n">payloadLength</span><span class="p">,</span>
+                                                                <span class="n">zclCmdIndCallback</span><span class="o">-&gt;</span><span class="n">payload</span><span class="p">);</span>
+    <span class="err">}</span>
+    <span class="k">break</span><span class="p">;</span>
+	<span class="p">........</span>
+	<span class="k">case</span> <span class="p">...</span>
+	<span class="k">break</span><span class="p">;</span>
+	<span class="p">...</span>
+	<span class="err">}</span>	
+	
+    <span class="n">ZDO_CALLBACK_ptr</span> <span class="n">ZB_ZDO_CallBack</span><span class="p">[</span><span class="n">ZDO_APP_CALLBACK_MAX</span><span class="p">]</span> <span class="o">=</span>
+    <span class="err">{</span>
+      <span class="n">ZDO_ResetNetworkConf_Callback</span><span class="p">,</span>
+      <span class="n">ZDO_MgmtNwkUpdateNotf_CallBack</span><span class="p">,</span>
+      <span class="n">ZDO_WakeUpInd_CallBack</span><span class="p">,</span>
+      <span class="n">ZDO_BindIndication_CallBack</span><span class="p">,</span>
+      <span class="n">ZDO_UnbindIndication_CallBack</span><span class="p">,</span>
+    <span class="err">}</span><span class="p">;</span>	
+</code></pre></div></div> <hr> <footer> <p class="text-small text-grey-dk-000 mb-0"><img src='https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png' /><br />Copyright &copy; 2020 Microchip Technology.</p> <!-- <p class="text-small text-grey-dk-000 mb-0"><img src='http://10.16.32.120:4000/wireless/assets/images/vendor/microchip_logo.png' /><br /> Copyright &copy; 2021 Microchip Technology.</p> --> </footer> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

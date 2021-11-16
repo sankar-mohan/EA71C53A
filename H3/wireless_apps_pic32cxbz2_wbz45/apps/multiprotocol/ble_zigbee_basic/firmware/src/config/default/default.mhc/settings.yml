@@ -1,0 +1,14 @@
+configName: default
+folderName: on_off
+format_version: v1.0
+frameworkPath: ..\..\Application_Development\H3_EA1
+processor: WBZ451
+projectName: on_off
+settings:
+  PackageFilter: bsp;bsp_EA3;chimera_h3_wireless;chimera_h3_wireless_v0.9.0.2;chimera_h3_wireless_v0.9.0.5;core;core_EA3;crypto;crypto_EA3;csp;csp_EA3;wireless;wireless_dropped;wireless_EA3
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\PIC32CX-BZ_DFP\1.0.80\WBZ451\atdf\WBZ451.atdf

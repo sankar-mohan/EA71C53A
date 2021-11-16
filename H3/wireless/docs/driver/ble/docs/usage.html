@@ -1,0 +1,153 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="../../../assets/css/just-the-docs-default.css"> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-16"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-2724382-16'); </script> <script type="text/javascript" src="../../../assets/js/vendor/lunr.min.js"></script> <script type="text/javascript" src="../../../assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.6.1 --> <title>BLE Library Usage | Microchip MPLAB Harmony Wireless help</title> <meta name="generator" content="Jekyll v3.9.0" /> <meta property="og:title" content="BLE Library Usage" /> <meta property="og:locale" content="en_US" /> <meta name="description" content="Harmony 3 Wireless package" /> <meta property="og:description" content="Harmony 3 Wireless package" /> <link rel="canonical" href="usage.html" /> <meta property="og:url" content="http://10.16.32.120:4000/wireless/driver/ble/docs/usage.html" /> <meta property="og:site_name" content="Microchip MPLAB Harmony Wireless help" /> <script type="application/ld+json"> {"@type":"WebPage","url":"http://10.16.32.120:4000/wireless/driver/ble/docs/usage.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://10.16.32.120:4000/wireless/assets/images/vendor/microchip_mplab_harmony_logo_150_transparent.png"}},"headline":"BLE Library Usage","description":"Harmony 3 Wireless package","@context":"https://schema.org"}</script> <!-- End Jekyll SEO tag --> </head> <body> <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="svg-link" viewBox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-search" viewBox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <symbol id="svg-menu" viewBox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewBox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <symbol id="svg-doc" viewBox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header"> <a href="../../../index.html" class="site-title lh-tight"> <div class="site-logo"></div> </a> <a href="usage.html#" id="menu-button" class="site-button"> <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg> </a> </div> <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list"><li class="nav-list-item"><a href="../../../index.html" class="nav-list-link">Harmony 3 Wireless Package</a></li><li class="nav-list-item"><a href="usage.html#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="../../readme.html" class="nav-list-link">Driver libraries</a><ul class="nav-list "><li class="nav-list-item "><a href="readme.html" class="nav-list-link">BLE Driver Library</a></li><li class="nav-list-item "><a href="../../pic32cx-bz/docs/readme.html" class="nav-list-link">PIC32CX-BZ Device Support Component Library</a></li><li class="nav-list-item "><a href="../../zigbee/docs/readme.html" class="nav-list-link">Zigbee Driver Library</a></li></ul></li><li class="nav-list-item"><a href="usage.html#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="../../../release_notes.html" class="nav-list-link">Release notes</a><ul class="nav-list "><li class="nav-list-item "><a href="release_notes.html" class="nav-list-link">BLE Driver Library</a></li><li class="nav-list-item "><a href="../../zigbee/docs/release_notes.html" class="nav-list-link">Zigbee Driver Library</a></li></ul></li><li class="nav-list-item"><a href="../../../mplab_harmony_license.html" class="nav-list-link">License</a></li><li class="nav-list-item"><a href="../../pic32cx-bz/docs/release_notes.html" class="nav-list-link">Microchip PIC32CX-BZ2 Device Support Release Notes</a></li></ul> </nav> <footer class="site-footer"> This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll. </footer> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Microchip MPLAB Harmony Wireless help" aria-label="Search Microchip MPLAB Harmony Wireless help" autocomplete="off"> <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> <nav aria-label="Auxiliary" class="aux-nav"> <ul class="aux-nav-list"> <li class="aux-nav-list-item"> <a href="https://support.microchip.com" class="site-button" > Obtain Support from Microchip </a> </li> </ul> </nav> </div> <div id="main-content-wrap" class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="usage.html">Wireless libraries</a></li> <li class="breadcrumb-nav-list-item"><a href="usage.html">BLE Library</a></li> <li class="breadcrumb-nav-list-item"><span>BLE Library Usage</span></li> </ol> </nav> <div id="main-content" class="main-content" role="main"> <h1 id="ble-library-usage"> <a href="usage.html#ble-library-usage" aria-labelledby="ble-library-usage" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> BLE Library Usage </h1> <h2 id="initializing-the-library"> <a href="usage.html#initializing-the-library" aria-labelledby="initializing-the-library" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Initializing the library </h2> <h3 id="initializing-ble-stack"> <a href="usage.html#initializing-ble-stack" aria-labelledby="initializing-ble-stack" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Initializing BLE Stack </h3> <p>Before using any BLE Stack relevant API, BLE component must be initialized. It is strongly recommend that BLE component be initialized during system initialization. BLE component only operates with RTOS, the relevant parameters of RTOS must be assigned to BLE component. Also, device address is necessary for BLE component.</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//BLE Queue definition</span>
+    <span class="cp">#define QUEUE_LENGTH_BLE (16)
+</span>    <span class="cp">#define QUEUE_ITEM_SIZE_BLE (sizeof(void *))
+</span>
+    <span class="c1">//BLE library Initialization Data</span>
+    <span class="n">OSAL_QUEUE_HANDLE_TYPE</span> <span class="n">bleRequestQueueHandle</span><span class="p">;</span>
+    <span class="n">OSAL_API_LIST_TYPE</span>     <span class="n">osalAPIList</span><span class="p">;</span>
+    <span class="kt">uint8_t</span>                <span class="n">bdAddr</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>     <span class="c1">//address type + address[6]</span>
+
+    <span class="c1">// Create BLE Stack Message QUEUE</span>
+    <span class="n">OSAL_QUEUE_Create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bleRequestQueueHandle</span><span class="p">,</span> <span class="n">QUEUE_LENGTH_BLE</span><span class="p">,</span> <span class="n">QUEUE_ITEM_SIZE_BLE</span><span class="p">);</span>
+
+    <span class="c1">// Initialize BLE Stack</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">IB_GetBdAddr</span><span class="p">(</span><span class="n">bdAddr</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">BT_SYS_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bleRequestQueueHandle</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">osalAPIList</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">bdAddr</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">BT_SYS_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bleRequestQueueHandle</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">osalAPIList</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div></div> <p>BLE Stack provides various APIs for application, and those APIs belong to the specific module within dedicated group. Currently there are four groups inside the BLE Stack. Application shall initialize the dedicated group and modules in the BLE Stack if needs.</p> <ul> <li>GAP: Provide the user interface for discovery of BLE devices, broadcast of BLE device, and connection management</li> <li>L2CAP: Provide the user interface for credit based flow control procedure</li> <li>GATT: Provide the user interface for GATT server and client procedure</li> <li>SMP: Provide the user interface for pairing, authentication, and security configuration</li> </ul> <p>Example of initializing modules in GAP group:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Initialize BLE GAP main module</span>
+    <span class="n">BLE_GAP_Init</span><span class="p">();</span>
+    
+    <span class="c1">//Initialize BLE GAP advertising module</span>
+    <span class="n">BLE_GAP_AdvInit</span><span class="p">();</span>
+
+</code></pre></div></div> <p>Example of initializing modules in L2CAP group:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Initialize BLE L2cap main module</span>
+    <span class="n">BLE_L2CAP_Init</span><span class="p">();</span>
+
+    <span class="c1">//Initialize BLE L2cap credit based flow control module</span>
+    <span class="n">BLE_L2CAP_CbInit</span><span class="p">();</span>
+</code></pre></div></div> <p>Example of initializing modules in GATT group:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Initialize BLE GATT server module</span>
+    <span class="n">GATTS_Init</span><span class="p">();</span>
+
+    <span class="c1">//Initialize BLE GATT client module</span>
+    <span class="n">GATTC_Init</span><span class="p">();</span>
+
+</code></pre></div></div> <p>Example of initializing modules in SMP group:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Initialize BLE SMP main module</span>
+    <span class="n">BLE_SMP_Init</span><span class="p">();</span>
+
+</code></pre></div></div> <p>BLE Stack would generate events to inform application if there is any status changed or activity. Application may need to get the relevant information from BLE Stack and do the corresponding procedure. Therefore, application shall register BLE Stack callback function after BLE Stack initialized.</p> <p>Example of registering BLE Stack callback event:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="cm">/* Register BLE Stack callback event*/</span>
+    <span class="n">STACK_EventRegister</span><span class="p">(</span><span class="n">APP_BleStackCb</span><span class="p">);</span>
+</code></pre></div></div> <h3 id="initializing-ble-middleware"> <a href="usage.html#initializing-ble-middleware" aria-labelledby="initializing-ble-middleware" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Initializing BLE Middleware </h3> <p>BLE component provides two modules in BLE Middleware to assist application. Application shall initialize the dedicated modules if needs.</p> <ul> <li>BLE_DM: Handle pairing procedures, connection management and the record of pairing information. Provide the simplified user interface for application.</li> <li>BLE_DD: Handle the service discovery procedures. It shall be included if a GATT client profile is enabled.</li> </ul> <p>Example of initializing modules in BLE Middleware:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Initialize BLE device manager module</span>
+    <span class="n">BLE_DM_Init</span><span class="p">();</span>
+
+    <span class="c1">//Initialize BLE device discovery module</span>
+    <span class="n">BLE_DD_Init</span><span class="p">();</span>
+</code></pre></div></div> <p>BLE Middleware module would generate events to inform application if there is any status changed or activity. Application may need to get the relevant information from BLE Middleware and do the corresponding procedure. Therefore, application shall register BLE Middleware callback function after BLE Middleware initialized.</p> <p>Example of registering BLE middleware callback event:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="cm">/* Register BLE DM module callback event */</span>
+    <span class="n">BLE_DM_EventRegister</span><span class="p">(</span><span class="n">APP_DmEvtHandler</span><span class="p">);</span>
+
+    <span class="cm">/* Register BLE DD module callback event */</span>
+    <span class="n">BLE_DD_EventRegister</span><span class="p">(</span><span class="n">APP_DdEvtHandler</span><span class="p">);</span>
+</code></pre></div></div> <h3 id="initializing-ble-profile"> <a href="usage.html#initializing-ble-profile" aria-labelledby="initializing-ble-profile" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Initializing BLE Profile </h3> <p>BLE component provides some example profiles. Application shall initialize the profiles if needs.</p> <p>Example of initializing BLE profiles:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Initialize BLE transparent server profile</span>
+    <span class="n">BLE_TRSPS_Init</span><span class="p">();</span>
+
+    <span class="c1">//Initialize BLE transparent client profile</span>
+    <span class="n">BLE_TRSPC_Init</span><span class="p">();</span>
+</code></pre></div></div> <p>BLE profiles module would generate events to inform application if there is any status changed or activity. Application may need to get the relevant information from BLE profiles and do the corresponding procedure. Therefore, application shall register BLE profiles callback function after BLE profiles initialized.</p> <p>Example of registering BLE profiles callback event:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="cm">/* Register BLE transparent server callback event */</span>
+    <span class="n">BLE_TRSPS_EventRegistration</span><span class="p">(</span><span class="n">APP_TrspsEvtHandler</span><span class="p">);</span>
+
+    <span class="cm">/* Register BLE transparent client callback event */</span>
+    <span class="n">BLE_TRSPC_EventRegistration</span><span class="p">(</span><span class="n">APP_TrspcEvtHandler</span><span class="p">);</span>
+</code></pre></div></div> <h3 id="initializing-ble-service"> <a href="usage.html#initializing-ble-service" aria-labelledby="initializing-ble-service" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Initializing BLE Service </h3> <p>BLE component provides some example services. Some of the services are used by the specific profile, and some of them may be used by application directly.</p> <p>Example of initializing BLE service:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//Initialize BLE device information service</span>
+    <span class="n">BLE_DIS_Add</span><span class="p">();</span>
+
+    <span class="c1">//Initialize BLE battery service</span>
+    <span class="n">BLE_BAS_Add</span><span class="p">();</span>
+</code></pre></div></div> <h2 id="using-the-library"> <a href="usage.html#using-the-library" aria-labelledby="using-the-library" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Using the library </h2> <p>Application shall be able to get the events from BLE Stack if the callback event is registered. And it is strongly recommend application shall not handle the event directly. Because timing is critical for BLE Stack, application shall not occupy the execution time before task switch. Application shall generate a new message to handle the event within application task execution time.</p> <p>Example of handling event from BLE Stack:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="c1">//Create a new message and handler the event later</span>
+    <span class="kt">void</span> <span class="nf">APP_BleStackCb</span><span class="p">(</span><span class="n">STACK_Event_T</span> <span class="o">*</span><span class="n">p_stack</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">STACK_Event_T</span> <span class="n">stackEvent</span><span class="p">;</span>
+        <span class="n">APP_Msg_T</span>   <span class="n">appMsg</span><span class="p">;</span>
+        <span class="n">APP_Msg_T</span>   <span class="o">*</span><span class="n">p_appMsg</span><span class="p">;</span>
+    
+        <span class="n">memcpy</span><span class="p">((</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">stackEvent</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">p_stack</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">STACK_Event_T</span><span class="p">));</span>
+        <span class="n">stackEvent</span><span class="p">.</span><span class="n">p_event</span><span class="o">=</span><span class="n">OSAL_Malloc</span><span class="p">(</span><span class="n">p_stack</span><span class="o">-&gt;</span><span class="n">evtLen</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">stackEvent</span><span class="p">.</span><span class="n">p_event</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">memcpy</span><span class="p">(</span><span class="n">stackEvent</span><span class="p">.</span><span class="n">p_event</span><span class="p">,</span> <span class="n">p_stack</span><span class="o">-&gt;</span><span class="n">p_event</span><span class="p">,</span> <span class="n">p_stack</span><span class="o">-&gt;</span><span class="n">evtLen</span><span class="p">);</span>
+        <span class="n">stackEvent</span><span class="p">.</span><span class="n">p_event</span><span class="o">=</span><span class="n">stackEvent</span><span class="p">.</span><span class="n">p_event</span><span class="p">;</span>
+        <span class="p">...</span>
+    
+        <span class="n">appMsg</span><span class="p">.</span><span class="n">msgId</span><span class="o">=</span><span class="n">APP_MSG_BLE_STACK_EVT</span><span class="p">;</span>
+    
+        <span class="p">((</span><span class="n">STACK_Event_T</span> <span class="o">*</span><span class="p">)</span><span class="n">appMsg</span><span class="p">.</span><span class="n">msgData</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">groupId</span><span class="o">=</span><span class="n">p_stack</span><span class="o">-&gt;</span><span class="n">groupId</span><span class="p">;</span>
+        <span class="p">((</span><span class="n">STACK_Event_T</span> <span class="o">*</span><span class="p">)</span><span class="n">appMsg</span><span class="p">.</span><span class="n">msgData</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">evtLen</span><span class="o">=</span><span class="n">p_stack</span><span class="o">-&gt;</span><span class="n">evtLen</span><span class="p">;</span>
+        <span class="p">((</span><span class="n">STACK_Event_T</span> <span class="o">*</span><span class="p">)</span><span class="n">appMsg</span><span class="p">.</span><span class="n">msgData</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">p_event</span><span class="o">=</span><span class="n">stackEvent</span><span class="p">.</span><span class="n">p_event</span><span class="p">;</span>
+    
+        <span class="n">p_appMsg</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">appMsg</span><span class="p">;</span>
+        <span class="n">OSAL_QUEUE_Send</span><span class="p">(</span><span class="o">&amp;</span><span class="n">appData</span><span class="p">.</span><span class="n">appQueue</span><span class="p">,</span> <span class="n">p_appMsg</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="c1">//Handle the BLE Stack events</span>
+    <span class="kt">void</span> <span class="nf">APP_Tasks</span> <span class="p">(</span> <span class="kt">void</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">APP_Msg_T</span>    <span class="n">appMsg</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+        <span class="n">APP_Msg_T</span>   <span class="o">*</span><span class="n">p_appMsg</span><span class="p">;</span>
+        <span class="n">p_appMsg</span><span class="o">=</span><span class="n">appMsg</span><span class="p">;</span>
+    
+        <span class="cm">/* Check the application's current state. */</span>
+        <span class="k">switch</span> <span class="p">(</span> <span class="n">appData</span><span class="p">.</span><span class="n">state</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="p">...</span>
+            <span class="k">case</span> <span class="n">APP_STATE_SERVICE_TASKS</span><span class="p">:</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">OSAL_QUEUE_Receive</span><span class="p">(</span><span class="o">&amp;</span><span class="n">appData</span><span class="p">.</span><span class="n">appQueue</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">appMsg</span><span class="p">,</span> <span class="n">OSAL_WAIT_FOREVER</span><span class="p">))</span>
+                <span class="p">{</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">p_appMsg</span><span class="o">-&gt;</span><span class="n">msgId</span><span class="o">==</span><span class="n">APP_MSG_BLE_STACK_EVT</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="n">APP_BleStackEvtHandler</span><span class="p">((</span><span class="n">STACK_Event_T</span> <span class="o">*</span><span class="p">)</span><span class="n">p_appMsg</span><span class="o">-&gt;</span><span class="n">msgData</span><span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="err">}</span>
+</code></pre></div></div> <p>All the group events of BLE Stack comes in one entry point. Hence, application shall check the groupId to identify the group first when receiving the BLE Stack event. And then check the eventId in each group.</p> <p>Example of handling the BLE Stack events:</p> <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">APP_BleStackEvtHandler</span><span class="p">(</span><span class="n">STACK_Event_T</span> <span class="o">*</span><span class="n">p_stackEvt</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">p_stackEvt</span><span class="o">-&gt;</span><span class="n">groupId</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">case</span> <span class="n">STACK_GRP_BLE_GAP</span><span class="p">:</span>
+        <span class="p">{</span>
+            <span class="cm">/* TODO: implement your application code.*/</span>
+        <span class="p">}</span>
+        <span class="k">break</span><span class="p">;</span>
+        
+        <span class="k">case</span> <span class="n">STACK_GRP_BLE_L2CAP</span><span class="p">:</span>
+        <span class="p">{</span>
+            <span class="cm">/* TODO: implement your application code.*/</span>
+        <span class="p">}</span>
+        <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="n">STACK_GRP_BLE_SMP</span><span class="p">:</span>
+        <span class="p">{</span>
+            <span class="cm">/* TODO: implement your application code.*/</span>
+        <span class="p">}</span>
+        <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="n">STACK_GRP_GATT</span><span class="p">:</span>
+        <span class="p">{</span>
+            <span class="cm">/* TODO: implement your application code.*/</span>
+        <span class="p">}</span>
+        <span class="k">break</span><span class="p">;</span>
+
+    <span class="p">}</span> 
+    <span class="n">OSAL_Free</span><span class="p">(</span><span class="n">p_stackEvt</span><span class="o">-&gt;</span><span class="n">p_event</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div> <hr> <footer> <p class="text-small text-grey-dk-000 mb-0"><img src='https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png' /><br />Copyright &copy; 2020 Microchip Technology.</p> <!-- <p class="text-small text-grey-dk-000 mb-0"><img src='http://10.16.32.120:4000/wireless/assets/images/vendor/microchip_logo.png' /><br /> Copyright &copy; 2021 Microchip Technology.</p> --> </footer> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

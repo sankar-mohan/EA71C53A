@@ -1,0 +1,15 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: profileBLE_TRCP}
+children:
+- type: Symbols
+  children:
+  - type: Boolean
+    attributes: {id: TRCP_BOOL_SERVER}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+- type: ElementPosition
+  attributes: {x: '17', y: '581', id: profileBLE_TRCP}

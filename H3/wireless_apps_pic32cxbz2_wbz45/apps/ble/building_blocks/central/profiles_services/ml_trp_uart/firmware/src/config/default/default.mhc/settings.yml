@@ -1,0 +1,14 @@
+configName: default
+folderName: ble_ml_trp_uart_wbz451_curiosity
+format_version: v1.0
+frameworkPath: ..\..\..\..\god
+processor: WBZ451
+projectName: ble_ml_trp_uart_wbz451_curiosity
+settings:
+  PackageFilter: bsp;core;crypto;csp;dev_packs;wireless
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\PIC32CX-BZ_DFP\1.0.80\WBZ451\atdf\WBZ451.atdf

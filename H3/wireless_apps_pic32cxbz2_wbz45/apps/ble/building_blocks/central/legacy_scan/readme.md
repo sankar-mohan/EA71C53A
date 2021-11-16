@@ -1,0 +1,244 @@
+---
+grand_parent: Examples applications
+parent: BLE Building Blocks
+title: Legacy Scan
+has_children: true
+has_toc: false
+nav_order: 80
+
+family: PIC32CX-BZ
+market:
+  - wireless
+---
+[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
+#  BLE Legacy Scan
+
+[Getting Started](../../readme.md)
+
+[Getting Started with Central Building Blocks](../../central/readme.md)
+
+[Adding UART](../../chip_peripherals/uart/readme.md) **-->** [Legacy Scan](readme.md) **-->** [BLE Connection](../connection/readme.md) 
+
+## Introduction
+
+This document will help users to enable BLE Scanning on WBZ451 Curiosity
+board using Harmony 3 framework BLE Scanning is scanning for devices
+that are advertising. In BLE a central or observer always starts with
+scanning.
+
+Users of this document can choose to just run the precompiled
+Application Example hex file on the WBZ451 Curiosity Board and
+experience the demo or can go through the steps involved in developing
+this Application from scratch
+
+## Recommended Reads
+
+1.  [FreeRtos BLE App Initialize](../freertos_ble_stack_init_central.md) 
+
+2.  [Adding UART](../../chip_peripherals/uart/readme.md)
+
+## Hardware Required
+
+  |**Tool**                | **Qty**  |
+  |------------------------| ---------|
+  |WBZ451 Curiosity Board  | 1        |
+  |Micro USB cable         | 1        |
+
+## SDK Setup
+
+1.  [SDK Setup](../../../../docs/pic32cx_bz2_wbz45x_sdk_setup.md)
+
+## Software
+
+1.  [TeraTerm](https://ttssh2.osdn.jp/index.html.en) 
+
+## Smartphone App
+  None
+
+## Programming the precompiled hex file or Application Example
+
+### Programming the hex file using MPLABX IPE
+
+1.  Precompiled Hex file is located <a href="hex/"> here </a>
+
+2.  Follow the steps mentioned [here](https://microchipdeveloper.com/ipe:programming-device)
+
+ **Caution:** Users should choose the correct Device and Tool information
+### Programming the Application using MPLABX IDE
+
+1.  Follow steps mentioned in section 4 of [SDK Setup document](../../../../docs/pic32cx_bz2_wbz45x_sdk_setup.md) 
+
+2.  Open and program the Application Example <a href="firmware"> legacy_scan </a>  in MPLABX IDE 
+
+## Demo Description
+
+This Application Example enables users to do passive scanning. After
+programming the Application Example, on reset user will be able to see
+the beginning of scan operation, the Bluetooth addresses of devices
+scanned for the next 10 seconds, the end of scanning operation
+
+## Testing
+
+Connect the WBZ45x Curiosity board to PC, program the precompiled hex
+file or application example as mentioned. Open TeraTerm @ (Speed:
+115200, Data: 8-bit, Parity: none, stop bits: 1 bit, Flow control:
+none). Reset the board. Upon reset, "Scanning" message is displayed
+on the TeraTerm. Once scan operation has begun user will be able to display all the Bluetooth addresses that are advertising on channel 37, 38 and 39. After 10 secs "Scan Completed" message is sent out.
+
+![Tera Term](media/legacy_scan_1.PNG)
+
+Users can use another WBZ451 Curiosity Board configured as [BLE Advertiser](../../peripheral/legacy_adv_sleep/readme.md) set the address and scan
+
+## Developing this Application from scratch using Harmony 3
+
+This section explains the steps required by a user to develop this
+application example from scratch using MPLABx Harmony 3 Framework
+
+**Tip:** New Harmony 3 Users are recommended to go through the [overview](https://microchip-mplab-harmony.github.io/mhc/doc/readme.html) of Harmony 3. Users can add/remove different components like peripheral support and other wireless functionality by following steps mentioned [here](https://microchip-mplab-harmony.github.io/mhc/doc/readme_mhc_configuration.html). 
+
+1.  Create a new MPLAB Harmony 3 Project -- [link](../../../../docs/creating_new_mplabx_harmony_project.md) for
+    instructions
+
+2.  Import Harmony 3 component configuration -- This step helps users
+    setup the basic Harmony 3 components required to start their
+    Application Development
+    Harmony 3 component configuration related to this Application is
+    available [here](export.mhc)
+    Users should follow the instructions mentioned
+    [here](https://microchip-mplab-harmony.github.io/mhc/doc/readme_mhc_import_export.html) to import the Harmony 3 component configuration.
+
+    **Tip:** Import and Export functionality of Harmony 3 component
+    configuration will help users to start from a known working setup of Harmony 3
+    configuration
+
+3.  Accept Dependencies or satisfiers, select "Yes"
+
+4.  Verify if the Project Graph window has all the expected Harmony 3
+    configuration
+    ![](media/legacy_scan_2.PNG)
+
+## Verify Scan Configuration
+1.  Select **BLE_Stack** component in project graph
+
+    ![](media/legacy_scan_3.PNG)
+
+## Generate Code [link](../../../../docs/generate_code.md) for instructions
+
+## Files and Routines Automatically generated by the MHC
+After generating the program source from MHC interface by clicking Generate Code, the BLE configuration can be found in the following project directories 
+
+![](media/legacy_scan_4.PNG)
+
+
+The [OSAL](http://ww1.microchip.com/downloads/en/DeviceDoc/MPLAB%20Harmony%20OSAL%20Libraries%20Help%20v2.06.pdf), RF System, BLE System  initialization routine executed during program initialization can be found in the project files. This initialization routine is automatically generated by the MHC
+
+![](media/legacy_scan_5.png)
+
+The BLE stack initialization routine excuted during Application Initialization can be found in project files. This intitialization routine is automatically generated by the MHC. This call initializes and configures the GAP, GATT, SMP, L2CAP and BLE middleware layers.
+![](media/legacy_scan_7.PNG)
+
+Autogenerated, Scan Parameters
+
+![](media/legacy_scan_6.PNG)
+
+
+  |**Source Files**        | **Usage**  |
+  |------------------------|------------|
+  |app.c                   |Application State machine, includes calls for Initialization of all BLE stack (GAP,GATT, SMP, L2CAP) related componenet configurations            |
+  |app_ble.c               |Source Code for the BLE stack related componenet configurations, code related to function calls from app.c                                        |
+  |app_ble_handler.c       |All GAP, GATT, SMP and L2CAP Event handlers   
+
+> **Tip:** app.c is autogenerated and has a state machine based
+> Application code sample, users can use this template to develop their
+> application                                                                                                    |
+### Header Files 
+
+-   ble_gap.h- This header file contains BLE GAP functions and is
+    automatically included in the app.c file
+
+### Function Calls
+
+Harmony 3 generates and adds the code to initialize the BLE Stack GAP,
+GATT, L2CAP and SMP in *APP_BleStackInit()* function
+
+-   APP_BleStackInit() is the API that will be called inside the
+    Applications Initial State -- APP_STATE_INIT in app.c
+
+## User Application Development
+
+### Include
+
+-   user action is required as mentioned [here](../../../../docs/user_action.md)
+-   definitions.h in all the files where UART will be used to print debug information 
+Tip: definitions.h is not specific to just UART peripheral, instead it should be included in all application source files where peripheral functionality will be exercised  
+
+
+### Start Scanning  
+
+```
+BLE_GAP_SetScanningEnable(true, BLE_GAP_SCAN_FD_ENABLE, BLE_GAP_SCAN_MODE_OBSERVER, 100);
+```
+
+This API is called in the Applications initialstate - APP_STATE_INIT in app.c. Scan duration is 10 secs
+
+![](media/legacy_scan_11.PNG)
+
+### Scan Results  
+
+-   BLE_GAP_EVT_ADV_REPORT event is generated upon finding Adverstisements on legacy channels
+
+```
+  // code snippet to print scan results
+  uint8_t scanAddr[12]; //var to store ASCII address
+  BLE_GAP_EvtAdvReport_T scanResults;
+  scanResults.addr = p_event->eventField.evtAdvReport.addr;
+  APP_HexToAscii(6, scanResults.addr.addr, scanAddr);
+  SERCOM0_USART_Write((uint8_t *)"0x", 2);
+  SERCOM0_USART_Write((uint8_t *)scanAddr, 12);
+  SERCOM0_USART_Write((uint8_t *)"\r\n", 2);
+```
+
+```
+// function to convert HEX to ASCII
+static void APP_HexToAscii(uint8_t byteNum, uint8_t *p_hex, uint8_t *p_ascii)
+{
+    uint8_t i, j, c;
+    uint8_t digitNum = byteNum * 2;
+
+    if (p_hex == NULL || p_ascii == NULL)
+        return;
+
+    for (i = 0; i < digitNum; i++)
+    {
+        j = i / 2;
+        c = p_hex[j] & 0x0F;
+
+        if (c >= 0x00 && c <= 0x09)
+        {
+            p_ascii[digitNum - i - 1] = c + 0x30;
+        }
+        else if (c >= 0x0A && c <= 0x0F)
+        {
+            p_ascii[digitNum - i - 1] = c - 0x0A + 'A';
+        }
+
+        p_hex[j] /= 16;
+    }
+}
+```
+
+![](media/legacy_scan_10.PNG)
+
+### Scan Timeout Event   
+
+-   In app_ble_handler.c BLE_GAP_EVT_SCAN_TIMEOUT event is generated when BLE Scan duration expires.
+
+![](media/legacy_scan_9.PNG)
+
+Users can exercise various other BLE Advertisement functionalities by
+using [BLE Stack API](../../docs/api/driver/ble/docs/html/modules.html)
+
+## Where to go from here
+
+-   [BLE Connection](../../peripheral/connection/readme.md)
+

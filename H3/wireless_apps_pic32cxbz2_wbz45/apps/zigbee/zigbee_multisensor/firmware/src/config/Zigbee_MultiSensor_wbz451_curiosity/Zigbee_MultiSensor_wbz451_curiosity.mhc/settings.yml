@@ -1,0 +1,14 @@
+configName: Zigbee_MultiSensor_wbz451_curiosity
+folderName: Zigbee_MultiSensor_wbz451_curiosity
+format_version: v1.0
+frameworkPath: ..\..\..\SVN_Repo\Chimera\ea3_1
+processor: WBZ451
+projectName: Zigbee_MultiSensor_wbz451_curiosity
+settings:
+  PackageFilter: bsp;core;crypto;csp;dev_packs;quick_docs;wireless;wireless_system_pic32cxbz2_wbz45
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\PIC32CX-BZ_DFP\1.0.80\WBZ451\atdf\WBZ451.atdf

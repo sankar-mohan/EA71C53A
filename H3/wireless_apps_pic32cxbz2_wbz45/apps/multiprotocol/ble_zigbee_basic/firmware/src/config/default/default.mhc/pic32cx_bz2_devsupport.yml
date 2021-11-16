@@ -1,0 +1,105 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: pic32cx_bz2_devsupport}
+children:
+- type: Symbols
+  children:
+  - type: File
+    attributes: {id: APP_IDLE_TASK_C}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+  - type: File
+    attributes: {id: APP_IDLE_TASK_H}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+  - type: File
+    attributes: {id: APP_USER_EDITS_C}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: enabled}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Boolean
+    attributes: {id: AUTO_LOAD_PDS}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: pic32cx_bz2_devsupport, value: 'true'}
+  - type: Boolean
+    attributes: {id: BLESTACK_LOADED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: pic32cx_bz2_devsupport, value: 'true'}
+  - type: Boolean
+    attributes: {id: CUSTOM_ANT_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: pic32cx_bz2_devsupport, value: 'false'}
+  - type: Boolean
+    attributes: {id: ENABLE_CONSOLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: pic32cx_bz2_devsupport, value: 'true'}
+  - type: String
+    attributes: {id: FREERTOS_CONFIG_PATH}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: pic32cx_bz2_devsupport, value: config/default/FreeRTOSConfig.h/}
+  - type: String
+    attributes: {id: FREERTOS_HOOKS_PATH}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: pic32cx_bz2_devsupport, value: '"config/default/freertos_hooks.c/"'}
+  - type: Boolean
+    attributes: {id: PDS_LOADED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: pic32cx_bz2_devsupport, value: 'true'}
+  - type: Boolean
+    attributes: {id: SLEEP_SUPPORTED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: pic32cx_bz2_devsupport, value: 'false'}
+  - type: String
+    attributes: {id: WSS_ENABLE_MODE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: pic32cx_bz2_devsupport, value: WSS_ENABLE_BLE_ZB}
+  - type: Boolean
+    attributes: {id: ZIGBEESTACK_LOADED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: pic32cx_bz2_devsupport, value: 'true'}
+- type: ElementPosition
+  attributes: {x: '6', y: '194', id: pic32cx_bz2_devsupport}

@@ -1,0 +1,15 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: profileBLE_TRP}
+children:
+- type: Symbols
+  children:
+  - type: Boolean
+    attributes: {id: TRP_BOOL_SERVER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: bz_prov, value: 'true'}
+- type: ElementPosition
+  attributes: {x: '580', y: '20', id: profileBLE_TRP}

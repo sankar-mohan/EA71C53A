@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Package name="wireless_system_service_pic32cxbx2_wbz45">
+    <Dependencies>
+        <Dependency name="crypto" version="v3.10.0"/>
+        <Dependency name="core" version="v3.10.0"/>
+		<Dependency name="csp" version="v3.10.0"/>
+        <Dependency name="bsp" version="v3.10.0"/>
+		<Dependency name="zlib" version="v1.2.11"/>
+		<Dependency name="CMSIS-FreeRTOS" version="v10.3.1"/>
+		<Dependency name="dev_packs" version="v3.9.0"/>
+        <Dependency name="net" version="v3.10.0"/>
+		<Dependency name="mhc" version="v3.8.0"/>
+		<Dependency name="zlib" version="v1.2.11"/>
+    </Dependencies>
+</Package>

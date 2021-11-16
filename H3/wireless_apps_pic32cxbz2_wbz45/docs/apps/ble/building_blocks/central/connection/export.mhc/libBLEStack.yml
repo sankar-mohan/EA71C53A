@@ -1,0 +1,508 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: libBLEStack}
+children:
+- type: Symbols
+  children:
+  - type: Boolean
+    attributes: {id: BLE_BOOL_GATT_CACHING}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: BLE_BOOL_GATT_CLIENT}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: Boolean
+    attributes: {id: BLE_BOOL_GATT_MANU_CONFIRM}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Boolean
+    attributes: {id: BOOL_GAP_EXT_ADV}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: BOOL_GAP_EXT_SCAN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Integer
+    attributes: {id: CUSTOM_ANT_GAIN}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: '3'}
+  - type: String
+    attributes: {id: CUSTOM_ANT_REGION}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: ETSI}
+  - type: Boolean
+    attributes: {id: GAP_ADVERTISING}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'false'}
+  - type: String
+    attributes: {id: GAP_ADV_DATA}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: '0x02, 0x01, 0x04, 0x0B, 0x09, 0x70,
+            0x69, 0x63, 0x33, 0x32, 0x63, 0x78, 0x2D, 0x62, 0x7A'}
+  - type: KeyValueSet
+    attributes: {id: GAP_ADV_DATA_FLAG}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_ADV_DATA_FLAG_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Integer
+    attributes: {id: GAP_ADV_DATA_LEN}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: '15'}
+  - type: String
+    attributes: {id: GAP_ADV_DATA_LOCAL_NAME}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_ADV_DATA_LOCAL_NAME_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Menu
+    attributes: {id: GAP_ADV_DATA_MENU}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_ADV_DATA_MSD_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_ADV_DATA_SERVICE_DATA_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_ADV_DATA_UDD_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: KeyValueSet
+    attributes: {id: GAP_ADV_FILT_POLICY}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Integer
+    attributes: {id: GAP_ADV_INTERVAL_MAX}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Integer
+    attributes: {id: GAP_ADV_INTERVAL_MIN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Integer
+    attributes: {id: GAP_ADV_TX_PWR}
+    children:
+    - type: Attributes
+      children:
+      - type: Integer
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '11'}
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: KeyValueSet
+    attributes: {id: GAP_ADV_TYPE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_CENTRAL}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: GAP_CHANNEL_MAP}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: String
+    attributes: {id: GAP_EXT_ADV_DATA}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: '0x02, 0x01, 0x04, 0x0B, 0x09, 0x70,
+            0x69, 0x63, 0x33, 0x32, 0x63, 0x78, 0x2D, 0x62, 0x7A'}
+  - type: String
+    attributes: {id: GAP_EXT_ADV_DATA_2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: '0x02, 0x01, 0x04, 0x0B, 0x09, 0x70,
+            0x69, 0x63, 0x33, 0x32, 0x63, 0x78, 0x2D, 0x62, 0x7A'}
+  - type: Boolean
+    attributes: {id: GAP_EXT_ADV_DATA_FLAG_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Integer
+    attributes: {id: GAP_EXT_ADV_DATA_LEN}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: '15'}
+  - type: Integer
+    attributes: {id: GAP_EXT_ADV_DATA_LEN_2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: '15'}
+  - type: Boolean
+    attributes: {id: GAP_EXT_ADV_DATA_LOCAL_NAME_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Menu
+    attributes: {id: GAP_EXT_ADV_DATA_MENU}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_EXT_ADV_DATA_MSD_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_EXT_ADV_DATA_SERVICE_DATA_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_EXT_ADV_DATA_UDD_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Integer
+    attributes: {id: GAP_EXT_ADV_TX_POWER}
+    children:
+    - type: Attributes
+      children:
+      - type: Integer
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '11'}
+  - type: Integer
+    attributes: {id: GAP_EXT_ADV_TX_POWER_2}
+    children:
+    - type: Attributes
+      children:
+      - type: Integer
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '11'}
+  - type: String
+    attributes: {id: GAP_EXT_SCAN_RSP_DATA}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: '0x0B, 0x09, 0x70, 0x69, 0x63, 0x33,
+            0x32, 0x63, 0x78, 0x2D, 0x62, 0x7A'}
+  - type: String
+    attributes: {id: GAP_EXT_SCAN_RSP_DATA_2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: ''}
+  - type: Integer
+    attributes: {id: GAP_EXT_SCAN_RSP_DATA_LEN}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: '12'}
+  - type: Integer
+    attributes: {id: GAP_EXT_SCAN_RSP_DATA_LEN_2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: '0'}
+  - type: Menu
+    attributes: {id: GAP_EXT_SCAN_RSP_DATA_MENU}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_EXT_SCAN_RSP_DATA_MSD_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_EXT_SCAN_RSP_DATA_SERVICE_DATA_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_EXT_SCAN_RSP_DATA_UDD_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_PERIPHERAL}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_SCAN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: GAP_SCAN_FILT_POLICY}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Integer
+    attributes: {id: GAP_SCAN_INTERVAL}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: String
+    attributes: {id: GAP_SCAN_RSP_DATA}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: '0x0B, 0x09, 0x70, 0x69, 0x63, 0x33,
+            0x32, 0x63, 0x78, 0x2D, 0x62, 0x7A'}
+  - type: Integer
+    attributes: {id: GAP_SCAN_RSP_DATA_LEN}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: '12'}
+  - type: Menu
+    attributes: {id: GAP_SCAN_RSP_DATA_MENU}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_SCAN_RSP_DATA_MSD_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_SCAN_RSP_DATA_SERVICE_DATA_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: Boolean
+    attributes: {id: GAP_SCAN_RSP_DATA_UDD_EN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'false'}
+  - type: KeyValueSet
+    attributes: {id: GAP_SCAN_TYPE}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Integer
+    attributes: {id: GAP_SCAN_WINDOW}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Menu
+    attributes: {id: GCM_MENU}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Boolean
+    attributes: {id: USE_CUSTOM_ANT_GAIN}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: libBLEStack, value: 'false'}
+- type: ElementPosition
+  attributes: {x: '337', y: '61', id: libBLEStack}

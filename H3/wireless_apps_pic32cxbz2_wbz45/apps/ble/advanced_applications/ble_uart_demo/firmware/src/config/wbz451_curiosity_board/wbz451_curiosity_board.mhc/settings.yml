@@ -1,0 +1,14 @@
+configName: wbz451_curiosity_board
+folderName: ble_uart_app_wbz451_curiosity_board
+format_version: v1.0
+frameworkPath: ..\..\..\..\..\20200729_ChimeraHarmonyFramework
+processor: WBZ451
+projectName: ble_uart_app_wbz451_curiosity_board
+settings:
+  PackageFilter: bsp;core;csp;quick_docs;wireless
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\PIC32CX-BZ_DFP\1.0.80\WBZ451\atdf\WBZ451.atdf

@@ -1,0 +1,37 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: rtc}
+children:
+- type: Symbols
+  children:
+  - type: Hex
+    attributes: {id: RTC_MODE0_INTENSET}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: rtc, value: '256'}
+  - type: Boolean
+    attributes: {id: RTC_MODE0_INTENSET_CMP0_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: pic32cx_bz2_devsupport, value: 'true'}
+- type: Attachments
+  children:
+  - type: DirectCapability
+    attributes: {id: RTC_TMR}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: pic32cx_bz2_devsupport}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: RTC_Module}
+- type: ElementPosition
+  attributes: {x: '30', y: '560', id: rtc}

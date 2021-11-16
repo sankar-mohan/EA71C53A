@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Module name="Wireless system service for PIC32CXBZ2" id="46fbf1a2-9d76-4ba8-a87b-93feee6d914b" version="0.0.1">
+    <ConfigRoot path="config/module.py"/>
+</Module>

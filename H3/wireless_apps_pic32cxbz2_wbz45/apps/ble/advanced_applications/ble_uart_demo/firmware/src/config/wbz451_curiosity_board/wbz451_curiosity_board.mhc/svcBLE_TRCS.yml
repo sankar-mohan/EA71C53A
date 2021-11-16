@@ -1,0 +1,6 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: svcBLE_TRCS}
+children:
+- type: ElementPosition
+  attributes: {x: '15', y: '482', id: svcBLE_TRCS}
