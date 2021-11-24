@@ -18,7 +18,7 @@ WBZ451 Curiosity Board comes pre-programmed with a Concurrent Multiprotocol (BLE
 1. MPLABx IDE v5.50 - Available in [IDE](MPLAB%20X%20IDE) folder
 2. XC32 Compiler v3.01 – Available in [Compiler](Compiler) folder
 3. MPLAB Harmony 3 Configurator and MPLAB Harmony Framework Setup for PIC32CX-BZ/WBZ45x – Instructions available in [PIC32CX-BZWBZ45x SDK Setup.pdf](Documentation/PIC32CX-BZWBZ45x%20SDK%20Setup.pdf)
-4. Application Examples – Instructions to build and program an application example available in Section 8 of [PIC32CX-BZWBZ45x SDK Setup.pdf](Documentation/PIC32CX-BZWBZ45x%20SDK%20Setup.pdf)
+4. Application Examples – Instructions to build and program an application example available in Section 7 of [PIC32CX-BZWBZ45x SDK Setup.pdf](Documentation/PIC32CX-BZWBZ45x%20SDK%20Setup.pdf)
 	- **BLE**
 
 		- [BLE Advanced Applications](H3/wireless_apps_pic32cxbz2_wbz45/apps/ble/advanced_applications/ble_uart_demo)
