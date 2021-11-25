@@ -4,7 +4,7 @@ Early Adopter 3 Package for PIC32CX_BZ2 and WBZ45x Family of devices
 
 This package has the necessary application examples, peripheral libraries, drivers and supporting documentation to get started with application development on PIC32CX_BZ2 and WBZ45x Family of devices. 
 
-## Clone Repo including the submodules
+## Clone Repo 
 
 - Download and install git bash - https://git-scm.com/
 
