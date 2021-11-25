@@ -8,7 +8,7 @@ This package has the necessary application examples, peripheral libraries, drive
 
 - Download and install git bash - https://git-scm.com/
 
-- clone repo along with submodules using command: git clone https://github.com/MicrochipTech/EA.git
+- clone repo using command: git clone https://github.com/MicrochipTech/EA.git
 
 
 **Note** - Users must clone this repository in the root directory (maximum 1 level deep), for example C:/<folder_name> (folder_name should not exceed 4 letters)  
