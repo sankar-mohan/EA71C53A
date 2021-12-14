@@ -1,0 +1,6 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: BSP_WBZ451_Curiosity, bsp: 'true'}
+children:
+- type: ElementPosition
+  attributes: {x: '188', y: '52', id: BSP_WBZ451_Curiosity}

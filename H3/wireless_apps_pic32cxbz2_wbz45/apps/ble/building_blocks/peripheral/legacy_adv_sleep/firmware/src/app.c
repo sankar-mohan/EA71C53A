@@ -124,7 +124,6 @@ void APP_Tasks ( void )
         {
             bool appInitialized = true;
             //appData.appQueue = xQueueCreate( 10, sizeof(APP_Msg_T) );
-            SERCOM0_USART_Write((uint8_t *)"Reset\r\n",7);
             APP_BleStackInit();
             RTC_Timer32Start();
 

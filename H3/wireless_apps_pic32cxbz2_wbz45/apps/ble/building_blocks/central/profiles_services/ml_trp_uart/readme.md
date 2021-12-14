@@ -102,6 +102,7 @@ bit, Flow control: none). Reset the board. Upon reset, "Scanning" message is dis
 
 Board2/Board3/Board4: Open TeraTerm @ (Speed: 115200, Data: 8-bit, Parity: none, stop bits: 1
 bit, Flow control: none). Reset the board. Upon reset, "Advertising" message is displayed on the TeraTerm.
+    ![](media/teraterm_settings.PNG)
 
  **Note:** Scanner is configured to scan only for 100 secs, user should ensure the peer device is advertising
 

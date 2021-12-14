@@ -2,8 +2,13 @@ Early Adopter Package Release Notes
    
 ## EA3 Release Package(BLE + Zigbee Support):  
 
-### current version 3.1 (11/12/2021) 
+### current version 3.1.1 (12/15/2021) 
 Changes since last Early Adopter package releases 
+
+- v3.1.1 (12/15/2021)
+  - BLE Custom Service Low Power App Example Added
+  - Updated instructions for BLE TRP UART central and peripheral examples
+  - Updated images of ble building blocks introduction pages
 
 - v3.1 (11/12/2021)
   - BLE & Zigbee Stack Support System Sleep/Standby Mode

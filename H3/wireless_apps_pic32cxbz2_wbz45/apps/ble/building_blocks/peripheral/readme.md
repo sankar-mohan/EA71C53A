@@ -42,6 +42,8 @@ BLE Peripheral devices send advertisement packets and accept connection requests
 -   [Profiles and services](profiles_services/readme.md)
     -   [Transparent UART Peripheral (Legacy Adv + Connection + Data Exchange)](profiles_services/trp_uart/readme.md)
     	- Data Exchange between 2 devices(peripheral and central) after a BLE connection using Microchip Transparent UART profile and service 
+    -   [Custom Service Peripheral (Legacy Adv + Connection + Data Exchange)](profiles_services/custom_service/readme.md)
+    	- Data Exchange between 2 devices(peripheral and central) after a BLE connection using Custom Service 
 
 
 

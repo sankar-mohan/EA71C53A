@@ -1,4 +1,4 @@
-# EA3.1
+# EA3.1.1
 
 Early Adopter 3 Package for PIC32CX_BZ2 and WBZ45x Family of devices
 

@@ -30,6 +30,8 @@ A **characteristic** is a value used in a service along with properties and conf
 -   [Profiles and services](readme.md)
     -   [Microchip proprietary - Transparent UART Peripheral (Legacy Adv + Connection + Data Exchange)](trp_uart/readme.md)
     	- Data Exchange between 2 devices after a BLE connection using Microchip Transparent UART profile and service 
+    -   [Custom Service Peripheral (Legacy Adv + Connection + Data Exchange)](custom_service/readme.md)
+      - Data Exchange between 2 devices(peripheral and central) after a BLE connection using Custom Service 
 
 
 

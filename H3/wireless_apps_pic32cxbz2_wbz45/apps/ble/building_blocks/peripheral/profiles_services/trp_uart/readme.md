@@ -72,7 +72,9 @@ Demo will print start of the advertisement “Advertising”, connection “BLE 
 This section assumes that user has programmed the Application Example on the WBZ451 Curiosity Board
 **Demo Experience when using a Smartphone (Light Blue App) as Central Device** 
 -   Reset the WBZ451 Curiosity board, Open Terminal emulator like Tera Term, select the right COM port@ (Speed: 115200, Data: 8-bit, Parity: none, stop bits: 1 bit, Flow control: none).
-
+    
+    ![](media/teraterm_settings.PNG)
+  
 -   open Light Blue App on your smartphone, Search and select the advertisement with Device Name "Microchip"
     
     ![](media/trp_uart_13.PNG)

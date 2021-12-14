@@ -61,7 +61,7 @@ WBZ451 Curiosity Board comes pre-programmed with a Concurrent Multiprotocol (BLE
 
 **Note** links superscripted as "html" can only be viewed when the package is cloned locally
 
-### Migrating from EA1 to EA3 Package
+### Migrating from EA1 to EA3.1 Package
 - [Migration Guide](Documentation/Migration%20Guide_EA3%20package%20to%20EA3_1%20package.pdf) 
 
 Copyright © 2021 Microchip Technology.

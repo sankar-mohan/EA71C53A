@@ -82,6 +82,7 @@ Board2 = WBZ451 Curiosity Board with central_trp_uart applicaton Programmed
 
 Board1: Open TeraTerm @ (Speed: 115200, Data: 8-bit, Parity: none, stop bits: 1
 bit, Flow control: none). Reset the board. Upon reset, "Advertising" message is displayed on the TeraTerm.
+    ![](media/teraterm_settings.PNG)
 
 Board2: Open TeraTerm @ (Speed: 115200, Data: 8-bit, Parity: none, stop bits: 1
 bit, Flow control: none). Reset the board. Upon reset, "Scanning" message is displayed on the TeraTerm. Upon finding peripheral device with public address {0xA1, 0xA2, 0xA3, 0xA4, 0xA5, 0xA6} message "Found Peer Node" will be displayed and a connection request will be initiated "Initiating connection".

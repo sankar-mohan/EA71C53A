@@ -1,0 +1,14 @@
+configName: default
+folderName: ble_custom_service_button_led_wbz451
+format_version: v1.0
+frameworkPath: ..\..\..\..\..\..\..
+processor: WBZ451
+projectName: ble_custom_service_button_led_wbz451
+settings:
+  PackageFilter: bsp;core;crypto;csp;dev_packs;quick_docs;wireless
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\PIC32CX-BZ_DFP\1.0.80\WBZ451\atdf\WBZ451.atdf
