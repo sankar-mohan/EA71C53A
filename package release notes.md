@@ -2,8 +2,11 @@ Early Adopter Package Release Notes
    
 ## EA3 Release Package(BLE + Zigbee Support):  
 
-### current version 3.1.1 (12/15/2021) 
+### current version 3.1.2 (01/06/2022) 
+
 Changes since last Early Adopter package releases 
+- v3.1.2 (01/06/2022)
+  - [Documentation] Updated instructions in SDK Setup Doc - Documentation/PIC32CX-BZWBZ45x SDK Setup.pdf
 
 - v3.1.1 (12/15/2021)
   - BLE Custom Service Low Power App Example Added
