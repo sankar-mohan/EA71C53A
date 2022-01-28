@@ -1,4 +1,4 @@
-# EA3.1.2
+# EA3.1.3
 
 Early Adopter 3 Package for PIC32CX_BZ2 and WBZ45x Family of devices
 
@@ -31,6 +31,3 @@ This package has the necessary application examples, peripheral libraries, drive
 Getting Started.md documents all the necessary tools, frameworks, documentation required to get started with BLE and Zigbee development using the WBZ451 Curiosity Board.
 
 *recommended* - markdown viewer as an extension to browser for offline mark down viewing purposes  
-
-
-[*Important Mandatory Update - Kit Information*](Documentation/Updating%20WBZ451%20Curiosity%20board%20Kit%20Info%20to%20work%20with%20MPLAB%20x%20IDE.pdf) 

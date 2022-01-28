@@ -29,7 +29,6 @@ reference information.
 - [MPLAB® Harmony 3 Wireless Wiki](https://github.com/Microchip-MPLAB-Harmony/wireless/wiki)
 - [MPLAB® Harmony 3 Wireless API Help](https://microchip-mplab-harmony.github.io/wireless)
 
-To download or clone these application from the github, go to the top of the repository page and [click:](https://bitbucket.microchip.com/projects/WSGAPPS/repos/chimera/browse/apps)
 
 # Contents Summary
 

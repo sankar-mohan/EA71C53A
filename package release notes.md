@@ -2,9 +2,19 @@ Early Adopter Package Release Notes
    
 ## EA3 Release Package(BLE + Zigbee Support):  
 
-### current version 3.1.2 (01/06/2022) 
+### current version 3.1.3 (01/26/2022)
 
 Changes since last Early Adopter package releases 
+- v3.1.3 (01/26/2022)
+  - [Documentation] Updated Migration Guide and Known Issues document with current information 
+  - [Documentation] Datasheet, Errata, Product Brief Updated, to reflect "preliminary" status of document
+  - [Documentation] Datasheet, Errata, Product Brief Updated, to remove the SOC variant "PIC32CX1012BZ25032" references
+  - [Documentation] README.md, Getting Started Updated, to remove the Kit information Update process as it is no longer applicable
+  - [Documentation] Schematic, Updated version of schematics made available 
+    - WBZ451 module and associated peripherals powered by separate 3.0V regulator.
+    - MikroBus UART Rx, Tx signals connected by sharing with MikroBus SPI SCK and MOSI
+  
+
 - v3.1.2 (01/06/2022)
   - [Documentation] Updated instructions in SDK Setup Doc - Documentation/PIC32CX-BZWBZ45x SDK Setup.pdf
 

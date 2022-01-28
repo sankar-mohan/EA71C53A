@@ -10,7 +10,7 @@ WBZ451 Curiosity board is an easy to use development platform that allows users 
 WBZ451 Curiosity Board comes pre-programmed with a Concurrent Multiprotocol (BLE+Zigbee) Application. The Out of Box demo experience is documented [here](OOBE%20BLE%20Zigbee%20App.pdf) 
 
 ## Hardware
-1. WBZ451 Curiosity Board - [*Important Mandatory Update - Kit Information*](Documentation/Updating%20WBZ451%20Curiosity%20board%20Kit%20Info%20to%20work%20with%20MPLAB%20x%20IDE.pdf) 
+1. WBZ451 Curiosity Board 
 2. iOS or Android based Smartphone
 3. Amazon Echo with Zigbee Support(Optional)
 
