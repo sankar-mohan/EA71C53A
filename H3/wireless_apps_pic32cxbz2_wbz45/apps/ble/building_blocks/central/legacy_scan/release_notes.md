@@ -9,7 +9,19 @@ nav_order: 276
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 # PIC32CX-BZ/WBZ451 Legacy Scan Firmware Release Notes
 ____
-## **Release v0.7.3.0** (11/1/2021)
+## **Release v0.7.3.1** (02/02/2022)
+
+### New Features
++ Example converted to MCC based project
+
+### Bug fixes
+- None
+
+### Known Issues
+- None
+
+
+## Release v0.7.3.0 
 
 ### New Features
 + Updated the application to latest BLE stack

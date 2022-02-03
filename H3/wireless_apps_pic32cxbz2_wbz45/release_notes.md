@@ -8,9 +8,12 @@ nav_order: 250
 ﻿![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
 ![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
 
-# Microchip WIRELESS MPLAB® Harmony 3 Release Notes
+# Microchip WIRELESS MPLAB® Harmony Release Notes
 
-## Wireless Release PIC32CX-BZ - EA3.1
+## Wireless Release PIC32CX-BZ - EA3.2
+EA3.2 (2_1_22)
+- All Application Examples are ported from Microchip Harmony Configurator Framework to MPLAB Code Configurator(MCC)
+- Corresponding documentation has been updated to reflect MCC related content
 
 ### application Example release notes
 
@@ -35,4 +38,7 @@ nav_order: 250
 ### Development Tools
 - [MPLAB X v5.50](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide)
 - [MPLAB® XC32 C/C++ Compiler v3.01](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers#tabs)
+
+
+
 

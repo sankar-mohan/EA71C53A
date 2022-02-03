@@ -1,12 +1,12 @@
 ﻿---
-title: Harmony 3 Wireless Package
+title: Mplab Code Configurator Wireless Package
 nav_order: 1
 ---
 
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
-# MPLAB® Harmony 3 Wireless
+# MPLAB® Harmony Wireless
 
-MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating
+MPLAB® Harmony  is an extension of the MPLAB® ecosystem for creating
 embedded firmware solutions for Microchip 32-bit SAM and PIC® microcontroller
 and microprocessor devices.  Refer to the following links for more information.
 
@@ -16,7 +16,7 @@ and microprocessor devices.  Refer to the following links for more information.
 - [Microchip MPLAB® Harmony](https://www.microchip.com/mplab/mplab-harmony)
 - [Microchip MPLAB® Harmony Pages](https://microchip-mplab-harmony.github.io/)
 
-This repository contains the MPLAB® Harmony 3 Wireless solutions and example applications.
+This repository contains the MPLAB® Harmony  Wireless solutions and example applications.
 It Quickly incorporate connectivity to design with wireless ICs, modules,
 software and development kits that make connecting effortless for the customers.
 Our comprehensive wireless portfolio has the technology to meet the range,
@@ -26,8 +26,6 @@ reference information.
 
 - [Release Notes](release_notes.md)
 - [MPLAB® Harmony License](mplab_harmony_license.md)
-- [MPLAB® Harmony 3 Wireless Wiki](https://github.com/Microchip-MPLAB-Harmony/wireless/wiki)
-- [MPLAB® Harmony 3 Wireless API Help](https://microchip-mplab-harmony.github.io/wireless)
 
 
 # Contents Summary

@@ -23,11 +23,11 @@ market:
 
 This tutorial will help users create a peripheral device and send/receive characters between 2 connected BLE devices over Microchip proprietary Transparent UART Profile. Peripheral device will be WBZ45x Device and Central device can either be a Smartphone with Light Blue App or another WBZ45x Device.The instructions mentioned below are applicable for a BLE Peripheral device.
 
-Users of this document can choose to just run the precompiled Application Example hex file on the WBZ451 Curiosity board and experience the demo or can go through the steps involved in developing this Application from scratch. 
+Users of this document can choose to just run the precompiled Application Example hex file on the WBZ451 Curiosity board and experience the demo or can go through the steps involved in developing this Application from scratch.
 
 ## Recommended Reads
 
-1.  [BLE Connection(peripheral)](../../connection/readme.md) 
+1.  [BLE Connection(peripheral)](../../connection/readme.md)
 
 ## Hardware Required
 
@@ -42,7 +42,7 @@ Users of this document can choose to just run the precompiled Application Exampl
 
 ## Software
 
-1.  [TeraTerm](https://ttssh2.osdn.jp/index.html.en) 
+1.  [TeraTerm](https://ttssh2.osdn.jp/index.html.en)
 
 ## Smartphone App
 
@@ -61,22 +61,22 @@ Users of this document can choose to just run the precompiled Application Exampl
 
 1.  Follow steps mentioned in section 4 of [SDK Setup](../../../../../docs/pic32cx_bz2_wbz45x_sdk_setup.md) document
 
-2.  Open and program the Application Example <a href="firmware"> trp_uart </a>  in MPLABX IDE 
+2.  Open and program the Application Example <a href="firmware"> trp_uart </a>  in MPLABX IDE
 
 ## Demo Description
 
-Upon programming the demo application, WBZ45x will start Advertising (connectable), central device (Smartphone or another WBZ45x) scanning for these advertisements will connect to the device. In case of using Light Blue App search for “Microchip” and connect. After a connection has been made data can be sent back and forth over UART between the two devices that are connected. 
-Demo will print start of the advertisement “Advertising”, connection “BLE Scanning”, “Connected” and “Disconnected” state on a terminal emulator like TeraTerm @ (Speed: 115200, Data: 8-bit, Parity: none, stop bits: 1 bit, Flow control: none). Application Data to be sent to the connected central device (Smartphone or another WBZ45x) should be entered in the terminal emulator. 
+Upon programming the demo application, WBZ45x will start Advertising (connectable), central device (Smartphone or another WBZ45x) scanning for these advertisements will connect to the device. In case of using Light Blue App search for “Microchip” and connect. After a connection has been made data can be sent back and forth over UART between the two devices that are connected.
+Demo will print start of the advertisement “Advertising”, connection “BLE Scanning”, “Connected” and “Disconnected” state on a terminal emulator like TeraTerm @ (Speed: 115200, Data: 8-bit, Parity: none, stop bits: 1 bit, Flow control: none). Application Data to be sent to the connected central device (Smartphone or another WBZ45x) should be entered in the terminal emulator.
 
 ## Testing
 This section assumes that user has programmed the Application Example on the WBZ451 Curiosity Board
-**Demo Experience when using a Smartphone (Light Blue App) as Central Device** 
+**Demo Experience when using a Smartphone (Light Blue App) as Central Device**
 -   Reset the WBZ451 Curiosity board, Open Terminal emulator like Tera Term, select the right COM port@ (Speed: 115200, Data: 8-bit, Parity: none, stop bits: 1 bit, Flow control: none).
-    
+
     ![](media/teraterm_settings.PNG)
-  
+
 -   open Light Blue App on your smartphone, Search and select the advertisement with Device Name "Microchip"
-    
+
     ![](media/trp_uart_13.PNG)
 
 -   To receive data from WBZ451 Curiosity Board (peripheral) device to central device, users need to select the UUID: 49535343-1E4D-4BD9-BA61-23C647249616 and select listen for notifications
@@ -97,33 +97,29 @@ This section assumes that user has programmed the Application Example on the WBZ
 **Demo Experience when using another WBZ45x as Central device**
 Users can use another WBZ451 Curiosity Board configured as [BLE Transparent UART(central)](../../../central/profiles_services/trp_uart/readme.md) instead of using a Smartphone App as central device
 
-## Developing this Application from scratch using Harmony 3
+## Developing this Application from scratch using MPLAB Code Configurator
 
-This section explains the steps required by a user to develop this
-application example from scratch using MPLABx Harmony 3 Framework
+This section explains the steps required by a user to develop this application example from scratch using MPLABx Code Configurator
 
-**Tip:** New Harmony 3 Users are recommended to go through the [overview](https://microchip-mplab-harmony.github.io/mhc/doc/readme.html) of Harmony 3. Users can add/remove different components like peripheral support and other wireless functionality by following steps mentioned [here](https://microchip-mplab-harmony.github.io/mhc/doc/readme_mhc_configuration.html). 
+**Tip:** New users of MPLAB Code Configurator are recommended to go through the [overview](https://onlinedocs.microchip.com/pr/GUID-1F7007B8-9A46-4D03-AEED-650357BA760D-en-US-6/index.html?GUID-B5D058F5-1D0B-4720-8649-ACE5C0EEE2C0).
 
-1.  Create a new MPLAB Harmony 3 Project -- [link](../../../../../docs/creating_new_mplabx_harmony_project.md) for
+1.  Create a new MCC Harmony Project -- [link](../../../../../docs/creating_new_mplabx_harmony_project.md) for
     instructions
 
-2.  Import Harmony 3 component configuration -- This step helps users
-    setup the basic Harmony 3 components required to start their
+2.  Import component configuration -- This step helps users
+    setup the basic components required to start their
     Application Development
-    Harmony 3 component configuration related to this Application is
-    available [here](export.mhc)
+    component configuration related to this Application is
+    available [here](firmware/peripheral_trp_uart_wbz451_curiosity.X/peripheral_trp_uart_wbz451_curiosity.mc3)      
     Users should follow the instructions mentioned
-    [here](https://microchip-mplab-harmony.github.io/mhc/doc/readme_mhc_import_export.html) to import the Harmony 3 component configuration.
+    [here](https://microchipdeveloper.com/mcc:peripheralconfig) to import the component configuration.
 
-    **Tip:** Import and Export functionality of Harmony 3 component
-    configuration will help users to start from a known working setup of Harmony 3
-    configuration  
+    **Tip:** Import and Export functionality of component configuration will help users to start from a known working setup of configuration  
 
 3.  Accept Dependencies or satisfiers, select "Yes"
 
-4.  Verify if the Project Graph window has all the expected Harmony 3
-    configuration
-    
+4.  Verify if the Project Graph window has all the expected configuration
+
     ![](media/trp_uart_1.PNG)
 
 ## Verify Advertisement,Connection and Transparent UART Profile Configuration
@@ -132,22 +128,22 @@ application example from scratch using MPLABx Harmony 3 Framework
     ![](media/trp_uart_2.PNG)
 
 1. Select **Transparent Profile** component in project graph
-    
+
     ![](media/trp_uart_3.PNG)
 
 ## Generate Code [link](../../../../../docs/generate_code.md) for instructions
 
-## Files and Routines Automatically generated by the MHC
-After generating the program source from MHC interface by clicking Generate Code, the BLE configuration can be found in the following project directories 
+## Files and Routines Automatically generated by the MCC
+After generating the program source from MCC interface by clicking Generate Code, the BLE configuration can be found in the following project directories
 
 ![](media/trp_uart_4.PNG)
 
 
-The [OSAL](http://ww1.microchip.com/downloads/en/DeviceDoc/MPLAB%20Harmony%20OSAL%20Libraries%20Help%20v2.06.pdf), RF System, BLE System  initialization routine executed during program initialization can be found in the project files. This initialization routine is automatically generated by the MHC
+The [OSAL](http://ww1.microchip.com/downloads/en/DeviceDoc/MPLAB%20Harmony%20OSAL%20Libraries%20Help%20v2.06.pdf), RF System, BLE System  initialization routine executed during program initialization can be found in the project files. This initialization routine is automatically generated by the MCC
 
 ![](media/trp_uart_5.png)
 
-The BLE stack initialization routine excuted during Application Initialization can be found in project files. This intitialization routine is automatically generated by the MHC. This call initializes and configures the GAP, GATT, SMP, L2CAP and BLE middleware layers.
+The BLE stack initialization routine excuted during Application Initialization can be found in project files. This intitialization routine is automatically generated by the MCC. This call initializes and configures the GAP, GATT, SMP, L2CAP and BLE middleware layers.
 ![](media/trp_uart_7.png)
 
 Autogenerated, advertisement data format
@@ -166,7 +162,7 @@ Autogenerated, advertisement data format
 > **Tip:** app.c is autogenerated and has a state machine based
 > Application code sample, users can use this template to develop their
 > application                                                                                                   
-### Header Files 
+### Header Files
 
 -   ble_gap.h- This header file contains BLE GAP functions and is
     automatically included in the app.c file
@@ -175,7 +171,7 @@ Autogenerated, advertisement data format
 
 ### Function Calls
 
-Harmony 3 generates and adds the code to initialize the BLE Stack GAP,
+MCC generates and adds the code to initialize the BLE Stack GAP,
 GATT, L2CAP and SMP in *APP_BleStackInit()* function
 
 -   APP_BleStackInit() is the API that will be called inside the
@@ -187,11 +183,11 @@ GATT, L2CAP and SMP in *APP_BleStackInit()* function
 
 -   "ble_trsps.h" in app.c, BLE Transparent UART Server related API's are available here
 -   "osal/osal_freertos_extend.h" in app_trsps_handler.c, OSAL related API's are available here
--   definitions.h in all the files where UART will be used to print debug information 
-Tip: definitions.h is not specific to just UART peripheral, instead it should be included in all application source files where peripheral functionality will be exercised 
--   user action is required as mentioned [here](../../../../../docs/user_action.md) 
+-   definitions.h in all the files where UART will be used to print debug information
+Tip: definitions.h is not specific to just UART peripheral, instead it should be included in all application source files where peripheral functionality will be exercised
+-   user action is required as mentioned [here](../../../../../docs/user_action.md)
 
-### Set PUBLIC Device Address 
+### Set PUBLIC Device Address
 
 -   BLE_GAP_SetDeviceAddr(&devAddr);
 ```
@@ -210,7 +206,7 @@ Tip: definitions.h is not specific to just UART peripheral, instead it should be
 
  ![](media/trp_uart_11.PNG)
 
-### Start Advertisement 
+### Start Advertisement
 
 -   BLE_GAP_SetAdvEnable(0x01, 0);
 
@@ -230,7 +226,7 @@ Tip: definitions.h is not specific to just UART peripheral, instead it should be
 -   BLE_TRSPS_SendData(conn_hdl , 1, &data);  is the API to be used for sending data towards the central device
 **Note:** The precompiled application example uses a UART callback to initiate the data transmission upon receiving a character on UART
 
-Example Implementation for Transmitting the received data over UART using the BLE_TRSPS_SendData API 
+Example Implementation for Transmitting the received data over UART using the BLE_TRSPS_SendData API
 ```
   void uart_cb(SERCOM_USART_EVENT event, uintptr_t context)
   {
@@ -257,7 +253,7 @@ Example Implementation for Transmitting the received data over UART using the BL
 
 ### Receive Data
 - BLE_TRSPS_EVT_RECEIVE_DATA is the event generated when data is sent from central device
-- Users need to use the BLE_TRSPS_GetDataLength(p_event->eventField.onReceiveData.connHandle, &data_len; API to extract the length of application data received 
+- Users need to use the BLE_TRSPS_GetDataLength(p_event->eventField.onReceiveData.connHandle, &data_len; API to extract the length of application data received
 - BLE_TRSPS_GetData(p_event->eventField.onReceiveData.connHandle, data); API is used to  retrieve the data
 
 **Tip:** BLE_TRSPC_Event_T p_event structure stores the information about BLE transparent UART callback functions

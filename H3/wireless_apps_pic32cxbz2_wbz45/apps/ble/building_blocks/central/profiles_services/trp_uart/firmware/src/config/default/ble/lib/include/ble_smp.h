@@ -138,7 +138,7 @@
 #define BLE_SMP_REASON_UNSPECIFIED_REASON                   0x08        /**< Pairing failed due to an unspecified reason. */
 #define BLE_SMP_REASON_REPEATED_ATTEMPTS                    0x09        /**< Too little time has elapsed since last pairing request or security request. */
 #define BLE_SMP_REASON_INVALID_PARAMETERS                   0x0A        /**< The command length is invalid. */
-#define BLE_SMP_REASON_DHKEY_CHECK_FAILED                   0x0B        /**< DHKey Check value received doesnâ€™t match the one calculated by the local device. */
+#define BLE_SMP_REASON_DHKEY_CHECK_FAILED                   0x0B        /**< DHKey Check value received doesnâ??t match the one calculated by the local device. */
 #define BLE_SMP_REASON_NUMERIC_COMPARISON_FAILED            0x0C        /**< The confirm values in the numeric comparison protocol do not match. */
 /** @} */
 

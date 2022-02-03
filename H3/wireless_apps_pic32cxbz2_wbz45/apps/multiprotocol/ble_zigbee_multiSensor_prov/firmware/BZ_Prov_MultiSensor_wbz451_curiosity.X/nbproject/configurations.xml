@@ -1506,6 +1506,7 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/BZ_Prov_MultiSensor_wbz451_curiosity/harmony-manifest-success.yml</itemPath>
+      <itemPath>BZ_Prov_MultiSensor_wbz451_curiosity.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -1568,7 +1569,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity/crypto;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity/driver/pds/include;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity/peripheral;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity/zigbee;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity/zigbee/configs;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity/zigbee/lib/include;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/WBZ451_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl;..\src\app_ble;..\src\config\BZ_Prov_MultiSensor_wbz451_curiosity\ble\lib\include;..\src\config\BZ_Prov_MultiSensor_wbz451_curiosity\ble\middleware_ble;..\src\config\BZ_Prov_MultiSensor_wbz451_curiosity\ble\profile_ble;..\src\config\BZ_Prov_MultiSensor_wbz451_curiosity\ble\service_ble;..\src\config\BZ_Prov_MultiSensor_wbz451_curiosity\driver\pds\include"/>
+                  value="..\src\app_ble;..\src\config\BZ_Prov_MultiSensor_wbz451_curiosity\ble\lib\include;..\src\config\BZ_Prov_MultiSensor_wbz451_curiosity\ble\middleware_ble;..\src\config\BZ_Prov_MultiSensor_wbz451_curiosity\driver\pds\include;..\src\config\BZ_Prov_MultiSensor_wbz451_curiosity\ble\profile_ble;..\src\config\BZ_Prov_MultiSensor_wbz451_curiosity\ble\service_ble;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity/zigbee/lib/include;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity/zigbee;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity/zigbee/configs;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity/peripheral;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity/driver/pds/include;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity/crypto;../src;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity;../src/packs/WBZ451_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="false"/>
@@ -1578,7 +1579,7 @@
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
-                  value="HAL_USE_FLASH_ACCESS;HAVE_CONFIG_H;PIC32CX_CHIP_SOC;WOLFSSL_IGNORE_FILE_WARN;Z3DEVICE_APP;_PIC32CX_;_SUPER_SET_LIB_;_USE_LIB_"/>
+                  value="_PIC32CX_;PIC32CX_CHIP_SOC;PIC32CX_CHIP_SOC;_PIC32CX_;_USE_LIB_;_SUPER_SET_LIB_;HAL_USE_FLASH_ACCESS;Z3DEVICE_APP;HAVE_CONFIG_H;WOLFSSL_IGNORE_FILE_WARN"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="tentative-definitions" value="-fcommon"/>
@@ -1668,7 +1669,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/WBZ451_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F"/>
+                  value="../src;../src/config/BZ_Prov_MultiSensor_wbz451_curiosity;../src/packs/WBZ451_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

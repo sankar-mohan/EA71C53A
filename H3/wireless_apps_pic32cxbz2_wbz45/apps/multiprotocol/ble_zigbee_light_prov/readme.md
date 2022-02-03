@@ -359,7 +359,7 @@ RGB LED on WBZ451 curiosity board is tied with Zigbee and BLE functionality. The
 
 ## Build and Program The Application
 
-The source code of BLE Sensor demo application is available in Harmony 3 framework firmware/src. If want to do changes in the demo code and would like to program/debug the customized code follow the below instruction.
+The source code of BLE Sensor demo application is available in Mplab Code Configurator framework firmware/src. If want to do changes in the demo code and would like to program/debug the customized code follow the below instruction.
 
 ### SDK Setup
 [SDK Setup](../../docs/pic32cx_bz2_wbz45x_sdk_setup.md)

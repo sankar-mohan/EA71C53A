@@ -105,7 +105,7 @@ function: BLE
 		- [7.3. UART Command/Event Format](#73-uart-commandevent-format)
 		- [7.4. Set Bluetooth Device Address](#74-set-bluetooth-device-address)
 	- [8. Sleep Mode](#8-sleep-mode)
-		- [8.1. How to use Harmony v3 to Configure Sleep Mode](#81-how-to-use-harmony-v3-to-configure-sleep-mode)
+		- [8.1. How to use MPLAB® Code Configurator (MCC) to Configure Sleep Mode](#81-how-to-use-MCC-to-configure-sleep-mode)
 		- [8.2. The Scope of Sleep Mode](#82-the-scope-of-sleep-mode)
 	- [Reference](#reference)
 
@@ -775,7 +775,7 @@ BLE SDK provides an API: "BLE_GAP_SetDeviceAddr()" to let Application set the Bl
 This API shall be called after "BLE_GAP_Init()". <br>
 
 ## 8. Sleep Mode
-### 8.1. How to use Harmony v3 to Configure Sleep Mode
+### 8.1. How to use MPLAB® Code Configurator (MCC) to Configure Sleep Mode
 1. Enable Sleep Mode option in the BLE stack module.
 		- The RTC component will be added automatically. <br>
       ![68](assets/markdown-img-paste-20211014134057755.png) <br>

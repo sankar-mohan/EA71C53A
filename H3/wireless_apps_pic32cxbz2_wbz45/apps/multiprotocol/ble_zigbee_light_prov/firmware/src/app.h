@@ -113,7 +113,7 @@ extern APP_DATA appData;
 
 //#define APP_PAIRING_ENABLE
 #define COMBO_STACK_VERSION  "B_0.9.0.5_Z_5.0.0_3.1"
-#define COMBO_APP_VERSION  "0.2.0.0"
+#define COMBO_APP_VERSION  "0.2.0.1"
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Routines

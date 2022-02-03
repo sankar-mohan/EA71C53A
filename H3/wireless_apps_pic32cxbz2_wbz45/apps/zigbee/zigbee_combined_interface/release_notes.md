@@ -3,18 +3,17 @@ parent: Release notes
 title: Zigbee Combined Interface App
 has_children: false
 has_toc: false
-nav_order: 300
-
+nav_order: 462
 ---
 
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 # PIC32CX-BZ2/WBZ45 Zigbee Combined Interface App Firmware Release Notes
 ____
-## Release ZB_v5.0.0_3.1_2.0E
+## Release ZB_v5.0.0_3.1_2.0E (02/02/2022)
 
 ### Enhancements
 + Updated the application to latest Zigbee stack base.
-+ Added support for WBZ451 module
++ Example converted to MCC based project
 
 ### Bug fixes
 - None

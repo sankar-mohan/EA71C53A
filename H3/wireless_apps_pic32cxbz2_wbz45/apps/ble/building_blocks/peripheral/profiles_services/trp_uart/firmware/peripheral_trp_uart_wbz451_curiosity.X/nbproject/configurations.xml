@@ -392,6 +392,7 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/default/harmony-manifest-success.yml</itemPath>
+      <itemPath>peripheral_trp_uart_wbz451_curiosity.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -411,8 +412,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CX-BZ_DFP" vendor="Microchip" version="1.0.80"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="PIC32CX-BZ_DFP" vendor="Microchip" version="1.0.80"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -477,7 +478,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/default;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/WBZ451_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F;..\src\app_ble;..\src\config\default\ble\lib;..\src\config\default\ble\lib\include;..\src\config\default\ble\middleware_ble;..\src\config\default\ble\middleware_ble\ble_dm;..\src\config\default\ble\middleware_ble\ble_gcm;..\src\config\default\ble\middleware_ble\ble_util;..\src\config\default\ble\profile_ble;..\src\config\default\ble\service_ble;..\src\config\default\driver\pds\include"/>
+                  value="..\src\app_ble;..\src\config\default\ble\lib\include;..\src\config\default\ble\middleware_ble;..\src\config\default\driver\pds\include;..\src\config\default\ble\profile_ble;..\src\config\default\ble\service_ble;../src;../src/config/default;../src/packs/WBZ451_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -575,7 +576,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/default;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/WBZ451_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F"/>
+                  value="../src;../src/config/default;../src/packs/WBZ451_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -1212,8 +1213,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1000000-2001ffff"/>
         <property key="memories.rww" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="D:/firmware/peripheral_trp_uart_wbz451_curiosity.X/debug/default/peripheral_trp_uart_wbz451_curiosity_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

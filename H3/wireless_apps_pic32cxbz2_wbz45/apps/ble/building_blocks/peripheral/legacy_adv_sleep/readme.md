@@ -17,12 +17,12 @@ market:
 
 [Getting Started with Peripheral Building Blocks](../../peripheral/readme.md)
 
--->[Legacy Advertisements](../legacy_adv_sleep/readme.md) **-->**[**BLE Sleep Mode Legacy Advertisements**](readme.md) 
+[**BLE Sleep Mode Legacy Advertisements**](readme.md)
 
 ## Introduction
 
-This document will help users to enable "sleep/standby" mode with 
-BLE Advertisements on WBZ451 Curiosity board using Harmony 3 framework.
+This document will help users to enable "sleep/standby" mode with
+BLE Advertisements on WBZ451 Curiosity board using MPLAB Code Configurator(MCC)
 In this basic application example the advertisement interval will be set to 1 sec.
 The advertisement interval will dictate the application sleep time.
 
@@ -33,11 +33,9 @@ this Application from scratch
 
 ## Recommended Reads
 
-1.  [FreeRtos BLE App Initialize](../freertos_ble_stack_init_peripheral.md) 
+1.  [FreeRtos BLE App Initialize](../freertos_ble_stack_init_peripheral.md)
 
-2.  [Legacy Adv](../legacy_adv_sleep/readme.md)
-
-3.  [Low Power Notes](../../../../docs/lowpower.md)
+2.  [Low Power Notes](../../../../docs/lowpower.md)
 
 ## Hardware Required
 
@@ -53,7 +51,7 @@ this Application from scratch
 
 ## Software
 
-1.  [TeraTerm](https://ttssh2.osdn.jp/index.html.en) 
+1.  [TeraTerm](https://ttssh2.osdn.jp/index.html.en)
 
 ## Smartphone App
 
@@ -72,12 +70,12 @@ this Application from scratch
 
 1.  Follow steps mentioned in section "How to open, build and program an existing application example" of [SDK Setup document](../../../../docs/pic32cx_bz2_wbz45x_sdk_setup.md)
 
-2.  Open and program the Application Example <a href="firmware"> legacy_adv_sleep </a>  in MPLABX IDE 
+2.  Open and program the Application Example <a href="firmware"> legacy_adv_sleep </a>  in MPLABX IDE
 
 ## Demo Description
 
 This Application Example enables users to enable sleep mode while transmitting non Connectable, Undirected BLE Advertisements. On reset demo will print "Advertising"
-on a terminal emulator like TeraTerm, this denotes start of advertisements, Device will enter sleep mode periodically based on the advertisement interval which is set to 1 sec for this example 
+on a terminal emulator like TeraTerm, this denotes start of advertisements, Device will enter sleep mode periodically based on the advertisement interval which is set to 1 sec for this example
 
 ## Testing
 
@@ -106,33 +104,28 @@ Users of this Early adopter package should go through the [known issues](../../.
 
 ![Light Blue App](media/sleep_legacy_adv_13.png)
 
-## Developing this Application from scratch using Harmony 3
+## Developing this Application from scratch using MPLAB Code Configurator
 
-This section explains the steps required by a user to develop this
-application example from scratch using MPLABx Harmony 3 Framework
+This section explains the steps required by a user to develop this application example from scratch using MPLABx Code Configurator
 
-**Tip:** New Harmony 3 Users are recommended to go through the [overview](https://microchip-mplab-harmony.github.io/mhc/doc/readme.html) of Harmony 3. Users can add/remove different components like peripheral support and other wireless functionality by following steps mentioned [here](https://microchip-mplab-harmony.github.io/mhc/doc/readme_mhc_configuration.html).
+**Tip:** New users of MPLAB Code Configurator are recommended to go through the [overview](https://onlinedocs.microchip.com/pr/GUID-1F7007B8-9A46-4D03-AEED-650357BA760D-en-US-6/index.html?GUID-B5D058F5-1D0B-4720-8649-ACE5C0EEE2C0).
 
 
-1.  Create a new MPLAB Harmony 3 Project -- [link](../../../../docs/creating_new_mplabx_harmony_project.md) for
+1.  Create a new MCC Harmony Project -- [link](../../../../docs/creating_new_mplabx_harmony_project.md) for
     instructions
 
-2.  Import Harmony 3 component configuration -- This step helps users
-    setup the basic Harmony 3 components required to start their
+2.  Import component configuration -- This step helps users
+    setup the basic components required to start their
     Application Development
-    Harmony 3 component configuration related to this Application is
-    available <a href="export.mhc"> here. </a>
     Users should follow the instructions mentioned
-    [here](https://microchip-mplab-harmony.github.io/mhc/doc/readme_mhc_import_export.html) to import the Harmony 3 component configuration.
+    [here](https://microchipdeveloper.com/mcc:peripheralconfig) to import the component configuration.
 
-    **Tip:** Import and Export functionality of Harmony 3 component
-    configuration will help users to start from a known working setup of Harmony 3
-    configuration
+    **Tip:** Import and Export functionality of component configuration will help users to start from a known working setup of configuration
 
 3.  Accept Dependencies or satisfiers, select "Yes"
 
-4.  Verify if the Project Graph window has all the expected Harmony 3 configuration
-    
+4.  Verify if the Project Graph window has all the expected configuration
+
     ![](media/sleep_legacy_adv_2.png)
 
 ## Verify Advertisement, system sleep and RTC Clock Source Configuration
@@ -152,17 +145,17 @@ application example from scratch using MPLABx Harmony 3 Framework
 
 ## Generate Code [link](../../../../docs/generate_code.md) for instructions
 
-## Files and Routines Automatically generated by the MHC
-After generating the program source from MHC interface by clicking Generate Code, the BLE configuration can be found in the following project directories 
+## Files and Routines Automatically generated by the MCC
+After generating the program source from MCC interface by clicking Generate Code, the BLE configuration can be found in the following project directories
 
 ![](media/legacy_adv_4.png)
 
 
-The [OSAL](http://ww1.microchip.com/downloads/en/DeviceDoc/MPLAB%20Harmony%20OSAL%20Libraries%20Help%20v2.06.pdf), RF System, BLE System  initialization routine executed during program initialization can be found in the project files. This initialization routine is automatically generated by the MHC
+The [OSAL](http://ww1.microchip.com/downloads/en/DeviceDoc/MPLAB%20Harmony%20OSAL%20Libraries%20Help%20v2.06.pdf), RF System, BLE System  initialization routine executed during program initialization can be found in the project files. This initialization routine is automatically generated by the MCC
 
 ![](media/legacy_adv_5.png)
 
-The BLE stack initialization routine excuted during Application Initialization can be found in project files. This intitialization routine is automatically generated by the MHC. This call initializes and configures the GAP, GATT, SMP, L2CAP and BLE middleware layers.
+The BLE stack initialization routine excuted during Application Initialization can be found in project files. This intitialization routine is automatically generated by the MCC. This call initializes and configures the GAP, GATT, SMP, L2CAP and BLE middleware layers.
 
 During system sleep, clock (system PLL) will be disabled and syatem tick will be turned off. FreeRTOS timer needs to be componsated for the time spent in sleep. RTC timer which works in the sleep mode is used to accomplish this.  RTC timer will be initialized after BLE stack initialization.
 ![](media/sleep_legacy_adv_7.png)
@@ -181,7 +174,7 @@ Autogenerated, adverisement Data Format
 > **Tip:** app.c is autogenerated and has a state machine based
 > Application code sample, users can use this template to develop their
 > application                                                                                                    |
-### Header Files 
+### Header Files
 
 -   ble_gap.h- This header file contains BLE GAP functions and is
     automatically included in the app.c file
@@ -189,7 +182,7 @@ Autogenerated, adverisement Data Format
 
 ### Function Calls
 
-Harmony 3 generates and adds the code to initialize the BLE Stack GAP,
+MCC generates and adds the code to initialize the BLE Stack GAP,
 GATT, L2CAP and SMP in *APP_BleStackInit()* function
 
 -   APP_BleStackInit() is the API that will be called inside the
@@ -200,11 +193,11 @@ GATT, L2CAP and SMP in *APP_BleStackInit()* function
 ### Include
 
 -   user action is required as mentioned [here](../../../../docs/user_action.md)
--   definitions.h in all the files where UART will be used to print debug information 
+-   definitions.h in all the files where UART will be used to print debug information
 >Tip: definitions.h is not specific to just UART peripheral, instead it should be included in all application source files where peripheral functionality will be exercised  
 
 
-### Set PUBLIC Device Address 
+### Set PUBLIC Device Address
 
 -   BLE_GAP_SetDeviceAddr(&devAddr);
 
@@ -224,8 +217,8 @@ This API can be called in APP_BleConfig() located in file app_ble.c
     BLE_GAP_SetDeviceAddr(&devAddr);
 ```
 ![](media/legacy_adv_10.PNG)
-    
-### Start Advertisement 
+
+### Start Advertisement
 
 -   BLE_GAP_SetAdvEnable(0x01, 0);
 
@@ -240,4 +233,3 @@ using [BLE Stack API](../../docs/api/driver/ble/docs/html/modules.html)
 ## Where to go from here
 
 -   [BLE Connection](../../peripheral/connection/readme.md)
-

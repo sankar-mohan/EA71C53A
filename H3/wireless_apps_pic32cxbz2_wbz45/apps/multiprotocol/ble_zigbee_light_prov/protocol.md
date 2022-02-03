@@ -1,7 +1,7 @@
 ---
 grand_parent: Examples applications
 parent: Multiprotocol
-title: Multiprotocol Protocol
+title: Multiprotocol Demo
 has_children: true
 has_toc: false
 nav_order: 416

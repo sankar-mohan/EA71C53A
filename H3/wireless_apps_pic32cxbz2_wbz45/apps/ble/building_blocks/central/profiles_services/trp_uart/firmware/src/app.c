@@ -116,6 +116,7 @@ void uart_cb(SERCOM_USART_EVENT event, uintptr_t context)
   }
 }
 
+
 /******************************************************************************
   Function:
     void APP_Tasks ( void )

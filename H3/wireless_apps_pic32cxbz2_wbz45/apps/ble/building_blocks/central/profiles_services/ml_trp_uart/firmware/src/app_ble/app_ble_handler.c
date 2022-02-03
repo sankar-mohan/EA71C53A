@@ -60,6 +60,7 @@ uint8_t scanAddr[12]; // var to store ASCII address
 extern uint16_t conn_hdl[3];
 extern uint8_t no_of_links;
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Functions

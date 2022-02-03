@@ -232,7 +232,6 @@ __attribute__((ramfunc, long_call, section(".ramfunc"),unique_section)) void PCH
 
 
 
-
 /*******************************************************************************
   Function:
     void SYS_Initialize ( void *data )
@@ -247,7 +246,6 @@ void SYS_Initialize ( void* data )
 {
 
     BT_SYS_Cfg_T        btSysCfg;
-
 
     // Initialize the RF Clock Generator
     SYS_ClkGen_Config();

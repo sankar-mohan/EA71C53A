@@ -9,6 +9,17 @@ nav_order: 269
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 # PIC32CX-BZ/WBZ451 Custom Service [Button-RGB LED] (Peripheral) Firmware Release Notes
 ____
+## **Release v0.1.0.1** (02/02/2022)
+
+### New Features
++ Example converted to MCC based project
+
+### Bug fixes
+- None
+
+### Known Issues
+- None
+
 ## Release v0.1.0.0
 
 ### Features

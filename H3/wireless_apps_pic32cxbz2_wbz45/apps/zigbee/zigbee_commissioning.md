@@ -10,19 +10,17 @@ family: PIC32CX-BZ
 market:
   - wireless
 ---
+
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 # Zigbee Commissioning Procedure
 
 ---
 
-<span class='icon icon-question inline-block highlight-warning'> **Overview** </span>
-
-
 Commissioning is the process of initializing the devices to join a network and to work together.
 The Zigbee Base Device Behaviour specification specifies the procedures for the following commissioning mechanisms which are executed in the order as given given below :
 
 <a href="https://zigbeealliance.org/developer_resources/zigbee-base-device-behavior-bdb-v1-0/" target="_top">Link to Base Device Behaviour Specification by Zigbee Alliance</a>
-</br>
+
 
 |  Sequence  |  Commissioning Aspect  |  Details                                                                                                                                                                                                                                                                                                                                                  |
 |------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -36,60 +34,47 @@ The Zigbee Base Device Behaviour specification specifies the procedures for the 
  Default Mapping of Commissioning to zigbee device types :
 
  <div style="text-align:center"><img src="doc/resources/CommisioningMappingDevice.png" /></div>
- </br>
 
-<span class='icon icon-gear inline-block highlight-error'> **H3 Configuration**</span>
+ This is configurable from MPLAB Code Configurator (MCC) while generating the project:
 
-This is configurable from H3 configurator while generating the project:
+<div style="text-align:center"><img src="doc/resources/comm_mcc.png" /></div>
 
-<div style="text-align:center"><img src="doc/resources/comm_h3.png" /></div>
-</br>
 
- The commissioning procedure can be automatically started when the device is first powered on, based on the 4 Commissioning Aspects (Touchlink, steering, formation, finding & binding) chosen in above H3 configuration. This is referred as auto commissioning.
+ The commissioning procedure can be automatically started when the device is first powered on, based on the 4 Commissioning Aspects (Touchlink, steering, formation, finding & binding) chosen in above MPLAB Code Configurator (MCC). This is referred as auto commissioning.
 
  The application can also choose invoking this commisioning procedure manually through user input. In Microchip zigbee reference applications this is demonstrated through sending console commands through UART. This way of commissioning is referred as manual commissioning.
 
 
-#### 1. Auto Commissioning
+## 1. Auto Commissioning
 Auto-commissioning/commissioning on startup is the easiest way of commissioning, which involves automatic commissioning of devices.
 It allows for minimal (or no) human intervention, since most of the startup parameters are pre-configured .The flowchart for the commissioning mode based on 4 commissioning aspect flags in Zigbee Application is described below :
 
   <div style="text-align:center"><img src="doc/resources/FlowchartForCommissioningProcedure.png" /></div>
 
-</br>
-  This type of commissioning can be enabled by user, using the H3 configuration as shown below :
 
-</br>
+  This type of commissioning can be enabled by user, using the MPLAB Code Configurator (MCC) as shown below :
 
-<span class='icon icon-gear inline-block highlight-error'> **H3 Configuration**</span>
-</br>
 
-</br>
-  <div style="text-align:center"><img src="doc/resources/auto.gif" ></div>
-  </br>
-  </br>
+  <div style="text-align:center"><img src="doc/resources/auto.png" ></div>
 
-The commissioning is observed,  with the help of an example i.e. Combined Interface and Thermostat applications. After Combined Interface application is programmed on the device, automatically device starts the commissioning procedure and creates the network.
-**Note:** <i>"resetToFN"</i> console command is used to bring the device to factory default state and reset the device. This step is needed only if the UART terminal is not setup before the device gets power on first and if logs are missed in terminal.
-Program another device with Thermostat application. After that the device joins , the joiner(Thermostat) starts reporting attribute data back to the Combined Interface device. Here there is no user input needed to initiate the commissioning. It can be observed below in the console logs :
-</br>
 
- <span class='icon icon-terminal inline-block highlight-success'> **Console Logs**</span>
+
+Below is the example of auto commissioning procedure between Combined Interface and Thermostat applications.
+1. After Combined Interface application is programmed on the device, automatically device starts the commissioning procedure and creates the network.
+
+  **Note:** <i>"resetToFN" console command is used to bring the device to factory default state and reset the device. This step is needed only if the UART terminal is not setup before the device gets power on first and if logs are missed in terminal.</i>
+
+2. Program another device with Thermostat application.
+3. After that the device joins , the joiner(Thermostat) starts reporting attribute data back to the Combined Interface device. Here there is no user input needed to initiate the commissioning.
+It can be observed below in the console logs :
+
   <div style="text-align:center"><img src="doc/resources/auto_commissioning_ci_thermostat.jpg" ></div>
-  </br>
 
-#### 2. Manual Commissioning Procedure ( when uart is enabled)
+## 2. Manual Commissioning ( when uart is enabled)
 
-This mode of commissioning is configured in different application device types using the following Harmony 3 configuration :
+Manual mode of commissioning is configured using the following MPLAB Code Configurator (MCC) :
 
-</br>
-
-<span class='icon icon-gear inline-block highlight-error'> **H3 Configuration**</span>
-</br>
-
-<div style="text-align:center"><img src="doc/resources/man_com.gif" ></div>
-</br>
-
+<div style="text-align:center"><img src="doc/resources/man_com.png" ></div>
 
 To trigger the commissioning procedures manually, the user has to issue the following console commands as given below:
 
@@ -107,7 +92,7 @@ To trigger the commissioning procedures manually, the user has to issue the foll
      - SetFBRole 1 (this command to be given on application endpoint acts as initiator which initiates the binding procedure by sending identify query request)
      - SetFBRole 0 (this command to be given on application endpoint acts as target)     
 
-Note: <i> Permit Join flag is enabled for 180 secs after forming a network and opens up the network for a finite duration to allow other nodes to join. To allow the joining even after 180 secs, give "setPermitJoin 180" or “invokeCommissioning 2 0” command from the console. The above mentioned note holds good for both Commissioning on Startup and manual commissioning procedure </i>
+**Note:** <i> Permit Join flag is enabled for 180 secs after forming a network and opens up the network for a finite duration to allow other nodes to join. To allow the joining even after 180 secs, give "setPermitJoin 180" or “invokeCommissioning 2 0” command from the console. The above mentioned note holds good for both Commissioning on Startup (auto) and manual commissioning procedure </i>
 
 The below table shows the list of manual commissioning command sequences to be followed between 2 joining devices.
 
@@ -117,83 +102,76 @@ The below table shows the list of manual commissioning command sequences to be f
 | 2       |  Combined interface  |  Multi Sensor       |  <p>1. Combined Interface and Multi Sensor - resetToFN</p>             <p>2. Combined Interface - invokeCommissioning 4 0 </p>            <p>3. Combined Interface - invokeCommissioning 2 0</p>             <p>4. Multi Sensor - invokeCommissioning 2 0 (After this Multi Sensor joins Combined Interface) </p>            <p>5. Combined Interface - SetFBRole 0</p>             <p>6. Combined Interface - invokeCommissioning 8 0</p>             <p>7. Multi Sensor - setSrcSensorType -ls  </p>           <p>8. Multi Sensor - SetFBRole 1</p>             <p>9. Multi Sensor - invokeCommissioning 8 0 (After this Light Sensor Finding and Binding happens) </p>            <p>10. Multi Sensor - setSrcSensorType -os </p>            <p>11. Multi Sensor - SetFBRole 1</p>             <p>12. Multi Sensor - invokeCommissioning 8 0 (After this Illuminance Measurement Finding and Binding happens)</p>             <p>13. Multi Sensor - setSrcSensorType -ts</p>             <p>14. Multi Sensor - SetFBRole 1</p>             <p>15. Multi Sensor - invokeCommissioning 8 0 (After this Temperature Measurement Finding and Binding happens)</p>             <p>16. Multi Sensor - setSrcSensorType -hs </p>            <p>17. Multi Sensor - SetFBRole 1</p>             <p>18. Multi Sensor - invokeCommissioning 8 0 (After this Relative Humidity Measurement Finding and Binding happens)</p>             <p>19. Multi Sensor Device will start reporting periodically</p>  |
 | 3       |  Combined interface  |  Lights             |  <p>1. Combined Interface and Light - resetToFN</p>            <p>2. Combined Interface - invokeCommissioning 4 0 </p>           <p>3. Combined Interface - invokeCommissioning 2 0</p>            <p>4. Light - invokeCommissioning 2 0 (After this Light joins Combined Interface)</p>           <p> 5. Combined Interface - SetFBRole 0</p>            <p>6. Light - SetFBRole 1</p>            <p>7. Combined Interface - invokeCommissioning 8 0 </p>           <p>8. Light - invokeCommissioning 8 0 (After this all the Finding and Binding happens)</p>            <p>9. Light Device will start reporting peridically</p> |
 
-**Note:** **invokeCommissioning 8 0** has be executed first on target device then on initiator device. <p>**SetFBRole 0** sets device as Target,</p> <p>**SetFBRole 1** sets the device as Initiator. A single device can act as initiator </p>
+**Note:** <i> invokeCommissioning 8 0 has to be executed first on target device then on initiator device. **SetFBRole 0** sets device as Target, **SetFBRole 1** sets the device as Initiator. A single device can act as initiator and/or target </i>
 
 
- <span class='icon icon-terminal inline-block highlight-success'> **Console Logs**</span>
- </br>
-
-Combined interface and Thermostat :
+**Combined interface and Thermostat :**
 
  <div style="text-align:center"><img src="doc/resources/manual_ci_thermostat.JPG" ></div>
-</br>
 
-Combined interface and Multi-sensor :
+
+**Combined interface and Multi-sensor :**
 
  <div style="text-align:center"><img src="doc/resources/manual_ci_multi-sensor.JPG" ></div>
- </br>
-Combined interface and Extended Lights :
-</br>
-</br>
+
+**Combined interface and Extended Lights :**
+
+
   <div style="text-align:center"><img src="doc/resources/manual_ci_lights.JPG" ></div>
 
 
-
-#### 3. Touchlink
+## 3. Touchlink Commissioning
 
 The zigbee protocol provides special commissioning called Touchlink , which is an easy-to-use proximity mechanism for commisioning a device to a network. This method works by the Touchlink 'initiator' determining the proximity of the target device (to be commissioned) and negotiating/transferring network parameters. Touchlink commissioning can be used to form a new network and/or join a node to an existing network. Touchlink is initiated on a node called the ‘initiator’. Touchlink is provided as a cluster in the ZigBee Cluster Library (ZCL). The initiator must support the Touchlink cluster as a client and the target node must support the cluster as a server. If it is required on a node, Touchlink commissioning must be enabled via the ZigBee Base Device attribute bdbCommissioningMode.
 
 
-<span class='icon icon-tools inline-block highlight'> - Wireshark logs :</span>
-</br>
+**Wireshark Sniffer logs**
+
 <div style="text-align:center"><img src="doc/resources/wireshark_sniffer_logs_auto_touchlink_commissioning_lights_csc.JPG" ></div>
-</br>
-
-Let us look into an example. Here a ColorSceneController which is an end device type will get bring the light into the network and by asking light to form the distributed network via Touchlink. For touchlink a color scene controller shall be brought close to a target( Light) device around like 20-30cms range. It can be done in the following 2 ways :
-
-<b>(a). Auto-commissioning :</b>
-In order to establish touchlink via auto-commissioning , each of the application e.g. extended lights and color scene controller, Harmony 3 configurations has to be updated as shown below :
 
 
-<span class='icon icon-gear inline-block highlight-error'> **H3 Configuration**</span>
+Let us look into an example. Here a ColorSceneController which is an end device type will bring the light into the network and by asking light to form the distributed network via Touchlink. For touchlink, a color scene controller shall be brought close to a target( Light) device around like 20-30cms range. It can be done in the following 2 ways :
+
+**(a). Auto-commissioning :**
+In order to establish touchlink via auto-commissioning , each of the application e.g. extended lights and color scene controller, MPLAB Code Configuration (MCC) has to be updated as shown below :
+
+
 <div style="text-align:center"><img src="doc/resources/auto_tl.png" ></div>
-</br>
+
 
 During auto commissioning mode , the device would perform touchlink by default. To initiate the process, input <i>"resetToFN"</i> console command on the light device first followed by the color scene controller. After that the device joins via touchlink, the Light device starts reporting attribute data back to the ColorSceneController device. It can be observed below in :
-</br>
 
- <span class='icon icon-terminal inline-block highlight-success'> **Console Logs**</span>
+
+ **Console Logs**
 <div style="text-align:center"><img src="doc/resources/auto_comm_tl.jpg" ></div>
-</br>
 
-<b>(b). Manual commisioning  :</b>
-In order to establish touchlink commissioning manually, each of the application e.g. extended lights and  color scene controller, Harmony 3 configurations has to be updated as shown below :
 
-<span class='icon icon-gear inline-block highlight-error'> **H3 Configuration**</span>
-</br>
+**(b). Manual commisioning  :**
+In order to establish touchlink commissioning manually, each of the application e.g. extended lights and  color scene controller, MPLAB Code Configurator (MCC) has to be updated as shown below :
+
+
 <div style="text-align:center"><img src="doc/resources/manual_tl.png" ></div>
-</br>
+
 
 During manual commissioning mode , we need to issue console commands on the color scene controller device to perform touchlink. In order to initiate the process, input resetToFN console comand on the light device first followed by the color scene controller. Follow the below sequence of commands
 
-1. Light and CSC - resetToFN</br>
-2. CSC - invokeCommissioning 1 0</br>   (Touchlink commisioning, wait for touchlinking to be completed)
-3. CSC - SetFBRole 0</br>
-4. Light - SetFBRole 1</br>
-5. CSC - invokeCommissioning 8 0</br>
-6. Light - invokeCommissioning 8 0</br>             
+1. Light and CSC - resetToFN
+2. CSC - invokeCommissioning 1 0   (Touchlink commisioning, wait for touchlinking to be completed)
+3. CSC - SetFBRole 0
+4. Light - SetFBRole 1
+5. CSC - invokeCommissioning 8 0
+6. Light - invokeCommissioning 8 0             
 7. Light Device will start reporting periodically.
 
-</br>
 
-<span class='icon icon-terminal inline-block highlight-success'> **Console Logs**</span>
+
+ **Console Logs**
   <div style="text-align:center"><img src="doc/resources/manual_touchlink_commisioning.JPG" ></div>
-  </br>
 
-  <span class='icon icon-search inline-block highlight-info'> **Explore**</span>
-  </br>
+
+
  For more details regarding the commisioning procedures, please refer to, the Commisioning section(8) of the base device behaviour specification from Zigbee Alliance ->
  <a href="https://zigbeealliance.org/developer_resources/zigbee-base-device-behavior-bdb-v1-0/" target="_top">Link to Base Device Behaviour Specification by Zigbee Alliance</a>
- </br>
+
 
 ---

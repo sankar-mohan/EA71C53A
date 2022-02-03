@@ -190,6 +190,9 @@ void APP_BleConfig()
     
     BLE_GAP_ConfigureBuildInService(&gapServiceOptions);
    
+
+        
+    
     // Configure scan parameters
     scanParam.type = BLE_GAP_SCAN_TYPE_PASSIVE_SCAN;
     scanParam.interval = 160;
@@ -242,20 +245,26 @@ void APP_BleStackInit()
     BLE_L2CAP_Init();
    
     GATTS_Init(gattsInitParam);
+    
     GATTC_Init(gattcInitParam);
     
     BLE_SMP_Init();
     
+
     //Initialize BLE middleware
     BLE_DM_Init();
     BLE_DM_EventRegister(APP_DmEvtHandler);
+
     BLE_DD_Init();
     BLE_DD_EventRegister(APP_DdEvtHandler);
     
+
     //Initialize BLE profiles
+
     BLE_TRSPC_Init();
     BLE_TRSPC_EventRegistration(APP_TrspcEvtHandler);
     
+
     APP_BleConfig();
 }
 

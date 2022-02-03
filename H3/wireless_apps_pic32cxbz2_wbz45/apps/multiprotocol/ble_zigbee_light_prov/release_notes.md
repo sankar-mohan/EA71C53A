@@ -10,6 +10,17 @@ nav_order: 350
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 # PIC32CX-BZ2/WBZ45 Combo Light and Provisioning Firmware Release Notes
 
+## Release v0.2.0.1 (02/02/2022)
+
+### Enhancements
++ Example converted to MCC based project
+
+### Bug fixes
+- None
+
+### Known Issues
+- None
+
 ## Release v0.2.0.0
 
 ### Enhancements

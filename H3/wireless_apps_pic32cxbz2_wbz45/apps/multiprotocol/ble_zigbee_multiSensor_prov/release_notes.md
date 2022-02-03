@@ -10,6 +10,18 @@ nav_order: 351
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 # PIC32CX-BZ/WBZ451 BLE Zigbee Provisioning in Multi-Sensor Device (Low power)
 ____
+## Release v0.1.0.1 (02/02/2022)
+
+### New Features
+- Example convered to MCC based project
+  
+### Bug fixes
+- None
+
+### Known Issues
+- Intermittent 5.5mA power consumption observed after BLE Advertisement.
+- When the device is goes through a power reset after commisioning, the sleep current consumption increases by 250uA (approx)
+
 ## Release v0.1.0.0
 
 ### New Features

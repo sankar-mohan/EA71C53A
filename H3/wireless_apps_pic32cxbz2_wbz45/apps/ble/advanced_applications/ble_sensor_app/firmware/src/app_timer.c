@@ -47,7 +47,7 @@
 // *****************************************************************************
 // *****************************************************************************
 #include <string.h>
-#include "byte_stream.h"
+#include "ble_util/byte_stream.h"
 #include "app.h"
 #include "app_ble.h"
 #include "app_timer.h"

@@ -4,13 +4,15 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="f2" displayName="app_zigbee" projectFiles="true">
-        <logicalFolder name="f1" displayName="zigbee_console" projectFiles="true">
+      <logicalFolder name="app_zigbee" displayName="app_zigbee" projectFiles="true">
+        <logicalFolder name="zigbee_console"
+                       displayName="zigbee_console"
+                       projectFiles="true">
           <itemPath>../src/app_zigbee/zigbee_console/consoleCmds.h</itemPath>
           <itemPath>../src/app_zigbee/zigbee_console/console.h</itemPath>
         </logicalFolder>
-        <itemPath>../src/app_zigbee/app_zigbee_handler.h</itemPath>
         <itemPath>../src/app_zigbee/app_zigbee.h</itemPath>
+        <itemPath>../src/app_zigbee/app_zigbee_handler.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1"
@@ -71,555 +73,583 @@
               <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/peripheral/trng/plib_trng.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="f3" displayName="zigbee" projectFiles="true">
-            <logicalFolder name="f4" displayName="common_files" projectFiles="true">
-              <logicalFolder name="f1" displayName="include" projectFiles="true">
+          <logicalFolder name="zigbee" displayName="zigbee" projectFiles="true">
+            <logicalFolder name="common_files"
+                           displayName="common_files"
+                           projectFiles="true">
+              <logicalFolder name="include" displayName="include" projectFiles="true">
                 <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/common_files/include/printLcd.h</itemPath>
                 <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/common_files/include/errH.h</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="lib" projectFiles="true">
-              <logicalFolder name="f1" displayName="include" projectFiles="true">
-                <logicalFolder name="f3" displayName="aps" projectFiles="true">
-                  <logicalFolder name="f1" displayName="include" projectFiles="true">
-                    <logicalFolder name="f1" displayName="private" projectFiles="true">
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/private/apsFrames.h</itemPath>
+            <logicalFolder name="lib" displayName="lib" projectFiles="true">
+              <logicalFolder name="include" displayName="include" projectFiles="true">
+                <logicalFolder name="aps" displayName="aps" projectFiles="true">
+                  <logicalFolder name="include" displayName="include" projectFiles="true">
+                    <logicalFolder name="private" displayName="private" projectFiles="true">
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/private/apsKeyPairSet.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/private/apsFrames.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/private/apsMemoryManager.h</itemPath>
                     </logicalFolder>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/aps.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsAIB.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsCommandReq.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsCommon.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsConfigServer.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsCryptoKeys.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsdeData.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsdeEndpoint.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeAuthenticate.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeBind.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeConfirmKey.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeEstablishKey.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeGroup.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeRemoveDevice.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeRequestKey.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeSwitchKey.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeTransportKey.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeAuthenticate.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeEstablishKey.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeUpdateDevice.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeTransportKey.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeBind.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsCommandReq.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsdeEndpoint.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsCryptoKeys.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeGroup.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeRequestKey.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsAIB.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsConfigServer.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeVerifyKey.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/intrpData.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsdeData.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/aps/include/apsmeRemoveDevice.h</itemPath>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder name="f4" displayName="bdb" projectFiles="true">
-                  <logicalFolder name="f1" displayName="include" projectFiles="true">
+                <logicalFolder name="bdb" displayName="bdb" projectFiles="true">
+                  <logicalFolder name="include" displayName="include" projectFiles="true">
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbTouchlink.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdb.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbDbg.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbZllBindings.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbFindingAndBinding.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbInstallCode.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbSecurity.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbInternal.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbNwkFormation.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbNwkSteering.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbSecurity.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbTouchlink.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbZllBindings.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbInstallCode.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/bdb/include/bdbDbg.h</itemPath>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder name="f5" displayName="configserver" projectFiles="true">
-                  <logicalFolder name="f1" displayName="include" projectFiles="true">
-                    <logicalFolder name="f1" displayName="private" projectFiles="true">
+                <logicalFolder name="configserver"
+                               displayName="configserver"
+                               projectFiles="true">
+                  <logicalFolder name="include" displayName="include" projectFiles="true">
+                    <logicalFolder name="private" displayName="private" projectFiles="true">
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/configserver/include/private/csBuffers.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/configserver/include/private/csSIB.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/configserver/include/private/csVarTable.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/configserver/include/private/csConstTable.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/configserver/include/private/csDbg.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/configserver/include/private/csMemTable.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/configserver/include/private/csSIB.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/configserver/include/private/csVarTable.h</itemPath>
                     </logicalFolder>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/configserver/include/configserver.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/configserver/include/csDefaults.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/configserver/include/configserver.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/configserver/include/stackVersion.h</itemPath>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder name="f8" displayName="hal" projectFiles="true">
-                  <logicalFolder name="f2" displayName="cortexm4" projectFiles="true">
-                    <logicalFolder name="f1" displayName="pic32cx" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halAppClock.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halAssert.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halDbg.h</itemPath>
+                <logicalFolder name="hal" displayName="hal" projectFiles="true">
+                  <logicalFolder name="cortexm4" displayName="cortexm4" projectFiles="true">
+                    <logicalFolder name="pic32cx" displayName="pic32cx" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halDiagnostic.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halMacIsr.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halAppClock.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halAes.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halSleepTimerClock.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halDbg.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halRfCtrl.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halSleep.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halSleepTimerClock.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halAes.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halAssert.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/cortexm4/pic32cx/include/halMacIsr.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
                   </logicalFolder>
-                  <logicalFolder name="f1" displayName="include" projectFiles="true">
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/include/atomic.h</itemPath>
+                  <logicalFolder name="include" displayName="include" projectFiles="true">
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/include/sleepTimer.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/include/sleep.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/include/bcTimer.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/include/appTimer.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/include/halTaskManager.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/include/sleep.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/include/sleepTimer.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/include/atomic.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/hal/include/statStack.h</itemPath>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder name="f7" displayName="mac_phy" projectFiles="true">
-                  <logicalFolder name="f1" displayName="include" projectFiles="true">
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/mac.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macAddr.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macAffix.h</itemPath>
+                <logicalFolder name="mac_phy" displayName="mac_phy" projectFiles="true">
+                  <logicalFolder name="include" displayName="include" projectFiles="true">
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macAssociate.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macBanNode.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macBeacon.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macBuffers.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macCommon.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macCommStatus.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macData.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macDisassociate.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macEnvironment.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macFrame.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macMem.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macOrphan.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macphyPib.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macPoll.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macPurge.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macReset.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macRxEnable.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macScan.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macSetGet.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macStart.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macSuperframe.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macSync.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macRxEnable.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macphyPib.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macAddr.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macMem.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macBuffers.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/phy.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/rfBattery.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/rfCalibration.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/rfEncrypt.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macOrphan.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macReset.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macSetGet.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/rfRandom.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/rfRegAccess.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macEnvironment.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macCommon.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/rfBattery.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macAffix.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/rfCalibration.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macData.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macPurge.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macPoll.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macCommStatus.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macSync.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macBanNode.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macFrame.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/mac.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macSuperframe.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macStart.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macBeacon.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/macDisassociate.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/include/rfEncrypt.h</itemPath>
                   </logicalFolder>
-                  <logicalFolder name="f2" displayName="mac_env" projectFiles="true">
-                    <logicalFolder name="f1" displayName="include" projectFiles="true">
+                  <logicalFolder name="mac_env" displayName="mac_env" projectFiles="true">
+                    <logicalFolder name="include" displayName="include" projectFiles="true">
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_env/include/macenvMem.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_env/include/macenvPib.h</itemPath>
                     </logicalFolder>
                   </logicalFolder>
-                  <logicalFolder name="f3" displayName="mac_hwd_phy" projectFiles="true">
-                    <logicalFolder name="f1" displayName="include" projectFiles="true">
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/include/machwd.h</itemPath>
+                  <logicalFolder name="mac_hwd_phy" displayName="mac_hwd_phy" projectFiles="true">
+                    <logicalFolder name="include" displayName="include" projectFiles="true">
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/include/machwdData.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/include/machwdEd.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/include/machwdReset.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/include/machwdService.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/include/machwdSet.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/include/machwdSetTrx.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/include/machwdEd.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/include/machwdSet.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/include/machwd.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/include/machwdService.h</itemPath>
                     </logicalFolder>
-                    <logicalFolder name="f2" displayName="RF231_RF212" projectFiles="true">
-                      <logicalFolder name="f1" displayName="MAC_HWD" projectFiles="true">
-                        <logicalFolder name="f1" displayName="include" projectFiles="true">
+                    <logicalFolder name="RF231_RF212" displayName="RF231_RF212" projectFiles="true">
+                      <logicalFolder name="MAC_HWD" displayName="MAC_HWD" projectFiles="true">
+                        <logicalFolder name="include" displayName="include" projectFiles="true">
                           <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/MAC_HWD/include/machwdMem.h</itemPath>
                         </logicalFolder>
                       </logicalFolder>
-                      <logicalFolder name="f2" displayName="PHY" projectFiles="true">
-                        <logicalFolder name="f1" displayName="include" projectFiles="true">
-                          <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/at86rf233.h</itemPath>
+                      <logicalFolder name="PHY" displayName="PHY" projectFiles="true">
+                        <logicalFolder name="include" displayName="include" projectFiles="true">
                           <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/phyPic32cx.h</itemPath>
-                          <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/phyCommon.h</itemPath>
+                          <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/phyRtimerIrqDispatcher.h</itemPath>
                           <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/phyDataStatus.h</itemPath>
+                          <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/phyDeepSleep.h</itemPath>
+                          <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/phyMemAccess.h</itemPath>
+                          <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/phyCommon.h</itemPath>
                           <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/phyInit.h</itemPath>
                           <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/phyMem.h</itemPath>
-                          <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/phyMemAccess.h</itemPath>
-                          <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/phyRtimerIrqDispatcher.h</itemPath>
-                          <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/phyDeepSleep.h</itemPath>
                           <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/phySet.h</itemPath>
+                          <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwd_phy/RF231_RF212/PHY/include/at86rf233.h</itemPath>
                         </logicalFolder>
                       </logicalFolder>
                     </logicalFolder>
                   </logicalFolder>
-                  <logicalFolder name="f4" displayName="mac_hwi" projectFiles="true">
-                    <logicalFolder name="f1" displayName="include" projectFiles="true">
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiAssociateHandler.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiDisassociateHandler.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiHwdReqMemPool.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiManager.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiMem.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiPollHandler.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiScanHandler.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiStartHandler.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiTransactionHandler.h</itemPath>
+                  <logicalFolder name="mac_hwi" displayName="mac_hwi" projectFiles="true">
+                    <logicalFolder name="include" displayName="include" projectFiles="true">
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiTransactionQueue.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiMem.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiStartHandler.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiManager.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiPollHandler.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiAssociateHandler.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiHwdReqMemPool.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiScanHandler.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiDisassociateHandler.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/mac_phy/mac_hwi/include/machwiTransactionHandler.h</itemPath>
                     </logicalFolder>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder name="f6" displayName="nwk" projectFiles="true">
-                  <logicalFolder name="f1" displayName="include" projectFiles="true">
-                    <logicalFolder name="f1" displayName="private" projectFiles="true">
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkAddressMap.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkBTT.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkConfig.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkDbg.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkEndDeviceTimeoutInd.h</itemPath>
+                <logicalFolder name="nwk" displayName="nwk" projectFiles="true">
+                  <logicalFolder name="include" displayName="include" projectFiles="true">
+                    <logicalFolder name="private" displayName="private" projectFiles="true">
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkFrame.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkIB.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkJoinInd.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkPacket.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkPassiveAck.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkRouteCache.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkRouteDiscovery.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkRouteDiscoveryTable.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkRouteRecord.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkRoutingTable.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkPassiveAck.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkRx.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkSystem.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkTx.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkJoinInd.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkTxDelay.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkTx.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkDbg.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkBTT.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkAddressMap.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkUpdateCommand.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkRouteDiscoveryTable.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkSystem.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkRouteCache.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkRoutingTable.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkConfig.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkPacket.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkRouteRecord.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkIB.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/private/nwkEndDeviceTimeoutInd.h</itemPath>
                     </logicalFolder>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nldeData.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeNetworkFormation.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeStartRouter.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkCommon.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkRouteInfo.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeDirectJoin.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeNwkStatus.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeSync.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkConfigServer.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkRouteTable.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeEdScan.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmePermitJoining.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeSyncLoss.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkEndDeviceTimeout.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkSecurity.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeJoin.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeReset.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwk.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkGroup.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeLeave.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeRouteDiscovery.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkAttributes.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmePermitJoining.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeJoin.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkAddressResolv.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkNeighbor.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeNetworkDiscovery.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeSetGet.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkAttributes.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeEdScan.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeStartRouter.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeLeave.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeDirectJoin.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkCommon.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkProfiler.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeReset.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeSync.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkGroup.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkRouteInfo.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkEndDeviceTimeout.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwk.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkRouteTable.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeSetGet.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeNetworkFormation.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeSyncLoss.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nldeData.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nwkSecurity.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/nwk/include/nlmeNwkStatus.h</itemPath>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder name="f2" displayName="pds" projectFiles="true">
-                  <logicalFolder name="f1" displayName="include" projectFiles="true">
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/pds/include/wlPdsMemIds.h</itemPath>
+                <logicalFolder name="pds" displayName="pds" projectFiles="true">
+                  <logicalFolder name="include" displayName="include" projectFiles="true">
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/pds/include/wlPdsTypesConverter.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/pds/include/bcPDS.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/pds/include/wlPdsMemIds.h</itemPath>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder name="f10" displayName="security" projectFiles="true">
-                  <logicalFolder name="f1" displayName="serviceprovider" projectFiles="true">
-                    <logicalFolder name="f1" displayName="include" projectFiles="true">
-                      <logicalFolder name="f1" displayName="private" projectFiles="true">
+                <logicalFolder name="security" displayName="security" projectFiles="true">
+                  <logicalFolder name="serviceprovider"
+                                 displayName="serviceprovider"
+                                 projectFiles="true">
+                    <logicalFolder name="include" displayName="include" projectFiles="true">
+                      <logicalFolder name="private" displayName="private" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/serviceprovider/include/private/sspHashHandler.h</itemPath>
                       </logicalFolder>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/serviceprovider/include/sspAuthentic.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/serviceprovider/include/sspChallengeGen.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/serviceprovider/include/sspCommon.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/serviceprovider/include/sspHash.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/serviceprovider/include/sspSfp.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/serviceprovider/include/sspCommon.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/serviceprovider/include/sspAuthentic.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/serviceprovider/include/sspSkke.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/serviceprovider/include/sspChallengeGen.h</itemPath>
                     </logicalFolder>
                   </logicalFolder>
-                  <logicalFolder name="f2" displayName="TrustCentre" projectFiles="true">
-                    <logicalFolder name="f1" displayName="include" projectFiles="true">
+                  <logicalFolder name="TrustCentre" displayName="TrustCentre" projectFiles="true">
+                    <logicalFolder name="include" displayName="include" projectFiles="true">
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/TrustCentre/include/tcAuthentic.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/TrustCentre/include/tcKeyEstablish.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/TrustCentre/include/tcPermissions.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/security/TrustCentre/include/tcKeyEstablish.h</itemPath>
                     </logicalFolder>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder name="f9" displayName="systemenvironment" projectFiles="true">
-                  <logicalFolder name="f1" displayName="include" projectFiles="true">
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/dbg.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysAssert.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysDbg.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysDuplicateTable.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysEndian.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysEvents.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysEventsHandler.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysIdleHandler.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysIncrementMacro.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysInit.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysMutex.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysQueue.h</itemPath>
+                <logicalFolder name="systemenvironment"
+                               displayName="systemenvironment"
+                               projectFiles="true">
+                  <logicalFolder name="include" displayName="include" projectFiles="true">
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysRepeatMacro.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysSleep.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysStat.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysTaskManager.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysTimer.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysTypes.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysQueue.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysEndian.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysMutex.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysUtils.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysEvents.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysTaskManager.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysSleep.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysIdleHandler.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysEventsHandler.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/dbg.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysInit.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysDbg.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysDuplicateTable.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysStat.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysAssert.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/systemenvironment/include/sysIncrementMacro.h</itemPath>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder name="f1" displayName="zcl" projectFiles="true">
-                  <logicalFolder name="f2" displayName="clusters" projectFiles="true">
-                    <logicalFolder name="f1" displayName="include" projectFiles="true">
+                <logicalFolder name="zcl" displayName="zcl" projectFiles="true">
+                  <logicalFolder name="clusters" displayName="clusters" projectFiles="true">
+                    <logicalFolder name="include" displayName="include" projectFiles="true">
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/clusters/include/scenes.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/clusters/include/groupsCluster.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/clusters/include/identifyCluster.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/clusters/include/scenes.h</itemPath>
                     </logicalFolder>
                   </logicalFolder>
-                  <logicalFolder name="f1" displayName="include" projectFiles="true">
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclBasicCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllBasicCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclIdentifyCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllIdentifyCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclGroupsCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllGroupsCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllScenesCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclOnOffCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllOnOffCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclLevelControlCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllLevelControlCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllColorControlCluster.h</itemPath>
+                  <logicalFolder name="include" displayName="include" projectFiles="true">
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclOtauClient.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclParser.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclSecurityManager.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclAlarmsCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclTimeCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclThermostatCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclFanControlCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zcloccupancysensingcluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclIlluminanceMeasurementCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclTemperatureMeasurementCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclHumidityMeasurementCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclThermostatUiConfCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllIdentifyCluster.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclIasZoneCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclIasACECluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclDiagnosticsCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zcl.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/clusters.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/genericEcc.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclMemoryManager.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclAttributes.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclCommandManager.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclGreenPowerCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclInt.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclMem.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclMemoryManager.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclOnOffSwitchConfigurationCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclOtauClient.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclOTAUCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclOtauManager.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclParser.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclScenesCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclSecurityManager.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclBasicCluster.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllCommissioningCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclHumidityMeasurementCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclMem.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclScenesCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclOTAUCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclDiagnosticsCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclFanControlCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllGroupsCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllOnOffCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllLevelControlCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclTemperatureMeasurementCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllScenesCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclThermostatCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zcloccupancysensingcluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclIasACECluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclIdentifyCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclGreenPowerCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclOnOffCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllColorControlCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zcl.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/genericEcc.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclZllBasicCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclIlluminanceMeasurementCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclTimeCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/clusters.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclOnOffSwitchConfigurationCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclGroupsCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclLevelControlCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclThermostatUiConfCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclInt.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zcl/include/zclOtauManager.h</itemPath>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder name="f11" displayName="zdo" projectFiles="true">
-                  <logicalFolder name="f1" displayName="include" projectFiles="true">
-                    <logicalFolder name="f1" displayName="private" projectFiles="true">
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoAddrResolvingInt.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoCommands.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoDbg.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoEndDeviceBinding.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoLeaveNetwork.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoMem.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoMgmtNwkUpdate.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoNwkManager.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoPermissionsTable.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoPowerManager.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoStartNetwork.h</itemPath>
+                <logicalFolder name="zdo" displayName="zdo" projectFiles="true">
+                  <logicalFolder name="include" displayName="include" projectFiles="true">
+                    <logicalFolder name="private" displayName="private" projectFiles="true">
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoTaskManager.h</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoZdpReq.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoAddrResolvingInt.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoNwkManager.h</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoZib.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoCommands.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoMgmtNwkUpdate.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoPermissionsTable.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoZdpReq.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoDbg.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoMem.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoStartNetwork.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoLeaveNetwork.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoEndDeviceBinding.h</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/private/zdoPowerManager.h</itemPath>
                     </logicalFolder>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/appFramework.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/zdo.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/zdoAddrResolving.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/zdoCommon.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/zdoConfigServer.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/zdoNotify.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/zdoPermissions.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/zdoSecurityManager.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/zdoConfigServer.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/zdoCommon.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/zdo.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/zdoNotify.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/appFramework.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zdo/include/zdoAddrResolving.h</itemPath>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder name="f12" displayName="zllplatform" projectFiles="true">
-                  <logicalFolder name="f2" displayName="infrastructure" projectFiles="true">
-                    <logicalFolder name="f1" displayName="N_Address" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                <logicalFolder name="zllplatform" displayName="zllplatform" projectFiles="true">
+                  <logicalFolder name="infrastructure"
+                                 displayName="infrastructure"
+                                 projectFiles="true">
+                    <logicalFolder name="N_Address" displayName="N_Address" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Address/include/N_Address.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f2" displayName="N_ErrH" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                    <logicalFolder name="N_ErrH" displayName="N_ErrH" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_ErrH/include/N_ErrH.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f4" displayName="N_Fsm" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                    <logicalFolder name="N_Fsm" displayName="N_Fsm" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Fsm/include/N_Fsm.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f6" displayName="N_Init" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Init/include/N_Init.h</itemPath>
+                    <logicalFolder name="N_Init" displayName="N_Init" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Init/include/N_Init-Atmel_Bindings.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Init/include/N_Init.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f5" displayName="N_Log" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                    <logicalFolder name="N_Log" displayName="N_Log" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Log/include/N_Log.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f7" displayName="N_Memory" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                    <logicalFolder name="N_Memory" displayName="N_Memory" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Memory/include/N_Memory.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f8" displayName="N_Task" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                    <logicalFolder name="N_Task" displayName="N_Task" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Task/include/N_Task.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Task/include/N_Task_Bindings.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Task/include/N_Task_Init.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Task/include/N_Task-Internal.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f9" displayName="N_Timer" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Timer/include/N_Timer.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Timer/include/N_Timer_Bindings.h</itemPath>
+                    <logicalFolder name="N_Timer" displayName="N_Timer" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Timer/include/N_Timer_Init.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Timer/include/N_Timer_Bindings.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Timer/include/N_Timer.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Timer/include/N_Timer-Internal.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f3" displayName="N_Types" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                    <logicalFolder name="N_Types" displayName="N_Types" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Types/include/N_Types.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f10" displayName="N_Util" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                    <logicalFolder name="N_Util" displayName="N_Util" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Util/include/N_Util.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/infrastructure/N_Util/include/N_Util_Bindings.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
                   </logicalFolder>
-                  <logicalFolder name="f1" displayName="ZLL" projectFiles="true">
-                    <logicalFolder name="f1" displayName="N_AddressManager" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                  <logicalFolder name="ZLL" displayName="ZLL" projectFiles="true">
+                    <logicalFolder name="N_AddressManager"
+                                   displayName="N_AddressManager"
+                                   projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_AddressManager/include/N_AddressManager.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_AddressManager/include/N_AddressManager_Bindings.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_AddressManager/include/N_AddressManager_Init.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f2" displayName="N_AddressMap" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_AddressMap/include/N_AddressMap.h</itemPath>
+                    <logicalFolder name="N_AddressMap"
+                                   displayName="N_AddressMap"
+                                   projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_AddressMap/include/N_AddressMap_Bindings.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_AddressMap/include/N_AddressMap.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f17" displayName="N_Beacon" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                    <logicalFolder name="N_Beacon" displayName="N_Beacon" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Beacon/include/N_Beacon.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f3" displayName="N_Binding" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                    <logicalFolder name="N_Binding" displayName="N_Binding" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Binding/include/N_Binding.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Binding/include/N_Binding_Bindings.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Binding/include/N_Binding_Init.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f4" displayName="N_Cmi" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Cmi/include/N_Cmi.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Cmi/include/N_Cmi_Bindings.h</itemPath>
+                    <logicalFolder name="N_Cmi" displayName="N_Cmi" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Cmi/include/N_Cmi_Init.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Cmi/include/N_Cmi_Bindings.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Cmi/include/N_Cmi.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f5" displayName="N_Connection" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Connection/include/N_Connection_ReconnectHandler.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Connection/include/N_Connection.h</itemPath>
+                    <logicalFolder name="N_Connection"
+                                   displayName="N_Connection"
+                                   projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Connection/include/N_Connection_Private.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Connection/include/N_Connection_Internal.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Connection/include/N_ConnectionEnddevice_Init.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Connection/include/N_ConnectionRouter_Init.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Connection/include/N_ConnectionEnddevice_Bindings.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Connection/include/N_Connection.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Connection/include/N_Connection_Internal.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Connection/include/N_ConnectionRouter_Bindings.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Connection/include/N_Connection_ReconnectHandler.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Connection/include/N_ConnectionEnddevice_Bindings.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Connection/include/N_ConnectionRouter_Init.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f6" displayName="N_DeviceInfo" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_DeviceInfo/include/N_DeviceInfo.h</itemPath>
+                    <logicalFolder name="N_DeviceInfo"
+                                   displayName="N_DeviceInfo"
+                                   projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_DeviceInfo/include/N_DeviceInfo_Bindings.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_DeviceInfo/include/N_DeviceInfo_Init.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_DeviceInfo/include/N_DeviceInfo_Version.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_DeviceInfo/include/N_DeviceInfo.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_DeviceInfo/include/N_DeviceInfo_Init.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f7"
+                    <logicalFolder name="N_EndDeviceRobustness"
                                    displayName="N_EndDeviceRobustness"
                                    projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_EndDeviceRobustness/include/N_EndDeviceRobustness.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_EndDeviceRobustness/include/N_EndDeviceRobustness_Bindings.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_EndDeviceRobustness/include/N_EndDeviceRobustness_Init.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f8" displayName="N_Groups" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Groups/include/N_Groups.h</itemPath>
+                    <logicalFolder name="N_Groups" displayName="N_Groups" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Groups/include/N_Groups_Bindings.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Groups/include/N_Groups.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f9" displayName="N_InterPan" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_InterPan/include/N_InterPan.h</itemPath>
+                    <logicalFolder name="N_InterPan" displayName="N_InterPan" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_InterPan/include/N_InterPan_Bindings.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_InterPan/include/N_InterPan_Init.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_InterPan/include/N_InterPanBuffers.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_InterPan/include/N_InterPan.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_InterPan/include/N_InterPan_Init.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f10" displayName="N_LinkInitiator" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_LinkInitiator/include/N_LinkInitiator.h</itemPath>
+                    <logicalFolder name="N_LinkInitiator"
+                                   displayName="N_LinkInitiator"
+                                   projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_LinkInitiator/include/N_LinkInitiator_Bindings.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_LinkInitiator/include/N_LinkInitiator_Init.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_LinkInitiator/include/N_LinkInitiator.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f11" displayName="N_LinkTarget" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_LinkTarget/include/N_LinkTarget.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_LinkTarget/include/N_LinkTarget_Bindings.h</itemPath>
+                    <logicalFolder name="N_LinkTarget"
+                                   displayName="N_LinkTarget"
+                                   projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_LinkTarget/include/N_LinkTarget_Init.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_LinkTarget/include/N_LinkTarget_Bindings.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_LinkTarget/include/N_LinkTarget.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f12" displayName="N_PacketDistributor" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                    <logicalFolder name="N_PacketDistributor"
+                                   displayName="N_PacketDistributor"
+                                   projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_PacketDistributor/include/N_PacketDistributor.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_PacketDistributor/include/N_ZllEndpoint.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f13" displayName="N_Radio" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                    <logicalFolder name="N_Radio" displayName="N_Radio" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Radio/include/N_Radio_Internal.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Radio/include/N_Radio_Init.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Radio/include/N_Radio.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Radio/include/N_Radio_Bindings.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Radio/include/N_Radio_Init.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Radio/include/N_Radio_Internal.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f14" displayName="N_ReconnectHandler" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
+                    <logicalFolder name="N_ReconnectHandler"
+                                   displayName="N_ReconnectHandler"
+                                   projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_ReconnectHandler/include/N_ReconnectHandler.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_ReconnectHandler/include/N_ReconnectHandler_Bindings.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_ReconnectHandler/include/N_ReconnectHandler_Init.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f15" displayName="N_Security" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Security/include/N_Security.h</itemPath>
+                    <logicalFolder name="N_Security" displayName="N_Security" projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Security/include/N_Security_Bindings.h</itemPath>
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Security/include/N_Security_Init.h</itemPath>
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Security/include/N_Security_Calc.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Security/include/N_Security.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Security/include/N_Security_Init.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
-                    <logicalFolder name="f16" displayName="N_Zcl_Framework" projectFiles="true">
-                      <logicalFolder name="f1" displayName="include" projectFiles="true">
-                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Zcl_Framework/include/N_Zcl_Framework.h</itemPath>
+                    <logicalFolder name="N_Zcl_Framework"
+                                   displayName="N_Zcl_Framework"
+                                   projectFiles="true">
+                      <logicalFolder name="include" displayName="include" projectFiles="true">
                         <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Zcl_Framework/include/N_Zcl_Framework_Bindings.h</itemPath>
+                        <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include/zllplatform/ZLL/N_Zcl_Framework/include/N_Zcl_Framework.h</itemPath>
                       </logicalFolder>
                     </logicalFolder>
                   </logicalFolder>
@@ -627,90 +657,96 @@
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="zigbee_af_interface" projectFiles="true">
-              <logicalFolder name="f1" displayName="bdb" projectFiles="true">
+            <logicalFolder name="zigbee_af_interface"
+                           displayName="zigbee_af_interface"
+                           projectFiles="true">
+              <logicalFolder name="bdb" displayName="bdb" projectFiles="true">
                 <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_af_interface/bdb/BDB_Unpack.h</itemPath>
               </logicalFolder>
-              <logicalFolder name="f2" displayName="configserver" projectFiles="true">
+              <logicalFolder name="configserver"
+                             displayName="configserver"
+                             projectFiles="true">
                 <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_af_interface/configserver/CS_Unpack.h</itemPath>
               </logicalFolder>
-              <logicalFolder name="f3" displayName="nwk" projectFiles="true">
+              <logicalFolder name="nwk" displayName="nwk" projectFiles="true">
                 <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_af_interface/nwk/NWK_Unpack.h</itemPath>
               </logicalFolder>
-              <logicalFolder name="f4" displayName="zcl" projectFiles="true">
+              <logicalFolder name="zcl" displayName="zcl" projectFiles="true">
                 <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_af_interface/zcl/ZCL_Unpack.h</itemPath>
               </logicalFolder>
-              <logicalFolder name="f5" displayName="zdo" projectFiles="true">
+              <logicalFolder name="zdo" displayName="zdo" projectFiles="true">
                 <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_af_interface/zdo/ZDO_Unpack.h</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="zigbee_device" projectFiles="true">
-              <logicalFolder name="f5" displayName="api" projectFiles="true">
-                <logicalFolder name="f1" displayName="include" projectFiles="true">
+            <logicalFolder name="zigbee_device"
+                           displayName="zigbee_device"
+                           projectFiles="true">
+              <logicalFolder name="api" displayName="api" projectFiles="true">
+                <logicalFolder name="include" displayName="include" projectFiles="true">
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/include/zdo_api.h</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/include/bdb_api.h</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/include/cs_api.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/include/zgb_api.h</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/include/nwk_api.h</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/include/zcl_api.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/include/zdo_api.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/include/zgb_api.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f4" displayName="clusters" projectFiles="true">
-                <logicalFolder name="f1" displayName="include" projectFiles="true">
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/include/basicCluster.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/include/colorControlCluster.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/include/commissioningCluster.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/include/haClusters.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/include/levelControlCluster.h</itemPath>
+              <logicalFolder name="clusters" displayName="clusters" projectFiles="true">
+                <logicalFolder name="include" displayName="include" projectFiles="true">
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/include/onOffCluster.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/include/levelControlCluster.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/include/colorControlCluster.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/include/basicCluster.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/include/haClusters.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/include/commissioningCluster.h</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/include/scenesCluster.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f2" displayName="common" projectFiles="true">
-                <logicalFolder name="f1" displayName="include" projectFiles="true">
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/appConsts.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/pic32cxBSP.h</itemPath>
+              <logicalFolder name="common" displayName="common" projectFiles="true">
+                <logicalFolder name="include" displayName="include" projectFiles="true">
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/zgpAppInterface.h</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/colorSceneRemoteBindings.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/system.h</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/commandManager.h</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/ezModeManager.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/hs2xy.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/keyboardPoll.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/otauService.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/system.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/z3Device.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/zgb_task.h</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/zgpAppConfig.h</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/zgpAppInterface.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/zgb_task.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/appConsts.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/pic32cxBSP.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/keyboardPoll.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/z3Device.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/otauService.h</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/include/hs2xy.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f1" displayName="configs" projectFiles="true">
-                <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/configs/zigbeeAppDeviceSelect.h</itemPath>
-                <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/configs/Zigbee_AllDevice_Makerules.h</itemPath>
+              <logicalFolder name="configs" displayName="configs" projectFiles="true">
                 <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/configs/zigbeeAppConfig.h</itemPath>
+                <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/configs/Zigbee_AllDevice_Makerules.h</itemPath>
                 <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/configs/bitcloudPreInclude.h</itemPath>
+                <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/configs/zigbeeAppDeviceSelect.h</itemPath>
                 <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/configs/stackConfig.h</itemPath>
               </logicalFolder>
-              <logicalFolder name="f3" displayName="devicetypes" projectFiles="true">
-                <logicalFolder name="f1" displayName="multiSensor" projectFiles="true">
-                  <logicalFolder name="f1" displayName="include" projectFiles="true">
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/hsBasicCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/hsGroupsCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/hsHumidityMeasurementCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/hsIdentifyCluster.h</itemPath>
+              <logicalFolder name="devicetypes" displayName="devicetypes" projectFiles="true">
+                <logicalFolder name="multiSensor" displayName="multiSensor" projectFiles="true">
+                  <logicalFolder name="include" displayName="include" projectFiles="true">
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/lsBasicCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/lsGroupsCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/lsIdentifyCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/lsIlluminanceMeasurementCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/msClusters.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/multiSensor.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/osBasicCluster.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/osGroupsCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/osIdentifyCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/osOccupancySensingCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/lsGroupsCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/hsBasicCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/lsIlluminanceMeasurementCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/hsHumidityMeasurementCluster.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/tsBasicCluster.h</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/tsGroupsCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/osIdentifyCluster.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/tsIdentifyCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/osOccupancySensingCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/msClusters.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/osBasicCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/lsIdentifyCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/hsIdentifyCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/hsGroupsCluster.h</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/tsTemperatureMeasurementCluster.h</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/include/tsGroupsCluster.h</itemPath>
                   </logicalFolder>
                 </logicalFolder>
               </logicalFolder>
@@ -1022,11 +1058,13 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="f2" displayName="app_zigbee" projectFiles="true">
-        <logicalFolder name="f1" displayName="zigbee_console" projectFiles="true">
-          <itemPath>../src/app_zigbee/zigbee_console/msConsole.c</itemPath>
-          <itemPath>../src/app_zigbee/zigbee_console/console.c</itemPath>
+      <logicalFolder name="app_zigbee" displayName="app_zigbee" projectFiles="true">
+        <logicalFolder name="zigbee_console"
+                       displayName="zigbee_console"
+                       projectFiles="true">
           <itemPath>../src/app_zigbee/zigbee_console/consoleCmds.c</itemPath>
+          <itemPath>../src/app_zigbee/zigbee_console/console.c</itemPath>
+          <itemPath>../src/app_zigbee/zigbee_console/msConsole.c</itemPath>
         </logicalFolder>
         <itemPath>../src/app_zigbee/app_zigbee.c</itemPath>
         <itemPath>../src/app_zigbee/app_zigbee_handler.c</itemPath>
@@ -1074,174 +1112,188 @@
           <logicalFolder name="f3" displayName="stdio" projectFiles="true">
             <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f2" displayName="zigbee" projectFiles="true">
-            <logicalFolder name="f4" displayName="common_files" projectFiles="true">
-              <logicalFolder name="f1" displayName="src" projectFiles="true">
-                <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/common_files/src/zigbee_init.c</itemPath>
+          <logicalFolder name="zigbee" displayName="zigbee" projectFiles="true">
+            <logicalFolder name="common_files"
+                           displayName="common_files"
+                           projectFiles="true">
+              <logicalFolder name="src" displayName="src" projectFiles="true">
                 <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/common_files/src/errH.c</itemPath>
+                <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/common_files/src/zigbee_init.c</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder name="f3" displayName="zigbee_af_interface" projectFiles="true">
-              <logicalFolder name="f1" displayName="bdb" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
+            <logicalFolder name="zigbee_af_interface"
+                           displayName="zigbee_af_interface"
+                           projectFiles="true">
+              <logicalFolder name="bdb" displayName="bdb" projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_af_interface/bdb/src/BDB_Unpack.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f2" displayName="configserver" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="configserver"
+                             displayName="configserver"
+                             projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_af_interface/configserver/src/CS_Unpack.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f3" displayName="nwk" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="nwk" displayName="nwk" projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_af_interface/nwk/src/NWK_Unpack.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f4" displayName="zcl" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="zcl" displayName="zcl" projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_af_interface/zcl/src/ZCL_Unpack.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f5" displayName="zdo" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="zdo" displayName="zdo" projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_af_interface/zdo/src/ZDO_Unpack.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="zigbee_device" projectFiles="true">
-              <logicalFolder name="f4" displayName="api" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/src/BDB_API.c</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/src/CS_API.c</itemPath>
+            <logicalFolder name="zigbee_device"
+                           displayName="zigbee_device"
+                           projectFiles="true">
+              <logicalFolder name="api" displayName="api" projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/src/NWK_API.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/src/ZCL_API.c</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/src/BDB_API.c</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/src/CS_API.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/api/src/ZDO_API.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f3" displayName="clusters" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="clusters" displayName="clusters" projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/src/identifyCluster.c</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/src/groupsCluster.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/src/haClusters.c</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/src/groupsCluster.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/clusters/src/commissioningCluster.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f1" displayName="common" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/src/z3DevicePic32cx.c</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/src/pic32cxBSP.c</itemPath>
+              <logicalFolder name="common" displayName="common" projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/src/hs2xy.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/src/zgb_task.c</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/src/z3DevicePic32cx.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/src/zgpTranslationTable.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/src/zgpAppInterface.c</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/src/hs2xy.c</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/common/src/pic32cxBSP.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f2" displayName="devicetypes" projectFiles="true">
-                <logicalFolder name="f1" displayName="multiSensor" projectFiles="true">
-                  <logicalFolder name="f1" displayName="src" projectFiles="true">
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/hsBasicCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/osBasicCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/tsBasicCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/hsIdentifyCluster.c</itemPath>
+              <logicalFolder name="devicetypes" displayName="devicetypes" projectFiles="true">
+                <logicalFolder name="multiSensor" displayName="multiSensor" projectFiles="true">
+                  <logicalFolder name="src" displayName="src" projectFiles="true">
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/osIdentifyCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/tsIdentifyCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/hsGroupsCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/osGroupsCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/tsGroupsCluster.c</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/osOccupancySensingCluster.c</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/lsIlluminanceMeasurementCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/tsTemperatureMeasurementCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/hsHumidityMeasurementCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/msDiagnosticsCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/lsBasicCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/lsGroupsCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/lsIdentifyCluster.c</itemPath>
-                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/msClusters.c</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/msPdt.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/lsBasicCluster.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/lsIdentifyCluster.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/hsHumidityMeasurementCluster.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/osGroupsCluster.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/hsIdentifyCluster.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/osBasicCluster.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/tsGroupsCluster.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/hsGroupsCluster.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/msClusters.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/tsTemperatureMeasurementCluster.c</itemPath>
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/multiSensor.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/hsBasicCluster.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/tsIdentifyCluster.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/msDiagnosticsCluster.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/tsBasicCluster.c</itemPath>
+                    <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_device/devicetypes/multiSensor/src/lsGroupsCluster.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder name="f2"
+            <logicalFolder name="zigbee_systemresource"
                            displayName="zigbee_systemresource"
                            projectFiles="true">
-              <logicalFolder name="f7" displayName="bsp" projectFiles="true">
-                <logicalFolder name="f1" displayName="PIC32CX" projectFiles="true">
-                  <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="bsp" displayName="bsp" projectFiles="true">
+                <logicalFolder name="PIC32CX" displayName="PIC32CX" projectFiles="true">
+                  <logicalFolder name="src" displayName="src" projectFiles="true">
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/bsp/PIC32CX/src/fakeBSP.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f1" displayName="configserver" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="configserver"
+                             displayName="configserver"
+                             projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/configserver/src/configserver.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/configserver/src/csMem.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/configserver/src/csPersistentMem.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f4" displayName="hal" projectFiles="true">
-                <logicalFolder name="f1" displayName="cortexm4" projectFiles="true">
-                  <logicalFolder name="f2" displayName="common" projectFiles="true">
-                    <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="hal" displayName="hal" projectFiles="true">
+                <logicalFolder name="cortexm4" displayName="cortexm4" projectFiles="true">
+                  <logicalFolder name="common" displayName="common" projectFiles="true">
+                    <logicalFolder name="src" displayName="src" projectFiles="true">
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/common/src/timer.c</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/common/src/sleepTimer.c</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/common/src/appTimer.c</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/common/src/halTaskManager.c</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/common/src/sleep.c</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/common/src/sleepTimer.c</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/common/src/statStack.c</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/common/src/timer.c</itemPath>
                     </logicalFolder>
                   </logicalFolder>
-                  <logicalFolder name="f1" displayName="pic32cx" projectFiles="true">
-                    <logicalFolder name="f1" displayName="src" projectFiles="true">
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/pic32cx/src/atomic.c</itemPath>
+                  <logicalFolder name="pic32cx" displayName="pic32cx" projectFiles="true">
+                    <logicalFolder name="src" displayName="src" projectFiles="true">
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/pic32cx/src/halSleepTimerClock.c</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/pic32cx/src/halAppClock.c</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/pic32cx/src/halSleep.c</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/pic32cx/src/halMacIsr.c</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/pic32cx/src/halRfCtrl.c</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/pic32cx/src/halSleep.c</itemPath>
-                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/pic32cx/src/halSleepTimerClock.c</itemPath>
+                      <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/pic32cx/src/atomic.c</itemPath>
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/hal/cortexm4/pic32cx/src/halAes.c</itemPath>
                     </logicalFolder>
                   </logicalFolder>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f6" displayName="pds" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="pds" displayName="pds" projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/pds/src/bcPDS.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/pds/src/wlPdsTypesConverter.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f2" displayName="systemenvironment" projectFiles="true">
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/dbg.c</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysAssert.c</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysDuplicateTable.c</itemPath>
+              <logicalFolder name="systemenvironment"
+                             displayName="systemenvironment"
+                             projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysEventsHandler.c</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysDuplicateTable.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysIdleHandler.c</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysInit.c</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysMutex.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysQueue.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysSleep.c</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysStat.c</itemPath>
-                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysTaskManager.c</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/dbg.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysTimer.c</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysInit.c</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysTaskManager.c</itemPath>
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysUtils.c</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysAssert.c</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysMutex.c</itemPath>
+                  <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/systemenvironment/src/sysStat.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f3" displayName="zcl" projectFiles="true">
-                <logicalFolder name="f2" displayName="clusters" projectFiles="true">
-                  <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="zcl" displayName="zcl" projectFiles="true">
+                <logicalFolder name="clusters" displayName="clusters" projectFiles="true">
+                  <logicalFolder name="src" displayName="src" projectFiles="true">
                     <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/zcl/clusters/src/scenes.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder name="f1" displayName="src" projectFiles="true">
+                <logicalFolder name="src" displayName="src" projectFiles="true">
                   <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/zcl/src/zclCommandManager.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="f5" displayName="zllplatform" projectFiles="true">
-                <logicalFolder name="f1" displayName="infrastructure" projectFiles="true">
-                  <logicalFolder name="f1" displayName="N_Util" projectFiles="true">
-                    <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="zllplatform" displayName="zllplatform" projectFiles="true">
+                <logicalFolder name="infrastructure"
+                               displayName="infrastructure"
+                               projectFiles="true">
+                  <logicalFolder name="N_Util" displayName="N_Util" projectFiles="true">
+                    <logicalFolder name="src" displayName="src" projectFiles="true">
                       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/zigbee_systemresource/zllplatform/infrastructure/N_Util/src/N_Util.c</itemPath>
                     </logicalFolder>
                   </logicalFolder>
@@ -1412,6 +1464,7 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/Zigbee_MultiSensor_wbz451_curiosity/harmony-manifest-success.yml</itemPath>
+      <itemPath>Zigbee_MultiSensor_wbz451_curiosity.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -1440,8 +1493,8 @@
         <linkerTool>
           <linkerLibItems>
             <linkerLibFileItem>../src/config/Zigbee_MultiSensor_wbz451_curiosity/driver/pds/pds.a</linkerLibFileItem>
-            <linkerLibFileItem>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/zigbee_alldevice_lib.a</linkerLibFileItem>
             <linkerLibFileItem>../src/config/Zigbee_MultiSensor_wbz451_curiosity/driver/device_support/pic32cx_bz2_device_support.a</linkerLibFileItem>
+            <linkerLibFileItem>../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/zigbee_alldevice_lib.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>
@@ -1467,23 +1520,25 @@
       <C32>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe"
+                  value="-include&quot;zigbee_device/configs/Zigbee_AllDevice_Makerules.h&quot;"/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/Zigbee_MultiSensor_wbz451_curiosity;../src/config/Zigbee_MultiSensor_wbz451_curiosity/crypto;../src/config/Zigbee_MultiSensor_wbz451_curiosity/driver/pds/include;../src/config/Zigbee_MultiSensor_wbz451_curiosity/peripheral;../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee;../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/configs;../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/WBZ451_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl"/>
+                  value="../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/lib/include;;../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee;;../src/config/Zigbee_MultiSensor_wbz451_curiosity/zigbee/configs;;../src/config/Zigbee_MultiSensor_wbz451_curiosity/peripheral;;../src/config/Zigbee_MultiSensor_wbz451_curiosity/driver/pds/include;;../src/config/Zigbee_MultiSensor_wbz451_curiosity/crypto;;../src;../src/config/Zigbee_MultiSensor_wbz451_curiosity;../src/packs/WBZ451_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl;../src/third_party/rtos/FreeRTOS/Source/include;;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F;;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="isolate-each-function" value="false"/>
+        <property key="isolate-each-function" value="false;"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-O2"/>
-        <property key="place-data-into-section" value="false"/>
+        <property key="place-data-into-section" value="false;"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
-                  value="HAL_USE_FLASH_ACCESS;HAVE_CONFIG_H;PIC32CX_CHIP_SOC;WOLFSSL_IGNORE_FILE_WARN;Z3DEVICE_APP;_PIC32CX_;_SUPER_SET_LIB_;_USE_LIB_"/>
+                  value="_PIC32CX_;PIC32CX_CHIP_SOC;PIC32CX_CHIP_SOC;_PIC32CX_;_USE_LIB_;_SUPER_SET_LIB_;HAL_USE_FLASH_ACCESS;Z3DEVICE_APP;HAVE_CONFIG_H;WOLFSSL_IGNORE_FILE_WARN;"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="tentative-definitions" value="-fcommon"/>
@@ -1525,6 +1580,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1551,7 +1607,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value=""/>
+        <property key="preprocessor-macros" value=";"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -1564,6 +1620,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -1573,7 +1630,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/Zigbee_MultiSensor_wbz451_curiosity;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/WBZ451_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F"/>
+                  value="../src;../src/config/Zigbee_MultiSensor_wbz451_curiosity;../src/packs/WBZ451_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F;;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -1592,6 +1649,7 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
+        <property key="appendMe" value=""/>
         <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>

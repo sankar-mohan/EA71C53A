@@ -1,108 +1,75 @@
 ---
 grand_parent: Examples applications
 parent: Zigbee
-title: Zigbee Multi-Sensor Low Power
+title: Zigbee multisensor
 has_children: true
 has_toc: false
-nav_order: 211
+nav_order: 255
 
 family: PIC32CX-BZ
 market:
   - wireless
 ---
-# PIC32CX-BZ2/WBZ45 ZigBee Low Power Application Demo: Zigbee Multi-Sensor
 
-This tutorial will help users to create a low power enabled zigbee project from Microchip H3 project generator framework. The step by step procedure will help the user to generate a Zigbee Multi-Sensor application from scratch.
+[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
+# Zigbee Application Demo: Multi-Sensor with Low Power Functionality
 
-## Hardware Required
+---
+## WBZ451 Curiosity Board
 
-  |**Tool**                | **Qty**  |
-  |------------------------| ---------|
-  |WBZ451 Curiosity Board  | 1        |
-  |Micro USB cable         | 1        |
+Devices (Device): \| **PIC32CX1012BZ25048(MCU) on WBZ451 module**  \|
 
-## SDK Setup
+Peripherals (Used, On-Board): \| **UART-USB Converter**\|
 
-[SDK Setup](../../../apps/docs/pic32cx_bz2_wbz45x_sdk_setup.md)
+## Introduction
+This tutorial will help users to create a low power enabled multi sensor application
+
+<div style="text-align:center"><img src="assets/zigbee_link.jpg" /></div>
+
+## Prerequisites :
+
++ ### Hardware Required
+
+    |**Tool**                | **Qty**  |
+    |------------------------| ---------|
+    |WBZ451 Curiosity Boards  | 2         |
+    |Micro USB cable         | 2        |
+    |Personal Computer     | 1        |
+
++ ### SDK Setup -   [SDK Setup](../../docs/pic32cx_bz2_wbz45x_sdk_setup.md)
+
++ ### Terminal Software - [TeraTerm](https://ttssh2.osdn.jp/index.html.en)
 
 ## Demo Description
 
 This application demonstrate the Zigbee Multi-Sensor end device joining to Zigbee Coordinator (Combined Interface or third-party gateway's such as Amazon Echo plus can also be used instead of CI.) After joining, multisensor device will start ZCL attribute reporting of sensor data such as temperature, occupancy, light, and humidity after connecting to the network.
 
-<div style="text-align:center"><img src="assets/zigbee_link.jpg" /></div>
+|**Application**                | **Zigbee Logical Device Type**  | **Functionality**|
+|------------------------| ---------|---------|
+|Combined Interface | Coordinator        |      Device capable of controlling and monitoring other devices. It is typically a mains-powered device like a personal computer|
+|Multi-Sensor        | End Device        |             Reports sensor data such as temperature, occupancy, light, and humidity periodically to gateway
 
-## Developing this Application from scratch using Harmony 3
-The following steps will help to understand the PIC32CXBZ2 device ZIGBEE stack programming structure. We recommend to follow the steps.
+To run the demo , we need 2 devices. One is the Combined Interface and the other is multi sensor.
 
-### Pull-in H3 Components
+1. One of the WBZ451 Curiosity board is programmed with Combined Interface which can act as Zigbee Gateway/Coordinator. Program the CI pre-compiled hex image by following [steps](../zigbee_combined_interface/readme.md) on one curiosity board.
+2. Another WBZ451 Curiosity board is programmed with Multi sensor application which can act as Zigbee end device. Program the pre-compiled hex image by following [Programming the precompiled hex file using MPLABX IPE](#tasks) on another curiosity board.
 
-1.  Create a new MPLAB Harmony 3 Project -- [link](../../../apps/docs/creating_new_mplabx_harmony_project.md) for instructions
+- If want to do changes in the demo code and would like to program/debug the customized code follow the instruction in [Build and Program The Application](#tasks_1)
+- If want to generate an application from scratch refer: [Creating New Application Device Types](#tasks_3). The steps for adding low power functionality is also explained here.
 
-2.  Open MPLABx Harmony 3 Configurator. The Wireless components will be displayed in available components. Select Multi Sensor from Available Components --> Wireless --> Zigbee as shown in the below figure.
+## Demo Steps: Commissioning
 
-	<div style="text-align:center"><img src="assets/available_components.jpg" /></div>
+The Zigbee Multi-Sensor can be connected to any zigbee network.
+- The steps explained in [Joining Multi-Sensor with Amazon Echo](#tasks_4) can be followed to connect Zigbee Multi-Sensor to Amazon Echo, if Amazon Echo has Built-in Zigbee smart home hub.
+- The steps explained in [Joining Multi-Sensor with WBZ451 Combined Interface (CI) Coordinator](#tasks_5) can be followed to connect with WBZ451 based combined interface which acts as Zigbee Coordinator.
 
-3.  Drag Multi Sensor component from available components to project graph area as shown in below figure. Accept Dependencies or satisfiers, select "Yes".
+<a name="tasks_4">
+</a>
 
-	<div style="text-align:center"><img src="assets/project_graph_multisensor.jpg" /></div>
+### Joining Multi-Sensor with Amazon Echo
 
-4.  Select the Multi Sensor Zigbee device component by click on the component in the project graph. Now the *Configuration Options* tab will list the Configurations for the selected Zigbee device.
-	Ensure that the *Automatic(Default) Configuration* is selected as shown in below figure.
-	
-	<div style="text-align:center"><img src="assets/configuration_options_ms.jpg" /></div>
- 
-### Low power Configuration
-
-5.  For Zigbee applications, the System Sleep mode is automatically enabled when using the following device types - Multisensor, Intruder Alarm System and Color Scene controller as per the Zigbee End Device Spec. There is no separate configuration that a user has to select to enable the System Sleep.
-
-6.  Upon adding Multi-Sensor, FreeRTOS related settings will be set automatically.
-	- Tick Mode will be set to Tickless_Idle
-	- Expected idle time before sleep will be set to 5 (ms)
-	- Tick Hook will be enabled (For user to add any custom code needed to be executed within each tick interrupt)
-	- RTC peripheral library will be added and configured 
-	<div style="text-align:center"><img src="assets/sleep_freertos.jpg" /></div>
-	
-	**Note:** RTC counter should not be reset (RTC_Timer32CounterSet()) arbitrarily when the system is running
-	
-7.  RTC clock source should be set manually, there are 4 options to choose from
-	 - FRC (±1% offset)
-	 - LPRC ( with larger offset, < ±5%)
-	 - POSC  <- Candidate of the clock source (better clock accuracy)
-	 - SOSC <- Candidate of the clock source (better clock accuracy)
-
-	Users can select POSC or SOSC as the RTC clock source. In this example SOSC is configured as RTC clock source.
-
-8.  In Harmony 3 configurator, Click "Tools" select "Clock Configuration"
-	<div style="text-align:center"><img src="assets/Tools_Clock_selection.jpg" /></div>
-
-9.  In Clock Diagram, 
-	 - Enable Secondary Oscillator (SOSC) by setting `SOSCEN` to `ON`
-	 - Select `SOSC` as clock source for `VBKP_32KCSEL` and set `LPCLK_MOD` to `DIV_1_024` as hown in below below.
-	 <div style="text-align:center"><img src="assets/ClockDiagram.jpg" /></div>
-	 - It is recommended to use 48MHz as SYS_CLOCK for better power savings. This can be configured by setting SPLLPOSTDIV1 to 2 as shown below.
-	 <div style="text-align:center"><img src="assets/sys_clock.jpg" /></div>
-	 - Ensure that JTAG Enable is disabled by clearing the JTAGEN bit in CFGCON0 (Configuration Control Register 0) as shown below.\
-     `CFG_REGS->CFG_CFGCON0CLR = CFG_CFGCON0_JTAGEN_Msk;`
-	 **Note:** This is done in `GPIO_Initialize()` as shwon below.
-	 <div style="text-align:center"><img src="assets/jtagen.jpg" /></div>
-
-10. All Unused pins in the application needs to be set in input mode and the pulldown should be enabled for these pins. This can be configured through pin configuration in Harmony3 Configurator as shown below.
-     <div style="text-align:center"><img src="assets/lowpower_pin_config.jpg" /></div>
-
-11. Open app_user_edits.c file. Comment out or remove the #error line. Update the freertos_hooks.c as mentioned in app_user_edits.c file
-
-12. Compile and Run the project in WBZ45x device.
-
-### Demo Steps: Commissioning
-
-13. The Zigbee Multi-Sensor can be connected to any zigbee network.
-    The steps explained in [Discovery of Multi-Sensor from Amazon Echo]() can be followed to connect Zigbee Multi-Sensor to Amazon Echo, if Amazon Echo has Built-in Zigbee smart home hub.
-	The steps explained in [Discovery of Multi-Sensor from WBZ451 Combined Interface (CI) Coordinator]() B can be followed for WBZ451 based combined interface acts as Zigbee Coordinator.
-
-#### Discovery of Multi-Sensor from Amazon Echo
-
-14. Multi-Sensor can be added to Alexa's Zigbee network by voice commands or by using Alexa mobile app
-	- **Voice Commands:** Open Alexa to discover the Multi-Sensor device. Say “Discover my devices”. or 
+1. Multi-Sensor can be added to Alexa's Zigbee network by voice commands or by using Alexa mobile app
+	- **Voice Commands:** Open Alexa to discover the Multi-Sensor device. Say “Discover my devices”. or
 	- **Alexa App:**
 	1. Launch Alexa app, from the menu, select the Add Device.
 	2. Select the type of smart home device “Motion Sensor” and select other.
@@ -113,19 +80,87 @@ The following steps will help to understand the PIC32CXBZ2 device ZIGBEE stack p
 
 	**Note:** Echo Plus is in discovery mode for 45 secs. Devices wanting to join Echo Plus should initiate joining/connecting procedure within this time limit for a successful join
 
-#### Discovery of Multi-Sensor from WBZ451 Combined Interface (CI) Coordinator
+<a name="tasks_5">
+</a>
 
-15. Supply power to another WBZ451 Curiosity Board which is programmed with Combined interface image by connecting a USB cable. Power Supply (PS) Green LED will turn on when connect to PC.
-	- Program Combined interface precomplied hex file by following the procedure
-	- Open Terminal (eg: Tera Term)and setup UART.
-	- send command: *resetToFN* and look for the below logs for successful zigbee network formation on CI
-	<div style="text-align:center"><img src="assets/CI_1.png" /></div>
+### Joining Multi-Sensor with WBZ451 Combined Interface (CI) Coordinator
 
-	- CI will open up the network for other zigbee devices to join for first 180sec from the first powerON. If commissioning of Multi-Sensor is initiated after this 180sec, Multi-Sensor will not get joined. This is same as Alexa saying "Discovering and put the device is pairing mode". To open up the network after 180sec, send the below commands in CI, before commissioning is initiated in combo device.
-    1. *setPermitJoin 180*  -> This command opens up the network for next 180sec
-    2. *invokeCommissioning 8 0*  -> This command opens up the network for "finding and binding procedure"
-	<div style="text-align:center"><img src="assets/CI_2.png" /></div>
-	3. Supply power to WBZ451 Curiosity Board which is programmed with Multi-Sensor image by connecting a USB cable. The Multi-Sensor will search for Zigbee coordinator device and will join to network and intiate Finding & Binding.
-	4. Once Multi-Sensor finishes Finding & Binding procedure, it will start attribute reporting. The Combined interface terminal log will print the recived attribute information as shown below.
+#### # Hardware & Software Setup
+1. Supply power to WBZ451 Curiosity Board consisting of Combined Interface application by connecting a USB cable. Power Supply (PS) Green LED will turn on when connect to PC.
+
+	<div style="text-align:center"><img src="assets/Curiosity_USER_LED_USB.jpg" /></div>
+
+2. The application activity is shown as "Console Log" through on board UART-USB converter
+    - Open Terminal(eg: Tera Term) with the setup as shown below to look for these logs
+
+    On the PC side virtual COM port connection that corresponds to the board shall have following settings:
+
+    - BAUD RATE: 115200 (as configured in SERCOM configuration)
+    - PARITY: None
+    - DATA BITS: 8
+    - STOP BITS: 1
+    - FLOW CONTROL: None
+
+    Additionally, local echo and sending line ends with line feeds shall be enabled in the PC serial terminal application.
+
+     <div style="text-align:center"><img src="assets/terminal.png" /></div>
+
+#### # Network Formation (Coordinator  - (Combined Interface))
+
+3. Follow the steps either _case1_ or _case2_ explained in [Network Formation (Coordinator  - (Combined Interface))](../zigbee_combined_interface/readme.md) to open up the network in CI.
+
+#### # Commissioning (End Device - Multi-Sensor)
+4. Supply power to WBZ451 Curiosity Board which is programmed with Multi-Sensor image by connecting a USB cable. The Multi-Sensor will search for Zigbee coordinator device and will join to network and intiate Finding & Binding.
+5. Once Multi-Sensor finishes Finding & Binding procedure, it will start attribute reporting. The Combined interface terminal log will print the received attribute information as shown below.
 	<div style="text-align:center"><img src="assets/CI_teraterm.jpg" /></div>
-	
+
+<a name="tasks">
+</a>
+
+## Programming the precompiled hex file using MPLABX IPE
+
+1.  Precompiled Hex file Extended light is located <a href="precompiled_hex/"> Multi Senso </a>
+
+2.  Follow the steps mentioned [here](https://microchipdeveloper.com/ipe:programming-device)
+
+ **Caution:** Users should choose the correct Device and Tool information
+
+3. Follow the steps for [running the demo](#tasks_2)
+
+---
+
+<a name="tasks_1">
+</a>
+
+## Build and Program The Application
+
+The source code of demo application is available here <a href="firmware"> Multi Sensor </a> . The source code implements the low power application as well and the configuration details are explained [here](#tasks_6) for reference. If want to do changes in the demo code and would like to program/debug the customized code follow the below instruction.
+
+
+1. Open the "firmware/Zigbee_MultiSensor_wbz451_curiosity.X" MPLABX project from MPLABX
+
+  <div style="text-align:center"><img src="../doc/resources/mplabx1.png" /></div>
+  <div style="text-align:center"><img src="../doc/resources/mplabx.png" /></div>    
+
+2. Do your changes in the code. Clean and build your application by clicking on the Clean and Build button as shown below.
+	  <div style="text-align:center"><img src="../doc/resources/mplabx2.png" /></div>
+
+3. Program your application to the device, by clicking on the Make and Program button as shown below
+	  <div style="text-align:center"><img src="../doc/resources/mplabx3.png" /></div>
+
+---
+
+<a name="tasks_3">
+</a>
+
+## Creating Application Device Types From Scratch Using MCC
+
+1. All the supported device types including this Multi Sensor projects can be generated by following the steps in <a href="../zigbee_project_generation.md"> Generating project from MCC </a>
+
+<a name="tasks_6">
+</a>
+
+2. Multi sensor is zigbee end device type. So, the low power sleep functionality can be enabled for this application. Follow the steps in <a href="../low_power_configuration.md"> low power configuration doc </a>
+
+3. Compile and Run the project in WBZ45x device.
+---

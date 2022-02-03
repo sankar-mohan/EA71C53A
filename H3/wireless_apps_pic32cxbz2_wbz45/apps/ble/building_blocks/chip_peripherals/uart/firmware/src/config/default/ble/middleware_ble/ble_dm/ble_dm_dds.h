@@ -68,11 +68,11 @@
 // *****************************************************************************
 
 
-uint16_t BLE_DM_DdsGetPairedDevice(uint8_t devId, BLE_DM_PairedDevInfo_T        * p_pairedDevInfo);
-uint16_t BLE_DM_DdsSetPairedDevice(uint8_t devId, BLE_DM_PairedDevInfo_T        * p_pairedDevInfo);
+uint16_t BLE_DM_DdsGetPairedDevice(uint8_t devId, BLE_DM_PairedDevInfo_T *p_pairedDevInfo);
+uint16_t BLE_DM_DdsSetPairedDevice(uint8_t devId, BLE_DM_PairedDevInfo_T *p_pairedDevInfo);
 uint8_t BLE_DM_DdsGetFreeDeviceId();
 uint8_t BLE_DM_DdsGetDeviceId(BLE_GAP_Addr_T *p_bdAddr);
-uint16_t BLE_DM_DdsDeletePairedDevice(uint8_t           devId);
+uint16_t BLE_DM_DdsDeletePairedDevice(uint8_t devId);
 uint16_t BLE_DM_DdsDeleteAllPairedDevice();
 bool BLE_DM_DdsChkDeviceId(uint8_t devId);
 

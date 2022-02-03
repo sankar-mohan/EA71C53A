@@ -23,13 +23,13 @@ market:
 
 This document will help users create a multilink central device and send/receive characters between connected BLE devices over Microchip proprietary Transparent UART Profile. The multilink central will enable users to connect multiple peripheral devices to a central device. The central and peripheral devices in this tutorial are WBZ45x devices.
 
-Users of this document can choose to just run the precompiled Application Example hex file on the WBZ451 Curiosity board and experience the demo or can go through the steps involved in developing this Application from scratch. 
+Users of this document can choose to just run the precompiled Application Example hex file on the WBZ451 Curiosity board and experience the demo or can go through the steps involved in developing this Application from scratch.
 
 ## Recommended Reads
 
-1.  [BLE Connection(central)](../../connection/readme.md) 
+1.  [BLE Connection(central)](../../connection/readme.md)
 
-2.  [BLE Transparent UART(central)](../../profiles_services/trp_uart/readme.md) 
+2.  [BLE Transparent UART(central)](../../profiles_services/trp_uart/readme.md)
 
 ## Hardware Required
 
@@ -44,7 +44,7 @@ Users of this document can choose to just run the precompiled Application Exampl
 
 ## Software
 
-1.  [TeraTerm](https://ttssh2.osdn.jp/index.html.en)] 
+1.  [TeraTerm](https://ttssh2.osdn.jp/index.html.en)]
 
 ## Smartphone App
   None
@@ -62,11 +62,11 @@ Users of this document can choose to just run the precompiled Application Exampl
 
 1.  Follow steps mentioned in section 4 of [SDK Setup](../../../../../docs/pic32cx_bz2_wbz45x_sdk_setup.md) document
 
-2.  Open and program the Application Example <a href="firmware"> multilink_central_trp_uart </a>  in MPLABX IDE 
+2.  Open and program the Application Example <a href="firmware"> multilink_central_trp_uart </a>  in MPLABX IDE
 
 ## Demo Description
 
-Upon programming the demo application, central device (WBZ45x) will start scanning for near by peripheral devices to connect. After a connection has been made data can be sent back and forth over UART between the two devices that are connected. The central device continues scanning until 100 secs and allows new peripheral devices that are advertising to join. For this example we are going to demonstrate 2 BLE links 
+Upon programming the demo application, central device (WBZ45x) will start scanning for near by peripheral devices to connect. After a connection has been made data can be sent back and forth over UART between the two devices that are connected. The central device continues scanning until 100 secs and allows new peripheral devices that are advertising to join. For this example we are going to demonstrate 2 BLE links
 
                         ------------------Central Device------------------
                         |                      |                         |
@@ -75,7 +75,7 @@ Upon programming the demo application, central device (WBZ45x) will start scanni
 
 Demo will print start of the scanning "Scanning",connected "Connected!" and disconnected
 "Disconnected" state on a terminal emulator like TeraTerm@ (Speed:
-115200, Data: 8-bit, Parity: none, stop bits: 1 bit, Flow control: none) Application Data to be sent to the connected peripheral device should be entered in the terminal emulator. 
+115200, Data: 8-bit, Parity: none, stop bits: 1 bit, Flow control: none) Application Data to be sent to the connected peripheral device should be entered in the terminal emulator.
 
 ## Testing
 Users should use 3 WBZ451 Curiosity Boards configured as <a href="../../../peripheral/profiles_services/trp_uart/readme.md"> BLE Transparent UART(peripheral) </a>
@@ -106,41 +106,37 @@ bit, Flow control: none). Reset the board. Upon reset, "Advertising" message is 
 
  **Note:** Scanner is configured to scan only for 100 secs, user should ensure the peer device is advertising
 
-After connection establishment, both the peripheral device (Board2/3/4) and central device(Board1) will display "Connected!" message on respective terminal windows. 
+After connection establishment, both the peripheral device (Board2/3/4) and central device(Board1) will display "Connected!" message on respective terminal windows.
 
-Users can now start sending data back and forth between the central and peripheral device using the terminal emulator. 
+Users can now start sending data back and forth between the central and peripheral device using the terminal emulator.
 Characters entered on any peripheral device's (Board2,3,4) terminal emulator will appear on central device's (Board1) terminal emulator
-Characters entered on central devices terminal emulator will appear on peripheral devices emulator in a round-robin fashion without priority. For example in order to send character "a" to all peripheral devices, "aaa" needs to be entered on terminal emulator of the central device 
+Characters entered on central devices terminal emulator will appear on peripheral devices emulator in a round-robin fashion without priority. For example in order to send character "a" to all peripheral devices, "aaa" needs to be entered on terminal emulator of the central device
 
 
 ![](media/trp_uart_13.PNG)
 
-## Developing this Application from scratch using Harmony 3
+## Developing this Application from scratch using MPLAB Code Configurator
 
-This section explains the steps required by a user to develop this
-application example from scratch using MPLABx Harmony 3 Framework
+This section explains the steps required by a user to develop this application example from scratch using MPLABx Code Configurator
 
-**Tip:** New Harmony 3 Users are recommended to go through the [overview](https://microchip-mplab-harmony.github.io/mhc/doc/readme.html) of Harmony 3. Users can add/remove different components like peripheral support and other wireless functionality by following steps mentioned [here](https://microchip-mplab-harmony.github.io/mhc/doc/readme_mhc_configuration.html). 
+**Tip:** New users of MPLAB Code Configurator are recommended to go through the [overview](https://onlinedocs.microchip.com/pr/GUID-1F7007B8-9A46-4D03-AEED-650357BA760D-en-US-6/index.html?GUID-B5D058F5-1D0B-4720-8649-ACE5C0EEE2C0). 
 
-1.  Create a new MPLAB Harmony 3 Project -- [link](../../../../../docs/creating_new_mplabx_harmony_project.md) 
+1.  Create a new MCC Harmony Project -- [link](../../../../../docs/creating_new_mplabx_harmony_project.md)
     for instructions
 
-2.  Import Harmony 3 component configuration -- This step helps users
-    setup the basic Harmony 3 components required to start their
+2.  Import component configuration -- This step helps users
+    setup the basic components required to start their
     Application Development
-    Harmony 3 component configuration related to this Application is
-    available [here](export.mhc)
+    Component configuration related to this Application is
+    available [here](firmware/ble_ml_trp_uart_wbz451_curiosity.X/ble_ml_trp_uart_wbz451_curiosity.mc3)    
     Users should follow the instructions mentioned
-    [here](https://microchip-mplab-harmony.github.io/mhc/doc/readme_mhc_import_export.html) to import the Harmony 3 component configuration.
+    [here](https://microchipdeveloper.com/mcc:peripheralconfig) to import the component configuration.
 
-    **Tip:** Import and Export functionality of Harmony 3 component
-    configuration will help users to start from a known working setup of Harmony 3
-    configuration
+    **Tip:** Import and Export functionality of component configuration will help users to start from a known working setup of configuration
 
 3.  Accept Dependencies or satisfiers, select "Yes"
 
-4.  Verify if the Project Graph window has all the expected Harmony 3
-    configuration
+4.  Verify if the Project Graph window has all the expected configuration
     ![](media/trp_uart_1.PNG)
 
 ## Verify Scan,Connection and Transparent UART Profile Configuration
@@ -153,17 +149,17 @@ application example from scratch using MPLABx Harmony 3 Framework
 
 ## Generate Code [link](../../../../../docs/generate_code.md) for instructions
 
-## Files and Routines Automatically generated by the MHC
-After generating the program source from MHC interface by clicking Generate Code, the BLE configuration can be found in the following project directories 
+## Files and Routines Automatically generated by the MCC
+After generating the program source from MCC interface by clicking Generate Code, the BLE configuration can be found in the following project directories
 
 ![](media/trp_uart_4.PNG)
 
 
-The [OSAL](http://ww1.microchip.com/downloads/en/DeviceDoc/MPLAB%20Harmony%20OSAL%20Libraries%20Help%20v2.06.pdf), RF System, BLE System  initialization routine executed during program initialization can be found in the project files. This initialization routine is automatically generated by the MHC
+The [OSAL](http://ww1.microchip.com/downloads/en/DeviceDoc/MPLAB%20Harmony%20OSAL%20Libraries%20Help%20v2.06.pdf), RF System, BLE System  initialization routine executed during program initialization can be found in the project files. This initialization routine is automatically generated by the MCC
 
 ![](media/trp_uart_5.png)
 
-The BLE stack initialization routine excuted during Application Initialization can be found in project files. This intitialization routine is automatically generated by the MHC. This call initializes and configures the GAP, GATT, SMP, L2CAP and BLE middleware layers.
+The BLE stack initialization routine excuted during Application Initialization can be found in project files. This intitialization routine is automatically generated by the MCC. This call initializes and configures the GAP, GATT, SMP, L2CAP and BLE middleware layers.
 ![](media/trp_uart_7.PNG)
 
 
@@ -178,7 +174,7 @@ The BLE stack initialization routine excuted during Application Initialization c
 > **Tip:** app.c is autogenerated and has a state machine based
 > Application code sample, users can use this template to develop their
 > application                                                                                                   
-### Header Files 
+### Header Files
 
 -   ble_gap.h- This header file contains BLE GAP functions and is
     automatically included in the app.c file
@@ -187,7 +183,7 @@ The BLE stack initialization routine excuted during Application Initialization c
 
 ### Function Calls
 
-Harmony 3 generates and adds the code to initialize the BLE Stack GAP,
+MCC generates and adds the code to initialize the BLE Stack GAP,
 GATT, L2CAP and SMP in *APP_BleStackInit()* function
 
 -   APP_BleStackInit() is the API that will be called inside the
@@ -199,9 +195,9 @@ GATT, L2CAP and SMP in *APP_BleStackInit()* function
 
 -   "ble_trspc.h" in app.c, BLE Transparent UART Server related API's are available here
 -   "osal/osal_freertos_extend.h" in app_trsps_handler.c, OSAL related API's are available here
--   definitions.h in all the files where UART will be used to print debug information 
->Tip: definitions.h is not specific to just UART peripheral, instead it should be included in all application source files where peripheral functionality will be exercised 
--   user action is required as mentioned <a href="../../../../../docs/user_action.md"> here </a> 
+-   definitions.h in all the files where UART will be used to print debug information
+>Tip: definitions.h is not specific to just UART peripheral, instead it should be included in all application source files where peripheral functionality will be exercised
+-   user action is required as mentioned <a href="../../../../../docs/user_action.md"> here </a>
 
 
 ### Start Scanning  
@@ -213,7 +209,7 @@ BLE_GAP_SetScanningEnable(true, BLE_GAP_SCAN_FD_ENABLE, BLE_GAP_SCAN_MODE_OBSERV
 
 This API is called in the Applications initialstate - APP_STATE_INIT in app.c. Scan duration is 100 secs
 
-### Scan Results and intiating a BLE Connection 
+### Scan Results and intiating a BLE Connection
 
 -   BLE_GAP_EVT_ADV_REPORT event is generated upon finding Adverstisements on legacy channels
 - BLE connection can be initiated by using the API BLE_GAP_CreateConnection(&createConnParam_t);
@@ -228,15 +224,15 @@ This API is called in the Applications initialstate - APP_STATE_INIT in app.c. S
   {
       SERCOM0_USART_Write((uint8_t *)"Found Peer Node\r\n", 17);
       BLE_GAP_CreateConnParams_T createConnParam_t;
-      createConnParam_t.scanInterval = 0x3C; // 37.5 ms 
+      createConnParam_t.scanInterval = 0x3C; // 37.5 ms
       createConnParam_t.scanWindow = 0x1E; // 18.75 ms
       createConnParam_t.filterPolicy = BLE_GAP_SCAN_FP_ACCEPT_ALL;
       createConnParam_t.peerAddr.addrType = p_event->eventField.evtAdvReport.addr.addrType;
       memcpy(createConnParam_t.peerAddr.addr, p_event->eventField.evtAdvReport.addr.addr, GAP_MAX_BD_ADDRESS_LEN);
-      createConnParam_t.connParams.intervalMin = 0x10; 
-      createConnParam_t.connParams.intervalMax = 0x10; 
+      createConnParam_t.connParams.intervalMin = 0x10;
+      createConnParam_t.connParams.intervalMax = 0x10;
       createConnParam_t.connParams.latency = 0;
-      createConnParam_t.connParams.supervisionTimeout = 0x48; 
+      createConnParam_t.connParams.supervisionTimeout = 0x48;
       SERCOM0_USART_Write((uint8_t *)"Initiating Connection\r\n", 23);
       BLE_GAP_CreateConnection(&createConnParam_t);
   }
@@ -258,7 +254,7 @@ This API is called in the Applications initialstate - APP_STATE_INIT in app.c. S
 -   BLE_TRSPC_SendData(conn_hdl[link_index] , 1, &data);  is the API to be used for sending data towards the central device
 **Note:** The precompiled application example uses a UART callback to initiate the data transmission upon receiving a character on UART
 
-Example Implementation for Transmitting the received data over UART using the BLE_TRSPC_SendData API 
+Example Implementation for Transmitting the received data over UART using the BLE_TRSPC_SendData API
 ```
 uint16_t conn_hdl[3] = {0xFFFF, 0xFFFF, 0xFFFF};// connection handle info captured @BLE_GAP_EVT_CONNECTED event
 uint8_t no_of_links;// No of connected peripheral devices
@@ -289,7 +285,7 @@ void uart_cb(SERCOM_USART_EVENT event, uintptr_t context)
 
 ### Receive Data
 - BLE_TRSPC_EVT_RECEIVE_DATA is the event generated when data is sent from central device
-- Users need to use the BLE_TRSPC_GetDataLength(&data_len) API to extract the length of application data received 
+- Users need to use the BLE_TRSPC_GetDataLength(&data_len) API to extract the length of application data received
 - BLE_TRSPC_GetData(&conn_hdl, data); API is used to  retrieve the data, conn_hdl is the value obtained from Connection Handler section
 
 **Tip:** BLE_TRSPC_Event_T p_event structure stores the information about BLE transparent UART callback functions
@@ -300,13 +296,13 @@ Example Implementation for printing the received data from peripheral device ove
     uint16_t data_len;
     uint8_t *data;
     // Retrieve received data length
-    BLE_TRSPC_GetDataLength(&data_len);
+    BLE_TRSPC_GetDataLength(p_event->eventField.onReceiveData.connHandle, &data_len);
     // Allocate memory according to data length
     data = OSAL_Malloc(data_len);
     if(data == NULL)
     break;
     // Retrieve received data
-    BLE_TRSPC_GetData(&p_event->eventField.onReceiveData.connHandle, data);
+    BLE_TRSPC_GetData(p_event->eventField.onReceiveData.connHandle, data);
     // Output received data to UART
     SERCOM0_USART_Write(data, data_len);
     // Free memory
@@ -321,4 +317,3 @@ using [BLE Stack API ](../../../docs/api/driver/ble/docs/html/modules.html)
 ## Where to go from here
 
 -   [BLE Profiles and Services](../readme.md)
-

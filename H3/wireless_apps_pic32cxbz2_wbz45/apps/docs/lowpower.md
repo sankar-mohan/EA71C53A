@@ -73,7 +73,7 @@ These API's ensure that the BLE/Zigbee stack can go to sleep
 
 ![](media/ble_lp12.PNG)
 
-# **How to use Harmony 3 to Generate Sleep Mode**
+# **How to use MPLAB Code Configurator to Generate Sleep Mode**
 
 1. Sytem Sleep Mode needs to be enabled in BLE stack H3 compoenent configuration, after enabling this dependant components like RTC (Timer source during sleep) will be requested to be enabled
 
@@ -100,11 +100,11 @@ These API's ensure that the BLE/Zigbee stack can go to sleep
 
 	**Note:** Users must select POSC/SOSC as the RTC clock source as choosing other clock sources will impact BLE connection stability
 
-4. Manually Setting RTC clock source - POSC, open Harmony 3 configurator, select "Clock Configuration" and configure as highlighted
+4. Manually Setting RTC clock source - POSC, open MCC, select "Clock Configuration" and configure as highlighted
    ![](media/ble_lp10.PNG)
 	 ![](media/ble_lp9.PNG)
 
-5. Manually Setting RTC clock source - SOSC, open Harmony 3 configurator, select "Clock Configuration" and configure as highlighted
+5. Manually Setting RTC clock source - SOSC, open MCC, select "Clock Configuration" and configure as highlighted
    ![](media/ble_lp10.PNG)
 	 ![](media/ble_lp11.PNG)
 

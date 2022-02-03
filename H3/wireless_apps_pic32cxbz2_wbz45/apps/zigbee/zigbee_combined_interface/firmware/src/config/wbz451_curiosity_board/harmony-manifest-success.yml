@@ -4,16 +4,16 @@
 
 
 project: zigbee_combined_interface
-creation_date: 2021-11-09T08:58:38.630-07:00[America/Phoenix]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2022-01-13T16:50:13.803+08:00[Asia/Shanghai]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
-mhc_mode: IDE            # [IDE|Standalone|Headless]
+mhc_mode: Standalone            # [IDE|Standalone|Headless]
 mhc_version: v3.8.0
-mplabx_version: v5.50        # if MPLAB X plugin only
-plugin_version: v3.6.4        # if MPLAB X plugin only
-compiler: XC32 (3.01)
+mplabx_version: NA        # if MPLAB X plugin only
+plugin_version: NA        # if MPLAB X plugin only
+compiler: xc32
 
 modules:
-    - {name: "csp", version: "unknown"}
+    - {name: "csp", version: "v3.10.0"}
     - {name: "core", version: "v3.10.0"}
     - {name: "dev_packs", version: "v3.10.0"}
     - {name: "wireless", version: "unknown"}

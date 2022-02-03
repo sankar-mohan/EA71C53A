@@ -190,6 +190,9 @@ void APP_BleConfig()
     
     BLE_GAP_ConfigureBuildInService(&gapServiceOptions);
    
+
+        
+    
     // Configure scan parameters
     scanParam.type = BLE_GAP_SCAN_TYPE_PASSIVE_SCAN;
     scanParam.interval = 160;

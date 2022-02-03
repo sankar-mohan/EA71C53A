@@ -76,14 +76,14 @@
 /**@defgroup BLE_DTM_TRANSMITTER_PAYLOAD_TYPE Transmitter payload type
  * @brief The definition of transmitter test packet payload type.
  * @{ */
-#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_0                      0x00        /**< PRBS9 sequence â€˜11111111100000111101â€¦â€™ (in transmission order) */
-#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_1                      0x01        /**< Repeated â€˜11110000â€™ (in transmission order) sequence*/
-#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_2                      0x02        /**< Repeated â€˜10101010â€™ (in transmission order) sequence*/
+#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_0                      0x00        /**< PRBS9 sequence â??11111111100000111101â?¦â?? (in transmission order) */
+#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_1                      0x01        /**< Repeated â??11110000â?? (in transmission order) sequence*/
+#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_2                      0x02        /**< Repeated â??10101010â?? (in transmission order) sequence*/
 #define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_3                      0x03        /**< PRBS15 sequence */
-#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_4                      0x04        /**< Repeated â€˜11111111â€™ (in transmission order) sequence */
-#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_5                      0x05        /**< Repeated â€˜00000000â€™ (in transmission order) sequence */
-#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_6                      0x06        /**< Repeated â€˜00001111â€™ (in transmission order) sequence */
-#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_7                      0x07        /**< Repeated â€˜01010101â€™ (in transmission order) sequence */
+#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_4                      0x04        /**< Repeated â??11111111â?? (in transmission order) sequence */
+#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_5                      0x05        /**< Repeated â??00000000â?? (in transmission order) sequence */
+#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_6                      0x06        /**< Repeated â??00001111â?? (in transmission order) sequence */
+#define BLE_DTM_TRANSMITTER_TEST_PAYLOAD_7                      0x07        /**< Repeated â??01010101â?? (in transmission order) sequence */
 /** @} */
 
 /**@defgroup BLE_DTM_TRANSMITTER_PHY_TYPE Transmitter PHY type

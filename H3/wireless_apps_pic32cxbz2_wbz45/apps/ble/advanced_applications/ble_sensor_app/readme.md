@@ -185,7 +185,7 @@ Follow the steps [Programming the precompiled hex file using MPLABX IPE](#tasks)
 
 ## Build and Program The Application
 
-The source code of BLE Sensor demo application is available in Harmony 3 framework firmware/src. If want to do changes in the demo code and would like to program/debug the customized code follow the below instruction.
+The source code of BLE Sensor demo application is available in "apps/ble/advanced_applications/ble_sensor_app/" folder. If want to do changes in the demo code and would like to program/debug the customized code follow the below instruction.
 
 ### SDK Setup
 [SDK Setup](../../../docs/pic32cx_bz2_wbz45x_sdk_setup.md)
@@ -361,33 +361,45 @@ The "BLE Sensor" sub app in MBD mobile app is designed only to work with specifi
   <img src="images/mbd_smart6.png" width="250" height="500"  />    
 </p>
 
-### Using Harmony 3 Code Configurator
+### Using MPLAB Code Configurator
 
-MPLABX Harmony 3 provides the MPLAB® Harmony Configurator (MHC) tool, a set of modular device and middleware libraries, and numerous example applications, all of which are designed to help developers to quickly and easily develop powerful and efficient embedded software. The following steps can be followed to open MHC tool and generate the code.
+<<<<<<< HEAD
+MPLABX Harmony provides the MPLAB® Code Configurator (MCC) tool, a set of modular device and middleware libraries, and numerous example applications, all of which are designed to help developers to quickly and easily develop powerful and efficient embedded software. The following steps can be followed to open MCC tool and generate the code.
+=======
+MPLAB® Code Configurator (MCC) is a free graphical programming environment that generates seamless, easy-to-understand C code to insert into your project. Using an intuitive interface, it enables and configures a rich set of peripherals and functions specific to your application.  The following steps can be followed to open MCC tool and generate the code.
+>>>>>>> 19d9eac030c68ec11a58a5f53f0a67aa2db4e324
 
-1. Open MHC tool from MPLABX
+1. Open MCC tool from MPLABX
 <p align="left">
-  <img src="images/H3_1.png" width="800" height="300"  />
+  <img src="images/MCC_1.png" width="800" height="300"  />
 </p>
 
-2. Once the MHC tool is launched, the "Project Graph" shows the list of H3 components used in the specific project
+2. Once the MCC tool is launched, the "Project Graph" shows the list of H3 components used in the specific project
 
 <p align="left">
-  <img src="images/H3_2.png" width="800" height="500"  />
+  <img src="images/MCC_2.png" width="800" height="500"  />
 </p>
 
 3. Clicking on the specific component block will allow to change the configuration of that component. eg:SERCOM0 is shown in the screenshot.
 
 <p align="left">
-  <img src="images/H3_3.png" width="800" height="500"  />
+  <img src="images/MCC_3.png" width="800" height="500"  />
 </p>
 
-4. New component can also be added by drag and drop from "Available Components" to "Project Graph". Then configure the component as in step #3. eg: SERCOM1 is dragged into "Project Graph"
+4. New component can also be added by drag and drop from "Device Resources" to "Project Graph". Then configure the component as in step #3. eg: SERCOM1 can be added into "Project Graph"
 
 <p align="left">
-  <img src="images/H3_4.png" width="800" height="400"  />
+<<<<<<< HEAD
+  <img src="images/MCC_2.png" width="800" height="400"  />
+=======
+  <img src="images/MCC_4.png" width="800" height="400"  />
+>>>>>>> 19d9eac030c68ec11a58a5f53f0a67aa2db4e324
 </p>
 
 5. Once all the required components and configurations are done, [Generate Code](../../../docs/generate_code.md)
+
+<p align="left">
+  <img src="images/MCC_5.png" width="800" height="400"  />
+</p>
 
 ---

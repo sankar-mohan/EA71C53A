@@ -1,6 +1,6 @@
 ---
 parent: Release notes
-title: BLE Sensor Release notes
+title: BLE Sensor
 has_children: false
 has_toc: false
 nav_order: 255
@@ -14,6 +14,17 @@ function: BLE
 # PIC32CX-BZ/WBZ45 BLE Sensor App Firmware Release Notes
 
 ____
+## Release v0.7.3.3
+
+### New Features
++ Example converted to MCC based project
+
+### Bug fixes
+- None
+
+### Known Issues
+- None
+
 ## Release v0.7.3.2
 
 ### New Features
@@ -41,7 +52,7 @@ ____
 - None
 
 ### Development Tools
-- [MPLAB X v5.45](https://www.microchip.com/mplab/mplab-x-ide)
+- [MPLAB X v5.50](https://www.microchip.com/mplab/mplab-x-ide)
 - [MPLAB® XC32 C/C++ Compiler v3.0](https://www.microchip.com/mplab/compilers)
 - Device Pack: PIC32CX-BZ_DFP (1.0.73)
 
@@ -49,7 +60,7 @@ ____
 
 ### New Features
 1. Update to BLE SDK Stack v0.7.3.3
-2. Updated to 1.0.73 DFP version
+2. Updated to 1.0.80 DFP version
 
 ### Bug fixes
 - None
@@ -58,7 +69,7 @@ ____
 - None
 
 ### Development Tools
-- [MPLAB X v5.45](https://www.microchip.com/mplab/mplab-x-ide)
+- [MPLAB X v5.50](https://www.microchip.com/mplab/mplab-x-ide)
 - [MPLAB® XC32 C/C++ Compiler v3.0](https://www.microchip.com/mplab/compilers)
 - Device Pack: PIC32CX-BZ_DFP (1.0.73)
 

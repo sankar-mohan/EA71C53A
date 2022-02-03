@@ -19,7 +19,7 @@ title: Microchip MPLAB Harmony Wireless help
 lang: en-US
 timezone: America/Phoenix
 
-description: Harmony 3 Wireless package
+description: Harmony Wireless package
 url: "https://microchip-mplab-harmony.github.io"
 baseurl: "/wireless"
 remote_theme: "Microchip-MPLAB-Harmony/just-the-docs@mchp-harmony"

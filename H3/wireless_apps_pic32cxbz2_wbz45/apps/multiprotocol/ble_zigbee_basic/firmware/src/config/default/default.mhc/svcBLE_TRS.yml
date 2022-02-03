@@ -1,6 +1,0 @@
-format_version: v1.0
-type: UniqueComponent
-attributes: {id: svcBLE_TRS}
-children:
-- type: ElementPosition
-  attributes: {x: '611', y: '394', id: svcBLE_TRS}

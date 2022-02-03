@@ -46,7 +46,7 @@
 
 
 #include "app_trsps_handler.h"
-#include "ble_trs.h"
+#include "ble_trs/ble_trs.h"
 
 
 // *****************************************************************************

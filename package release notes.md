@@ -2,9 +2,16 @@ Early Adopter Package Release Notes
    
 ## EA3 Release Package(BLE + Zigbee Support):  
 
-### current version 3.1.3 (01/26/2022)
+### current version 3.2 (02/02/2022)
 
 Changes since last Early Adopter package releases 
+
+- v3.2 (02/02/2022)
+  - [H3/wireless_apps_pic32cxbz2_wbz45] Ported all Application examples to MPLAB Code Configurator (MCC) based projects 
+  - [H3/wireless_apps_pic32cxbz2_wbz45 - Documentation] All Documentation related to Application Examples updated to reflect MPLAB Code Configurator usage
+  - [Documentation/PIC32CX-BZWBZ45x SDK Setup.pdf] updated instructions to setup MPLAB Code Configurator based Development Environment
+  - [Documentation/Building a new BLE Application.pdf] Replaced with BLE Bulding Block training material
+
 - v3.1.3 (01/26/2022)
   - [Documentation] Updated Migration Guide and Known Issues document with current information 
   - [Documentation] Datasheet, Errata, Product Brief Updated, to reflect "preliminary" status of document
@@ -14,7 +21,6 @@ Changes since last Early Adopter package releases
     - WBZ451 module and associated peripherals powered by separate 3.0V regulator.
     - MikroBus UART Rx, Tx signals connected by sharing with MikroBus SPI SCK and MOSI
   
-
 - v3.1.2 (01/06/2022)
   - [Documentation] Updated instructions in SDK Setup Doc - Documentation/PIC32CX-BZWBZ45x SDK Setup.pdf
 
@@ -48,7 +54,6 @@ Changes since last Early Adopter package releases
     - TC WO errata workaround updated 
     - new errata TCC (ALOCK)
 
-
 - v3.02 (08/11/2021)
   - Datasheet updates (Updates made since v3.01 release) 
     - Added Confidential Watermark to the Datasheet
@@ -66,9 +71,6 @@ Changes since last Early Adopter package releases
 - v3.0 (07/05/2021)
 First BLE + Zigbee (Multiprotocol) Support Package, Updated Errata, Updated Datasheet, added Support documentation to create BLE, Zigbee or Multiprotocol Application from scratch, updated H3 components, added mechanical drawings for WBZ451
 
-
-
-
 ## EA2 Release Package(Zigbee only Support): 
 
 ### current version 2.0 (03/19/2021)
@@ -76,11 +78,12 @@ Changes since last Early Adopter package releases
 
 - v2.0 (03/19/2021) First Package with Zigbee Support, Support documentation like Datasheet and Errata inherited from earlier version of EA1 packages
 
-
 ## EA1 Release Package(BLE only Support):  
 
 ### current version 1.2 (03/11/2021)
+
 Changes since last Early Adopter package releases
+
 - v1.2 (3/11/2021)
 Updated images and text in SDK and Firmware Examples/Building a new BLE Application.pdf 
 Datasheet has new chapters WDK, AES, ICM and minor edits

@@ -3,7 +3,7 @@ parent: Release notes
 title: BLE UART Demo
 has_children: false
 has_toc: false
-nav_order: 1
+nav_order: 253
 
 family: PIC32CX-BZ
 function: BLE

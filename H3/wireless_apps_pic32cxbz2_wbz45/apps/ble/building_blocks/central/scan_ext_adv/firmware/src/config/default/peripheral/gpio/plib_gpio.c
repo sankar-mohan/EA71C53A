@@ -64,6 +64,7 @@ void GPIO_Initialize ( void )
     GPIOB_REGS->GPIO_TRISCLR = 0x8; /* Direction Control */
     GPIOB_REGS->GPIO_ANSELCLR = 0x8; /* Digital Mode Enable */
 
+
     /* PPS Input Remapping */
 
     /* PPS Output Remapping */

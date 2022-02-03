@@ -1,20 +1,18 @@
-# EA3.1.3
+# EA3.2
 
 Early Adopter 3 Package for PIC32CX_BZ2 and WBZ45x Family of devices
 
 This package has the necessary application examples, peripheral libraries, drivers and supporting documentation to get started with application development on PIC32CX_BZ2 and WBZ45x Family of devices. 
 
-## Clone Repo 
+## Clone Repo
 
 - Download and install git bash - https://git-scm.com/
 
-- clone repo using command: git clone https://github.com/MicrochipTech/EA.git
-
+- clone repo using command: git clone https://github.com/MicrochipTech/EA71C53A.git
 
 **Note** - Users must clone this repository in the root directory (maximum 1 level deep), for example C:/<folder_name> (folder_name should not exceed 4 letters)  
 
-
-## Files and Folder Contents 
+## Files and Folder Contents
 
 | File/Folder             | Contents			                                                                            | 
 |-------------------------|-------------------------------------------------------------------------------------------------|
@@ -27,7 +25,8 @@ This package has the necessary application examples, peripheral libraries, drive
 | package release notes.md| EA3 Package update information                                                                  |
 | Getting Started.md      | Getting Started with EA3 package                                                                |
 
-## [Getting Started](Getting%20Started.md) 
+## [Getting Started](Getting%20Started.md)
+
 Getting Started.md documents all the necessary tools, frameworks, documentation required to get started with BLE and Zigbee development using the WBZ451 Curiosity Board.
 
 *recommended* - markdown viewer as an extension to browser for offline mark down viewing purposes  

@@ -9,21 +9,17 @@ family: PIC32CX-BZ
 market:
   - wireless
 ---
-
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 # Zigbee Applications Guide
 
 
 ##  Introduction
 
-This is a generic document, which gives the user an overview of few key Zigbee 3.0 protocol concepts and guidance on implementing these features on PIC32CX-BZ using Microchip software. It shows how the protocol configurations(such as application, device types, clusters, commissioning) can be enabled/disabled, configured in a step by step manner, using Microchip's embedded software development framework tools (MHC GUI).
+This is a generic document, which gives the user an overview of few key Zigbee 3.0 protocol concepts and guidance on implementing these features on PIC32CX-BZ/WBZ using Microchip software. It shows how the protocol configurations(such as application, device types, clusters, commissioning) can be enabled/disabled, configured in a step by step manner, using Microchip's embedded software development framework tools.
 
-Harmony is a full-featured, production grade, embedded software development platform from Microchip. It provides a framework for creating zigbee devices running on PIC32CX-BZ family of device and modules.
+Microchip Harmony3 Framework is a full-featured, production grade, embedded software development platform from Microchip. It provides a framework for creating zigbee devices running on PIC32CX-BZ/WBZ family of device and modules.
 
-##  Device Types and Clusters
-
-<span class='icon icon-question inline-block highlight-warning'> **Overview**</span>
-</br>
+## 1. Device Types and Clusters
 
 To allow interoperability among ZigBee products produced by various manufacturers, the
 ZigBee Alliance has defined a set of standard device types. These device types
@@ -33,7 +29,7 @@ This functionality is again dependent on independent functional entities, called
 Zigbee Device reference application implements behavior of Zigbee Lighting and Occupancy (ZLO) devices and Green power device for operation on a Zigbee network.
 
 #### Supported Device Types
-The list of Application device types supported as part of this reference application are as follows:
+The list of Application device types supported as part of reference applications are as follows:
 
  1. Combined Interface( Gateway / Coordinator)
  2. Light devices (OnOff  / Dimmable / Color / Extended Color / Temperature Color Light)
@@ -43,10 +39,20 @@ The list of Application device types supported as part of this reference applica
  6. Intruder Alarm System(IAS) - ACE
  7. Zigbee Green Power (Proxy, Sink) - An additional feature which is enabled on top of the above device types based on its capability
 
- <span class='icon icon-search inline-block highlight-info'> **Explore** </span>
- </br>
+
  For more details regarding Zigbee lighting and Occupancy device types, please refer to, Zigbee Lighting and Occupancy (ZLO) specification ->
  <a href=" https://zigbeealliance.org/wp-content/uploads/2019/11/docs-15-0014-05-0plo-Lighting-OccupancyDevice-Specification-V1.0.pdf" target="_top">Link to Zigbee Lighting and Occupancy (ZLO) device Specification by Zigbee Alliance</a>
+
+ Microchip Harmony3 framework allows users to create applications for above supported device types. The MPLAB Code Configurator (MCC) is the GUI based configurator also allows user to select optional clusters as per their use case.
+
+ Below it can be observed that how the supported device types can be accessed using MPLAB Code Configurator (MCC) tool after launching MCC GUI.
+
+<div style="text-align:center"><img src="doc/resources/MCC1.png" /></div>
+--->
+<div style="text-align:center"><img src="doc/resources/MCC2.png" /></div>
+
+ - [Follow the step by step procedure to generate a zigbee based project of any supported device type from MPLAB Code Configurator (MCC)](#tasks_1).
+
 
 #### Supported Clusters
 
@@ -133,74 +139,64 @@ The clusters in the ZigBee Cluster Library incorporate the concept of a client, 
 
 
 
+
 For more details regarding clusters, please refer to, the specification from Zigbee Alliance ->
 <a href="https://zigbeealliance.org/wp-content/uploads/2019/12/07-5123-06-zigbee-cluster-library-specification.pdf" target="_top">Link to Zigbee Cluster Library Specification by Zigbee Alliance</a>
-</br>
 
 
-<span class='icon icon-search inline-block highlight-info'> **Explore** </span>
-</br>
 For more details regarding mandatory or optional clusters for specific device type, please refer to, the specification from Zigbee Alliance ->
 <a href="https://zigbeealliance.org/wp-content/uploads/2019/11/docs-15-0014-05-0plo-Lighting-OccupancyDevice-Specification-V1.0.pdf" target="_top">Link to Zigbee Lighting and Occupancy Devices by Zigbee Alliance</a>
-</br>
-</br>
-
-<span class='icon icon-gear inline-block highlight-error'> **H3 Configuration**</span>
-</br>
-
-Microchip H3 framework allows users to create applications for different supported device types. The GUI based configurator also allows user to select optional clusters as per their use case.
-
-#### 1. Device Types :
-
-Below device types example reference projects are readily available. Other supported device type project can be created by user from H3 framework.
-
-- Below it can be observed that how the supported device types can be accessed using MPLABX Harmony 3 configurator tool :
-<div style="text-align:center"><img src="doc/resources/devTypes.gif" /></div>
-</br>
-
-- [Follow the step by step procedure to generate a zigbee based project of any support device type from MPLABX H3 framework](#tasks_1).
-
-#### 2. Clusters:
-How the available clusters can be accessed for a combined interface device type, using MPLABX Harmony 3 configurator tool is shown below. The optional clusters/attributes/commands as per zigbee device specification can be added/removed from the project through configuration as per custom use case.
-
-<div style="text-align:center"><img src="doc/resources/cluster_optional_groups.gif" /></div>
 
 
-## [Zigbee Network Security Models](./zigbee_security_model.md)
+How the available clusters can be accessed for a combined interface device type, using MPLAB Code Configurator (MCC) tool is shown below. The optional clusters/attributes/commands as per zigbee device specification can be added/removed from the project through configuration as per custom use case.
 
-## [Zigbee Commissioning Procedure](./zigbee_commissioning.md)
+<div style="text-align:center"><img src="doc/resources/MCC3.png" /></div>
 
-## [Zigbee Green Power](./zigbee_greenpower.md)
+--->
+
+<div style="text-align:center"><img src="doc/resources/MCC4.png" /></div>
 
 
-## Reference Examples
+## [2. Zigbee Network Security Models](./zigbee_security_model.md)
+
+## [3. Zigbee Commissioning Procedure](./zigbee_commissioning.md)
+
+## [4. Zigbee Green Power](./zigbee_greenpower.md)
+
+
+## 5. Reference Examples
  The list of Application device types supported as part of reference applications are as follows:
 
   1. **Combined Interface( Gateway / Coordinator)**
   2. Light devices (OnOff  / Dimmable / Color / **Extended Color** / Temperature Color Light)
   3. Thermostat
   4. Color scene controller
-  5. Multi Sensor
+  5. **Multi Sensor (with low power mode enabled)**
   6. Intruder Alarm System(IAS) - ACE
   7. Zigbee Green Power (Proxy, Sink) - An additional feature which is enabled on top of the above device types based on its capability
 
-##### - Sample projects: <a href="">Available for highlighted device types</a>
+#### - Sample projects are available for above highlighted device types
 
 <a name="tasks_1">
 </a>
 
-##### - Other device type projects: <a href="zigbee_project_generation.md"> Projects can be created from H3 framework by user by following very simple steps </a>
+#### - Other device type projects can be created using MPLAB Code Configurator (MCC) tool by following very simple <a href="zigbee_project_generation.md"> steps </a>
 
-## Demo Steps
+## 6. Demo Steps
 Detail demo steps of establishing zigbee network, zigbee commissioning and data exchange between zigbee devices are explained.
+   - <a href="zigbee_combined_interface/readme.md"> Centralized Network Formation in Combined Interface </a>
+     - <a href="zigbee_lights/readme.md"> Light control and Monitoring using Combined Interface </a>
+     - <a href="zigbee_multisensor/readme.md"> Multi-Sensor with Low Power Functionality </a>
 
-   - Light control and Monitoring using Combined Interface: <a href=""> Combined Interface and Extended Color light </a>
+    *Note:* Though the demo step takes Combined interface and extended color light/multi-sensor, the hardware setup, network formation, commissioning/joining procedures can be followed for other supported device types like Thermostat, IAS ACE joining to combined interface network.
 
-**Note:** Though the demo step takes 2 device types Combined interface and extended color light, the hardware setup, network formation, commissioning/joining procedures can be followed for other supported device types like Thermostat, IAS ACE, Multi sensor joining to combined interface network.   
+   - <a href="zigbee_lights/readme_distributed.md"> Distributed Network Formation in Light </a>
 
-##  [Serial Console Commands](./consoleCommands.md)
+    *Note:* The demo step can be followed to create distributed network and bring any other ZLO devices like color scene controller into the network.
 
-## Reference
+##  [7. Serial Console Commands](./consoleCommands.md)
+
+## References
 [1] IEEE Std 802.15.4™-2006 Part 15.4: Wireless Medium Access Control (MAC) and Physical Layer (PHY) Specifications for Low-Rate Wireless Personal Area Networks (WPANs)<br>
 [2] [https://zigbeealliance.org/ ](https://zigbeealliance.org/ ) <br>
 [3] [https://groups.zigbee.org/wg/progp-bg/document](https://groups.zigbee.org/wg/progp-bg/document) <br>

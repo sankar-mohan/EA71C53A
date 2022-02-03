@@ -12,7 +12,6 @@ market:
 ---
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 # Serial Console Commands
-
 The ZigBee application support includes implementation of a serial console that allows control and monitoring of the ZigBee device over a serial connection using a terminal program (HyperTerminal, Tera Term, etc.) on a PC.
 
 **Note:**
@@ -21,27 +20,27 @@ The ZigBee application support includes implementation of a serial console that 
 - But the code implementation used in these commands internally uses global zigbee stack API's which can be taken as reference for API usage.
 
 ## Setup
-To enable the use of console, In H3 configurator, Connect Zigbee console in the Zigbee device component to USART Driver Component and to SERCM0 component (for Curiosity Board) as shown in below figure.
+-  To enable the use of console, In MPLAB Code Configurator (MCC), Connect "Zigbee console" in the Zigbee device component to USART Driver Component and to SERCM0 component (for WBZ Curiosity Board) as shown below.
 
- <div style="text-align:center"><img src="doc/resources/H3_serial_console2.jpg" /></div>
+ <div style="text-align:center"><img src="doc/resources/MCC_serial_console2.jpg" /></div>
 
-Configure the SERCOM0 component as shown in the below figure to set the uart baud rate, parity, data bits and Sercom Tx and Rx pins
+- Configure the SERCOM0 component as shown in the below figure to set the uart baud rate, parity, data bits and Sercom Tx and Rx pins
 
  <div style="text-align:center"><img src="doc/resources/sercom0_2.jpg" /></div>
-</br>
 
-The H3 configurator also gives the flexibility to select commands based on different Groups. It is highly modularised.
+
+- The MCC configurator also gives the flexibility to select commands based on different Groups. It is highly modularised.
 
 <div style="text-align:center"><img src="doc/resources/conf_7.png" ></div>
 
 
-The H3 generated code for console can be seen in application folder:
+- The MCC generated code for console can be seen in application folder:
 
- </br>
+
  <div style="text-align:center"><img src="doc/resources/console_code.png" /></div>
 
 
-On the PC side virtual COM port connection that corresponds to the board shall have following settings:
+- On the PC side virtual COM port connection that corresponds to the board shall have following settings:
 
 - BAUD RATE: 115200 (as configured in SERCOM configuration)
 - PARITY: None
@@ -49,7 +48,7 @@ On the PC side virtual COM port connection that corresponds to the board shall h
 - STOP BITS: 1
 - FLOW CONTROL: None
 
-Additionally, local echo and sending line ends with line feeds shall be enabled in the PC serial terminal application.
+- Additionally, local echo and sending line ends with line feeds shall be enabled in the PC serial terminal application.
 
  <div style="text-align:center"><img src="doc/resources/terminal.png" /></div>
 
@@ -59,16 +58,21 @@ Once the COM port is opened in the PC terminal application, the console commands
  <div style="text-align:center"><img src="doc/resources/help.jpg" /></div>
 
 ### Help
+<style>
+td, th {
+    border: 1px solid grey
+}
+</style>
 |**Command Syntax**|**Response**|**Description**|
-| :- | :- | :- |
+|---------|----------------------------------|-------------------------------|
 |help|<p>Commands:</p><p>[zdoHelp](#_zdoHelp)</p><p>[commissioningHelp](#_commissioningHelp)</p><p>[zclHelp](#_zclHelp)</p>|<p>Shows supported help sections.</p><p>The console commands are categorized into three sections commissioningHelp, zdoHelp & zclHelp.</p><p></p><p></p>|
-|commissioningHelp <a name="_commissioningHelp"></a> |<p>Commands:</p><p>[invokeCommissioning](#_invokeCommissioning)</p><p>[getAppDeviceType](#_getAppDeviceType)</p><p>[getDeviceType](#_getDeviceType)</p><p>[getExtAddr](#_getExtAddr)</p><p>[getNetworkAddress](#_getNetworkAddress)</p><p>[getChannel](#_getChannel)</p><p>[setExtAddr](#_setExtAddr)</p><p>[setPrimaryChannelMask](#_setPrimaryChannelMask)</p><p>[setSecondaryChannelMask](#_setSecondaryChannelMask)</p><p>[powerOff](#_powerOff)</p><p>[reset](#_reset)</p><p>[resetToFN](#_resetToFN)</p><p>[formAndSteer](#_formAndSteer)</p><p>[formSteerAndFB](#_formSteerAndFB)</p><p>[SetInstallCode](#_SetInstallCode)</p><p>[SetAllowRemoteTCpolicyChange](#_SetAllowRemoteTCpolicyChange)</p><p>[SetInstallCodeDevice](#_SetInstallCodeDevice)</p><p>[SetTLRole](#_SetTLRole)</p><p>[setTCLKExchangeMethod](#_setTCLKExchangeMethod)</p><p>[setTCLKMaxRetryAttempts](#_setTCLKMaxRetryAttempts)</p><p>[setTCRequireKeyExchange](#_setTCRequireKeyExchange)</p><p>[setGlobalKey](#_setGlobalKey)</p><p>[setPermitJoin](#_setPermitJoin)</p>|<p>*commissioningHelp* list the command that are related to commissioning of the Zigbee device.</p>|
-|zdoHelp <a name="_zdoHelp"></a> |<p>Commands:</p><p>[activeEpReq](#_activeEpReq)</p><p>[bindReq](#_bindReq)</p><p>[bindReq2](#_bindReq2)</p><p>[ieeeAddrReq](#_ieeeAddrReq)</p><p>[macBanNode](#_macBanNode)</p><p>[macResetBanTable](#_macResetBanTable)</p><p>[matchDescReq](#_matchDescReq)</p><p>[NodeDescReq](#_NodeDescReq)</p><p>[nwkAddrReq](#_nwkAddrReq)</p><p>[nwkLeaveReq](#_nwkLeaveReq)</p><p>[sendBeaconReq](#_sendBeaconReq)</p><p>[sendMgmtBindReq](#_sendMgmtBindReq)</p><p>[sendMgmtLeaveReq](#_sendMgmtLeaveReq)</p><p>[sendMgmtLqiReq](#_sendMgmtLqiReq)</p><p>[sendMgmtPermitJoin](#_sendMgmtPermitJoin)</p><p>[sendNwkMgmtUpdateReq](#_sendNwkMgmtUpdateReq)</p><p>[simpleDescReq](#_simpleDescReq)</p><p>[unbindReq](#_unbindReq)</p><p>[unbindReq2](#_unbindReq2)</p>|<p>*zdoHelp* list the group of commands that are categorized to zdo (zigbee device object) functionality.</p>|
-|zclHelp<a name="_zclHelp"></a> |<p>Commands: Refer [ZCL Help](#_ZCL_Help) |<p>*zclHelp* list the group of commands that are categorized to zcl (zigbee cluster library) functionality. The clusters are specific to device type and the zclHelp list commands based on clusters that are supported in the device type of the project</p>|
+|commissioningHelp|<p>Commands:Refer [Commissioning Help](#_Commissioning_Help)|<p>*commissioningHelp* list the command that are related to commissioning of the Zigbee device.</p>|
+|zdoHelp|<p>Commands: Refer [ZDO Help](#_ZDO_Help)|<p>*zdoHelp* list the group of commands that are categorized to zdo (zigbee device object) functionality.</p>|
+|zclHelp|<p>Commands: Refer [ZCL Help](#_ZCL_Help) |<p>*zclHelp* list the group of commands that are categorized to zcl (zigbee cluster library) functionality. The clusters are specific to device type and the zclHelp list commands based on clusters that are supported in the device type of the project</p>|
 
-## Commissioning Help
+## 1. Commissioning Help <a name="_Commissioning_Help"></a>
 
-<p>When commissioningHelp is entered in the terminal application, the device list all the supported commands that are related to commissioning of the zigbee device.</p>
+<p>When commissioningHelp is entered in the terminal application, the device lists all the supported commands that are related to commissioning of the zigbee device.</p>
 
 |**Command Syntax**|**Response**|**Description**|
 | :- | :- | :- |
@@ -97,9 +101,9 @@ Once the COM port is opened in the PC terminal application, the console commands
 |<p><a name="_setGlobalKey"></a>setGlobalKey < option ></p><p></p><p>e.g.: *`setGlobalKey 1`*</p>|-|<p>Set Global Link (for testing)</p><p>0 -  HA Link key will be used</p><p>[0x5a,0x69,0x67,0x42,0x65,0x65,0x41,0x6c,0x6c,0x69,0x61,0x6e,0x63,0x65,0x30,0x39]</p><p>1 – [0xd0, 0xd1 …. 0xdf]</p><p>2 – [0xc0, 0xc1 …. 0xcf]</p><p>3 – [0x66, 0xB6, 0x90, 0x09, 0x81, 0xE1, 0xEE, 0x3C, 0xA4, 0x20, 0x6B, 0x6B, 0x86, 0x1C, 0x02, 0xBB]</p><p>Here in the example setGlobalKey 1 the key used will be [0xd0, 0xd1, 0xd2, 0xd3, 0xd4, 0xd5, 0xd6, 0xd7, 0xd8, 0xd9, 0xdA, 0xdb, 0xdc, 0xdd, 0xde, 0xdf]</p>|
 |<p><a name="_setPermitJoin"></a>setPermitJoin < duration ></p><p></p><p>e.g.: *`setPermitJoin 180`*</p>|setPermitJoinRsp 0|<p>Allow other devices to join the network for the specified duration (in secs)</p><p>Here the zigbee device allow other devices to join the network for a duration of 180 sec.</p><p>setPermitJoinRsp 0 - indicate that a ZDO MGMT\_PERMIT\_JOINING\_CLID packet is send.</p>|
 
-## ZDO Help
+## 2. ZDO Help <a name="_ZDO_Help"></a>
 
-When zdoHelp is entered in the terminal application, the device list all the supported commands that are related to network management and information gathering.  
+When zdoHelp is entered in the terminal application, the device lists all the supported commands that are related to network management and information gathering.  
 
 |**Command Syntax**|**Response**|**Description**|
 | :- | :- | :- |
@@ -122,14 +126,14 @@ When zdoHelp is entered in the terminal application, the device list all the sup
 |<p><a name="_unbindReq"></a>unbindReq <[addrMode](#_Address_Mode_table)> < DstAddr > < extDstAddrHigh > < extDstAddrLow > < ep > < ClusterId ></p>|<p>UnBindRsp 0</p>|<p>Requests a remote node to remove an entry from its binding table with the specified сlusterID, source and destination endpoint and extended address.</p><p>Here [addrMode](#_Address_Mode_table) specifies the format of *DstAddr*.</p><p>Refer [Address Mode table](#_Address_Mode_table) for more details. </p><p>*DstAddr*: is the short address of the remote device.</p><p>*extDstAddrHigh* & *extDstAddrLow*: is the extended address of the destination device. </p><p>*ep*: is the destination endpoint for the binding entry. </p><p>*ClusterId*: is the cluster on the source device that is bound to the destination.</p>|
 |<p><a name="_unbindReq2"></a>unbindReq2 < [addrMode](#_Address_Mode_table)> < DstAddr > < extSrcAddrHigh > <extSrcAddrLow> < extDstAddrHigh> < extDstAddrLow / GroupID> < ep\_Src > < ep\_Dst > < ClusterId ></p>|<p>UnBindRsp 0</p>|<p>Requests a remote node to remove an entry from its binding table with the specified сlusterID, source and destination endpoint and extended address.</p><p>Here [addrMode](#_Address_Mode_table) specifies the format of *DstAddr*. Refer [Address Mode table](#_Address_Mode_table) for more details.</p><p>*DstAddr*: is the short address of the remote device. </p><p>*extSrcAddrHigh* & *extSrcAddrLow*: is the extended address of the source device.</p><p>*extDstAddrHigh* & *extDstAddrLow*: is the extended address of the destination device.</p><p>*ep\_Src*: is the source endpoint for the binding entry.</p><p>*ep\_Dst*: is the destination endpoint for the binding entry.</p><p>*ClusterId*: is the cluster on the source device that is bound to the destination.</p>|
 
-## ZCL Help <a name="_ZCL_Help"></a>
+## 3. ZCL Help <a name="_ZCL_Help"></a>
 
 ZCL Help command lists the supported commands related to ZCL functionality. As the clusters and attributes are specific to device type, the list of commands also dependent on the device type of the project.
 
-### General
+#### General
 
 | Command Syntax  | Description  |
-| :--------------------------- |:---------------:|
+| :- | :- |
 | [readAttribute](#_readAttribute) &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;clusterId&gt; &lt;attId&gt; | Read value of specified attribute on specified cluster from remote device|
 | [writeAttribute](#_writeAttribute) &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;ClusterId&gt; &lt;attrId&gt; &lt;type&gt;  &lt;attrValue1&gt;&lt;attrSize&gt; | Sends Write Attribute command for specified attribute and cluster|
 | [configureReporting](#_configureReporting) &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;min&gt; &lt;max&gt;| Configure reporting of the occupancy sensor with min and max values |
@@ -140,7 +144,7 @@ ZCL Help command lists the supported commands related to ZCL functionality. As t
 
 
 | Command Syntax  | Description  |
-| :--------------------------- |:---------------:|
+| :- | :- |
 | [setTargetType](#_setTargetType) &lt;type&gt; &lt;addr&gt; &lt;ep&gt; |  Set as target(1)/initiator(0)|
 | [getGroupMembership](#_getGroupMembership) &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;count&gt; &lt;groupId1&gt; &lt;groupId2&gt; &lt;groupId3&gt; &lt;groupId4&gt; &lt;groupId5&gt; |   Sends the Get Group Membership command.(count)specifies how many group IDs following it should be considered, but five values must be provided as group IDs always. |
 | [identify](#_identify) &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;idTime(secs)&gt; |   Sends the Identify command to the specified node(s) |
@@ -153,12 +157,12 @@ ZCL Help command lists the supported commands related to ZCL functionality. As t
 | [resetTargetToFN](#_resetTargetToFN) |   reset the target to factory new|
 
 
-### Lights Specific commands
-The device implements light specific client clusters supports below commands: Combined Interface, Colorscene controller
+#### "Lights" Specific commands
+The device implements light specific client clusters supports below commands: Combined Interface, Colorscene controller.
 
 
 | Command Syntax  | Description  |
-| :--------------------------- |:---------------:|
+| :- | :- |
 | [addScene](#_addScene) &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;groupId&gt; &lt;sceneId&gt; &lt;transitionTime&gt; &lt;onOff&gt; &lt;level&gt; |   Sends the Add Scene command|
 | [viewScene](#_viewScene) &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;groupId&gt; &lt;sceneId&gt;|   Sends the View Scene command|
 | [removeScene](#_removeScene) &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;groupId&gt; &lt;sceneId&gt; |   Sends the Remove Scene command|
@@ -177,11 +181,11 @@ The device implements light specific client clusters supports below commands: Co
 | [stop](#_stop) &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;onOff&gt;|  Send the Stop (with On/Off) command|
 
 
-### IAS ACE
+#### IAS ACE
 
 
 | Command Syntax  | Description  |
-| :--------------------------- |:---------------:|
+| :- | :- |
 | IASACEArmCommand &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;ArmMode&gt; &lt;Arm/Code&gt; &lt;Zone/Id&gt; |Sends IAS ACE Arm command to the CI(CIE) along with Arm mode with its code to the zoneId|
 | IASACEBypassCommand &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;zone_numbers&gt; &lt;zone_id1&gt; &lt;zone_id2&gt; &lt;zone_id3&gt; &lt;arm_code_code&gt; |Sends IAS ACE Bypass command with the listof zoneIds along with the code to the CI (CIE)|
 | IASACEEmergencyCommand &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; |Sends IAS ACE Emergency command to the CI (CIE)|
@@ -197,11 +201,11 @@ The device implements light specific client clusters supports below commands: Co
 | GetByPassZoneList &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt;|Sends IAS ACE GetByPassZone list which were already bypassed and part of the bypass table|
 
 
-### Thermostat
+#### Thermostat
 
 
 | Command Syntax  | Description  |
-| :--------------------------- |:---------------:|
+| :- | :- |
 | setOccupancy &lt;0- UnOccupied/ 1- Occupied&gt; |Sets the Occupancy State either to Occupied / Unoccupied|
 | clusterAttrInitDefault &lt;ClusterID&gt; | Inititalizes all Attributes to default value|
 | setOccupancyState &lt;state&gt; | Sets the Occupancy state to either Occupied or Unoccupied|
@@ -211,10 +215,10 @@ The device implements light specific client clusters supports below commands: Co
 | resetAlarms | Resets the alarm|
 
 
-### Additional Commands Supported by the Coordinator/Combined Interface Device  
+#### Additional Commands Supported by the Coordinator/Combined Interface Device  
 
 | Command Syntax  | Description  |
-| :--------------------------- |:---------------:|
+| :- | :- |
 |  [readReporting](#_readReporting) &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;clusterId&gt; &lt;attrId&gt; | Read reporting from specified cluster server  |
 | thermSetPointChange &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;setPtmode&gt; &lt;amount&gt; | Sends thermostat Set Point Change Command along with the mode and amount  |
 | setUTCTime &lt;dd:mm:yr:hr:min:sec&gt; | Sets the UTC time |
@@ -227,6 +231,8 @@ The device implements light specific client clusters supports below commands: Co
 | [IasAceZoneStatusChangedCommand](#_IasAceZoneStatusChangedCommand) &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;zoneId&gt; &lt;zone_status&gt; &lt;audible&gt; &lt;zone_label&gt;| Sends Zone status Changed command to the Ace device with its status along with audible details and zone label |
 | [ZoneInitiateNormalOperatingModeCommand](#ZoneInitiateNormalOperatingModeCommand) &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt;| Sends to initiate Normal Operating mode at the Ace device |
 | [ZoneInitiateTestModeCommand](#_ZoneInitiateTestModeCommand) &lt;addrMode&gt; &lt;addr&gt; &lt;ep&gt; &lt;Test_Mode_Duration&gt; &lt;Current Zone Sensitiivity Level&gt;| Sends to initiate Test operating Mode at the Ace device with its duration for the same with its current zone sensitivity level |
+
+#### ZCL Commands and Responses with Examples
 
 <p>The below table provide detailed description of the zclHelp commands</p>
 
@@ -307,42 +313,44 @@ The device implements light specific client clusters supports below commands: Co
 |onOffQ<p>e.g.: *`onOffQ`*</p>|0|The console command shows the current on/off status of light|
 |currentLevelQ<p>e.g.: *`currentLevelQ`*</p>|127|The console command shows the current level of light|
 
-### Example commands
+### Important Notes
 
-**Parameters:**
-The command parameters has the dependency on ZCL specification, like intended cluster ID, attribute ID. Below few examples show, how the user can get these dependent parameter details from H3 configurator or from header file or through some other commands. By typing any command will show the details on what parameters it expects. The parameters values can be sent as hex value with **0x** prefixed or as decimal values without any prefix.
+#### Parameters:
+The command parameters has the dependency on ZCL specification, like intended cluster ID, attribute ID. Below few examples show, how the user can get these dependent parameter details from MCC configurator or from header file or through some other commands. By typing any command will show the details on what parameters it expects. The parameters values can be sent as hex value with **0x** prefixed or as decimal values without any prefix.
 
 
 1. [addrMode] -> Address mode
 
+**Address Mode table <a name="_Address_Mode_table"></a>**
+
 | Allowed Values  | Description  |
-| :--------------------------- |:---------------:|
+| :- | :- |
 |  -g | Group address. The group ID which was used while commissioning. [command ref](#_invokeCommissioning) |
 |  -e | Extended/MAC address. [command ref](#_getExtAddr)  |
 |  -b | No address  |
 |  -s <br>or Any other values | Network Short address. [command ref](#_getNetworkAddress)  |
 
 
-2. [ep] -> Each device will have application end point. This value can be taken from H3 configurator.
+2. [ep] -> Each device will have application end point. This value can be taken from MCC configurator.
 
-</br>
+
 <div style="text-align:center"><img src="doc/resources/conf_8.png" /></div>
-</br>
-3. [clusterId] -> Each device type supports number of mandatory and optional clusters as per zigbee device specification. The intended cluster ID can be taken from H3 configurator.
 
-</br>
+3. [clusterId] -> Each device type supports number of mandatory and optional clusters as per zigbee device specification. The intended cluster ID can be taken from MCC configurator.
+
+
 <div style="text-align:center"><img src="doc/resources/conf_9.png" /></div>
-</br>
-4. [attrId] -> Each cluster supports number of mandatory and optional attributes as per zigbee device specification. The intended attribute ID can be taken from H3 configurator.
 
-</br>
+4. [attrId] -> Each cluster supports number of mandatory and optional attributes as per zigbee device specification. The intended attribute ID can be taken from MCC configurator.
+
+
 <div style="text-align:center"><img src="doc/resources/conf_10.png" /></div>
-</br>
+
 5. [type][attrSize] -> Attribute type and size is ZCL spec defined and is little tricky part. This has to be get from the specific cluster include file from code.
 
-</br>
+
 <div style="text-align:center"><img src="doc/resources/conf_11.png" /></div>
-</br>
+
 
 **Examples:**
 
@@ -420,19 +428,12 @@ onOff 0x0 0xfe38 0x20 -on
 |0x0066|GP\_COMBO\_BASIC\_DEVICE\_ID|Green Power Combo basic|
 
 #### Zigbee Device Type <a name="_ZigbeeDeviceTypeTable"></a>
-
-|0x02|TEST\_DEVICE\_TYPE\_ZIGBEE\_COORDINATOR|Zigbee Coordinator|
+|Device ID|Device ID Type|Description|
 | :- | :- | :- |
+|0x02|TEST\_DEVICE\_TYPE\_ZIGBEE\_COORDINATOR|Zigbee Coordinator|
 |0x03|TEST\_DEVICE\_TYPE\_ZIGBEE\_ROUTER|Zigbee Router|
 |0x04|TEST\_DEVICE\_TYPE\_ZIGBEE\_END\_DEVICE|Zigbee End Device|
 |0x07|TEST\_DEVICE\_TYPE\_ZGP\_TH|Combo basic Device with certification support|
 |0x08|TEST\_DEVICE\_TYPE\_ZGP\_COMBO\_BASIC|Combo basic Device|
 
-#### Address Mode table <a name="_Address_Mode_table"></a>
-
-|Address mode|Description|
-| :- | :- |
-|-g|Group Address|
-|-b|No Address|
-|-e|Extended Address|
-|-s<br>or Any other values|Short Address|
+---

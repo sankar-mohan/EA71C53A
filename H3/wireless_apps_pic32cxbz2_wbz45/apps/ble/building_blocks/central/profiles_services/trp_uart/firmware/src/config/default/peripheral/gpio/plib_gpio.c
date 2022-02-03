@@ -57,6 +57,7 @@
 */
 void GPIO_Initialize ( void )
 {
+ 
           /* PORTA Initialization */
     /* PORTB Initialization */
 

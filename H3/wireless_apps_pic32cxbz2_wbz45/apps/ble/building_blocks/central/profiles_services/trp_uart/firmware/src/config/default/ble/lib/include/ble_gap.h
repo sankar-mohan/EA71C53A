@@ -1335,7 +1335,7 @@ uint16_t BLE_GAP_UpdateConnParam(uint16_t connHandle, BLE_GAP_ConnParams_T *p_co
 
 
 /**@brief To get the absolute Received Signal Strength Indication (RSSI) value. (Units: dBm)
- * @note  The meaning of the RSSI metric is an absolute receiver signal strength value in dBm to Â±6 dB accuracy.
+ * @note  The meaning of the RSSI metric is an absolute receiver signal strength value in dBm to �?±6 dB accuracy.
  *
  * @param[in] connHandle                    Connection handle associated with this connection.
  * @param[out] p_rssi                       Pointer to the buffer to store RSSI value.

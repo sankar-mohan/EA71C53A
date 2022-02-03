@@ -14,7 +14,8 @@ market:
 # Multiprotocol Application Framework
 
 ---
-Multiple protocols on a single SoC helps to connect smart device to a smartphone over BLE, and then join a Zigbee mesh network to connect to dozens or even hundreds of end nodes. Multiprotocol provides higher level of control of connected devices and makes data sampling easier.
+Multiple protocols on a single SoC helps to connect smart device to a smartphone over BLE, and then join a Zigbee mesh network to connect to dozens or even hundreds of end nodes. Multiprotocol provides higher 
+level of control of connected devices and makes data sampling easier.
 
 Targeting different applications and environments:
 1. Programmable: Only one wireless protocol either BLE or Zigbee application programmed and run on the device.
@@ -24,7 +25,8 @@ Targeting different applications and environments:
 2. Switchable: A device can switch from one wireless protocol to another, but uses only one at a time.
   - *Use case: Zigbee light commissioned based using BLE. Initially only BLE protocol will be active. Once command is sent from mobile app, to start the Zigbee commisioning, Zigbee will be active, BLE will be switched off.*
 
-3. Concurrent: Multiple protocol run on the device simultaneously. Sharing a single radio between 2 protocols BLE and Zigbee is challenging since protocols access the radio in different modes and with different time patterns. Radio abstraction layer for dynamically sharing the radio based on the priority of the requests. Furthermore, concurrent operation of protocols is achieved with the help of priority based multitasking of FreeRTOS operating system.
+3. Concurrent: Multiple protocol run on the device simultaneously. Sharing a single radio between 2 protocols BLE and Zigbee is challenging since protocols access the radio in different modes and with different time patterns. 
+Radio abstraction layer for dynamically sharing the radio based on the priority of the requests. Furthermore, concurrent operation of protocols is achieved with the help of priority based multitasking of FreeRTOS operating system.
   - *Use case: BLE based light control from mobile app on a Zigbee-connected light. ble_zigbee_light_prov demo available in this package is an example for this concurrent mulitprotocol.*
 
 ## Multiprotocol Application Framework

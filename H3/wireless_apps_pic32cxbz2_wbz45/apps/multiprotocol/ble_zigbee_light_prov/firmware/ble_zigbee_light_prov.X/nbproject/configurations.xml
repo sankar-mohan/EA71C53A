@@ -1583,6 +1583,7 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/wbz451_curiosity_board/harmony-manifest-success.yml</itemPath>
+      <itemPath>ble_zigbee_light_prov.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -1663,23 +1664,25 @@
       <C32>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe"
+                  value="-include&quot;zigbee_device/configs/Zigbee_AllDevice_Makerules.h&quot;"/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/wbz451_curiosity_board;../src/config/wbz451_curiosity_board/crypto;../src/config/wbz451_curiosity_board/driver/pds/include;../src/config/wbz451_curiosity_board/peripheral;../src/config/wbz451_curiosity_board/zigbee;../src/config/wbz451_curiosity_board/zigbee/configs;../src/config/wbz451_curiosity_board/zigbee/lib/include;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/WBZ451_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl;..\src\app_ble;..\src\config\wbz451_curiosity_board\ble\lib;..\src\config\wbz451_curiosity_board\ble\lib\include;..\src\config\wbz451_curiosity_board\ble\middleware_ble;..\src\config\wbz451_curiosity_board\ble\middleware_ble\ble_dm;..\src\config\wbz451_curiosity_board\ble\middleware_ble\ble_gcm;..\src\config\wbz451_curiosity_board\ble\middleware_ble\ble_util;..\src\config\wbz451_curiosity_board\ble\profile_ble;..\src\config\wbz451_curiosity_board\ble\service_ble;..\src\config\wbz451_curiosity_board\driver\pds\include;..\src\config\wbz451_curiosity_board\ble\profile_ble\ble_trsps;..\src\config\wbz451_curiosity_board\ble\service_ble\ble_trs;..\src\config\wbz451_curiosity_board\ble\service_ble\ble_dis"/>
+                  value="..\src\app_ble;..\src\config\wbz451_curiosity_board\ble\lib\include;..\src\config\wbz451_curiosity_board\ble\middleware_ble;..\src\config\wbz451_curiosity_board\driver\pds\include;..\src\config\wbz451_curiosity_board\ble\profile_ble;..\src\config\wbz451_curiosity_board\ble\service_ble;../src/config/wbz451_curiosity_board/zigbee/lib/include;;../src/config/wbz451_curiosity_board/zigbee;;../src/config/wbz451_curiosity_board/zigbee/configs;;../src/config/wbz451_curiosity_board/peripheral;;../src/config/wbz451_curiosity_board/driver/pds/include;;../src/config/wbz451_curiosity_board/crypto;;../src;../src/config/wbz451_curiosity_board;../src/packs/WBZ451_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;../src/third_party/wolfssl;../src/third_party/wolfssl/wolfssl;../src/third_party/rtos/FreeRTOS/Source/include;;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F;;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="isolate-each-function" value="false"/>
+        <property key="isolate-each-function" value="false;"/>
         <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-O2"/>
-        <property key="place-data-into-section" value="false"/>
+        <property key="place-data-into-section" value="false;"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
-                  value="HAL_USE_FLASH_ACCESS;HAVE_CONFIG_H;PIC32CX_CHIP_SOC;WOLFSSL_IGNORE_FILE_WARN;Z3DEVICE_APP;_PIC32CX_;_SUPER_SET_LIB_;_USE_LIB_"/>
+                  value="_PIC32CX_;PIC32CX_CHIP_SOC;PIC32CX_CHIP_SOC;_PIC32CX_;_USE_LIB_;_SUPER_SET_LIB_;HAL_USE_FLASH_ACCESS;Z3DEVICE_APP;HAVE_CONFIG_H;WOLFSSL_IGNORE_FILE_WARN;"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="tentative-definitions" value="-fcommon"/>
@@ -1721,6 +1724,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1747,7 +1751,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value=""/>
+        <property key="preprocessor-macros" value=";"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -1760,6 +1764,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -1769,7 +1774,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/wbz451_curiosity_board;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/WBZ451_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F"/>
+                  value="../src;../src/config/wbz451_curiosity_board;../src/packs/WBZ451_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F;;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -1788,6 +1793,7 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
+        <property key="appendMe" value=""/>
         <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
@@ -2356,8 +2362,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1000000-2001ffff"/>
         <property key="memories.rww" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="D:/Projects/Chimera/Application_Development/combo/chimera/apps/zigbee_ble_combo/combo_light_app/firmware/combo_light_app_wbz451_curiosity_board.X/debug/wbz451_curiosity_board/combo_light_app_wbz451_curiosity_board_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

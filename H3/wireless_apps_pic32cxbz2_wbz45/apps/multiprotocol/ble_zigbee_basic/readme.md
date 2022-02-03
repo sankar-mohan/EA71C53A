@@ -14,7 +14,9 @@ market:
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 #  Multiprotocol (BLE+ZIGBEE) Concurrent Application - Tutorial
 
-This tutorial will help users to create multiprotocol (BLE+ZIGBEE) example project from Microchip H3 project generator framework. The step by step procedure will help the user to generate the multiprotocol project from scratch and will guide in understanding few API calls needed for data transaction between 2 protocols.
+This tutorial will help users to create multiprotocol (BLE+ZIGBEE) example project using Mplab code configurator. 
+The step by step procedure will help the user to generate the multiprotocol project from scratch and will guide 
+in understanding few API calls needed for data transaction between 2 protocols.
 
 The project created at end of this tutorial, will look the sample project available <a href="firmware"> here </a>.
 
@@ -41,20 +43,26 @@ Microchip Bluetooth Data (MBD) iOS/Android app available in stores
 
 ## Demo Description
 
-This application demonstrate the Zigbee On/Off light joining to Zigbee gateway (Combined Interface) and the Microchip Proprietary Transparent Service based BLE peripheral running concurrently with zigbee protocol connects with mobile app. When the Zigbee light gets the light on/off command from CI will be displayed in mobile app. Hence the simple concurrent operation of multiprotocol is demonstrated here. Lights and Bridge (CI) devices are the interest of this tutorial, where the WIFI/Ethernet gateway is not scope of this application. The thirdparty gateway's like Amazon Echo plus can also be used instead of CI.
+This application demonstrate the Zigbee On/Off light joining to Zigbee gateway (Combined Interface) and the Microchip 
+Proprietary Transparent Service based BLE peripheral running concurrently with zigbee protocol connects with mobile app. 
+When the Zigbee light gets the light on/off command from CI will be displayed in mobile app. 
+Hence the simple concurrent operation of multiprotocol is demonstrated here. Lights and Bridge (CI) devices are the 
+interest of this tutorial, where the WIFI/Ethernet gateway is not scope of this application. The thirdparty gateway's 
+like Amazon Echo plus can also be used instead of CI.
 
 ![](assets/block_dia.png)
 
 ---
 
-## Developing this Application from scratch using Harmony 3
-The following steps will help to understand the PIC32CXBZ2 device ZIGBEE and BLE stack programming structure. We recommend to follow the steps. If wish to have Out-of-Box experience with the precompiled hex file [Go Here](#tasks_1)
+## Developing this Application from scratch using MPLab Code Configurator
+The following steps will help to understand the PIC32CXBZ2 device ZIGBEE and BLE stack programming structure. 
+We recommend to follow the steps. If wish to have Out-of-Box experience with the precompiled hex file [Go Here](#tasks_1)
 
 ## Pull-in H3 Components
 
-1.  Create a new MPLAB Harmony 3 Project -- [link](../../docs/creating_new_mplabx_harmony_project.md) for instructions
+-  Create a new MPLAB Code Configurator Project -- [link](../../docs/creating_new_mplabx_harmony_project.md) for instructions
 
-2.  Drag and Drop the Zigbee components from "Available" components to Project Graph
+-  Drag and Drop the Zigbee components from "Available" components to Project Graph
     - OnOffLight Device component
 
     "Accept Dependencies or satisfiers, select "Yes""
@@ -63,7 +71,7 @@ The following steps will help to understand the PIC32CXBZ2 device ZIGBEE and BLE
 
 <div style="text-align:center"><img src="assets/H3_2.png" ></div>    
 
-3.  Drag and Drop the BLE components
+-  Drag and Drop the BLE components
     - BLE Stack component
 
 <div style="text-align:center"><img src="assets/H3_3_1.png" ></div>              
@@ -76,13 +84,12 @@ The following steps will help to understand the PIC32CXBZ2 device ZIGBEE and BLE
 
 <div style="text-align:center"><img src="assets/H3_4.png" ></div>        
 
-4.  Add UART components needed for console logs
+-  Add UART components needed for console logs
 
 
 <div style="text-align:center"><img src="assets/H3_5.png" ></div>        
 
-5.  Verify if the Project Graph window has all the expected Harmony 3
-    configuration
+- Verify the Project Graph window has all the expected components
 
 
 <div style="text-align:center"><img src="assets/H3.png" ></div>    
@@ -94,31 +101,31 @@ The following steps will help to understand the PIC32CXBZ2 device ZIGBEE and BLE
 <a name="tasks">
 </a>
 
-1. Select **BLE_Stack** component in project graph and edit as below
+- Select **BLE_Stack** component in project graph and edit as below
 
 
 <div style="text-align:center"><img src="assets/BLE_1.png" ></div>      
 
-2. Select **Transparent Profile** component in project graph and edit as below.
+- Select **Transparent Profile** component in project graph and edit as below.
 
 
 <div style="text-align:center"><img src="assets/BLE_2_1.png" ></div>    
 
 ## Edit Zigbee Stack Specific Configurations
 
-1. Edit **Onoff Light** component in project graph. The "Commissioning Configuration" is edited to enable only Steering option
+- Edit **Onoff Light** component in project graph. The "Commissioning Configuration" is edited to enable only Steering option
 
 
 <div style="text-align:center"><img src="assets/Zigbee_1.png" ></div>    
 
 ## Edit Peripheral Specific Configurations
 
-1. Edit **SERCOM0** component in project graph for UART pin map and Baud rate
+- Edit **SERCOM0** component in project graph for UART pin map and Baud rate
 
 
 <div style="text-align:center"><img src="assets/zigbee_2.png" ></div>    
 
-2. Edit **Pin Configuration**  in project graph for RED LED GPIO configuration
+- Edit **Pin Configuration**  in project graph for RED LED GPIO configuration
 
 
 <div style="text-align:center"><img src="assets/peripheral_1.png" ></div>    

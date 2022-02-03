@@ -31,20 +31,20 @@
 
 <p>The header file describes the cluster specific APIs from high zgp.  
 <a href="zgp_cluster_8h.html#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="http://10.12.73.139:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/zcl_8h_source.html">zcl.h</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="http://10.12.73.139:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/zgp_cluster_structure_8h_source.html">zgpClusterStructure.h</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="http://10.12.80.161:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/zcl_8h_source.html">zcl.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="http://10.12.80.161:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/zgp_cluster_structure_8h_source.html">zgpClusterStructure.h</a>&gt;</code><br/>
 </div>
-<p><a href="http://10.12.73.139:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/zgp_cluster_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="http://10.12.80.161:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/zgp_cluster_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="zcl_8h.html#ad5ed4e48a062501fc4f9a9378cffe0da">ZCL_Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zgp_cluster_8h.html#ac841ff1946f4b6b4b5f7272889bd6dd1">ZGPH_SendReadAttribute</a> (uint16_t addr, uint8_t dir, uint16_t attrId)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sending read attribute command.  <a href="zgp_cluster_8h.html#ac841ff1946f4b6b4b5f7272889bd6dd1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="zcl_8h.html#ad5ed4e48a062501fc4f9a9378cffe0da">ZCL_Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zgp_cluster_8h.html#ae2e63a87b95f37319a05ed33f1580a9f">ZGPH_SendCmdInRawMode</a> (<a class="el" href="http://10.12.73.139:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/struct_z_c_l___addressing__t.html">ZCL_Addressing_t</a> *dstAddr, bool dir, uint8_t cmdId, uint8_t payLoadLength, uint8_t *payLoad)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="zcl_8h.html#ad5ed4e48a062501fc4f9a9378cffe0da">ZCL_Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zgp_cluster_8h.html#ae2e63a87b95f37319a05ed33f1580a9f">ZGPH_SendCmdInRawMode</a> (<a class="el" href="http://10.12.80.161:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/struct_z_c_l___addressing__t.html">ZCL_Addressing_t</a> *dstAddr, bool dir, uint8_t cmdId, uint8_t payLoadLength, uint8_t *payLoad)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send ZGP cluster command in raw mode.  <a href="zgp_cluster_8h.html#ae2e63a87b95f37319a05ed33f1580a9f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zgp_cluster_8h.html#a79a6c51f5d8ac6c5f00f8ade4387d73d">ZGPH_ParseGpdIdFromPayload</a> (ZGP_ApplicationId_t appId, <a class="el" href="http://10.12.73.139:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/union___z_g_p___gpd_id__t.html">ZGP_GpdId_t</a> *gpdId, uint8_t *endpoint, uint8_t *payload)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zgp_cluster_8h.html#a79a6c51f5d8ac6c5f00f8ade4387d73d">ZGPH_ParseGpdIdFromPayload</a> (ZGP_ApplicationId_t appId, <a class="el" href="http://10.12.80.161:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/union___z_g_p___gpd_id__t.html">ZGP_GpdId_t</a> *gpdId, uint8_t *endpoint, uint8_t *payload)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parsing gpdId field from the rxd payload.  <a href="zgp_cluster_8h.html#a79a6c51f5d8ac6c5f00f8ade4387d73d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="zcl_8h.html#ad5ed4e48a062501fc4f9a9378cffe0da">ZCL_Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zgp_cluster_8h.html#a51e8d6e7825b2c0929e824de68aa33b8">ZGPH_SendProxyCommissioningModeCommand</a> (<a class="el" href="http://10.12.73.139:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/structzgp_gp_proxy_comm_mode_options__t.html">zgpGpProxyCommModeOptions_t</a> options, uint16_t commissioningWindow, uint8_t channel)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="zcl_8h.html#ad5ed4e48a062501fc4f9a9378cffe0da">ZCL_Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zgp_cluster_8h.html#a51e8d6e7825b2c0929e824de68aa33b8">ZGPH_SendProxyCommissioningModeCommand</a> (<a class="el" href="http://10.12.80.161:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/structzgp_gp_proxy_comm_mode_options__t.html">zgpGpProxyCommModeOptions_t</a> options, uint16_t commissioningWindow, uint8_t channel)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send proxy commissioning mode command.  <a href="zgp_cluster_8h.html#a51e8d6e7825b2c0929e824de68aa33b8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="zcl_8h.html#ad5ed4e48a062501fc4f9a9378cffe0da">ZCL_Status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zgp_cluster_8h.html#a35ec9602fdc2c7a8133a7983ef5353b9">ZGPH_SendProxyTableRequest</a> (uint16_t addr, uint8_t options, uint64_t gpdId_Ieee, uint8_t ep, uint8_t index)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sending proxy table request.  <a href="zgp_cluster_8h.html#a35ec9602fdc2c7a8133a7983ef5353b9"></a><br/></td></tr>
@@ -58,7 +58,7 @@ Functions</h2></td></tr>
  Support email: <a href="mailto:support@microchip.com">support@microchip.com</a></dd></dl>
 <p>Copyright (c) 2018, Microchip Corporation. All rights reserved. Licensed under Mirochip's Limited License Agreement. </p>
 
-<p>Definition in file <a class="el" href="http://10.12.73.139:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/zgp_cluster_8h_source.html">zgpCluster.h</a>.</p>
+<p>Definition in file <a class="el" href="http://10.12.80.161:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/zgp_cluster_8h_source.html">zgpCluster.h</a>.</p>
 </div><hr/><h2>Function Documentation</h2>
 <a class="anchor" id="ac841ff1946f4b6b4b5f7272889bd6dd1"></a><!-- doxytag: member="zgpCluster.h::ZGPH_SendReadAttribute" ref="ac841ff1946f4b6b4b5f7272889bd6dd1" args="(uint16_t addr, uint8_t dir, uint16_t attrId)" -->
 <div class="memitem">
@@ -111,7 +111,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="zcl_8h.html#ad5ed4e48a062501fc4f9a9378cffe0da">ZCL_Status_t</a> ZGPH_SendCmdInRawMode </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="http://10.12.73.139:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/struct_z_c_l___addressing__t.html">ZCL_Addressing_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="http://10.12.80.161:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/struct_z_c_l___addressing__t.html">ZCL_Addressing_t</a> *&#160;</td>
           <td class="paramname"><em>dstAddr</em>, </td>
         </tr>
         <tr>
@@ -175,7 +175,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="http://10.12.73.139:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/union___z_g_p___gpd_id__t.html">ZGP_GpdId_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="http://10.12.80.161:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/union___z_g_p___gpd_id__t.html">ZGP_GpdId_t</a> *&#160;</td>
           <td class="paramname"><em>gpdId</em>, </td>
         </tr>
         <tr>
@@ -217,7 +217,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="zcl_8h.html#ad5ed4e48a062501fc4f9a9378cffe0da">ZCL_Status_t</a> ZGPH_SendProxyCommissioningModeCommand </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="http://10.12.73.139:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/structzgp_gp_proxy_comm_mode_options__t.html">zgpGpProxyCommModeOptions_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="http://10.12.80.161:4000/wireless/apps/ble/building_blocks/docs/api/driver/zigbee/docs/html/structzgp_gp_proxy_comm_mode_options__t.html">zgpGpProxyCommModeOptions_t</a>&#160;</td>
           <td class="paramname"><em>options</em>, </td>
         </tr>
         <tr>

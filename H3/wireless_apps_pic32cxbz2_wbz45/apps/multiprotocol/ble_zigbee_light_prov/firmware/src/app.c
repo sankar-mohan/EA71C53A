@@ -30,7 +30,7 @@
 #include "app.h"
 #include "definitions.h"
 #include "app_ble.h"
-#include "ble_dis.h"
+#include "ble_dis/ble_dis.h"
 #include "app_ble_handler.h"
 #include "app_ble_sensor.h"
 #include "app_adv.h"

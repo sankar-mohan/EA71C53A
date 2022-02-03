@@ -255,7 +255,11 @@ void APP_BleStackInit()
     BLE_DD_Init();
     BLE_DD_EventRegister(APP_DdEvtHandler);
     
+
     //Initialize BLE profiles
+
+
+
     APP_BleConfig();
 }
 

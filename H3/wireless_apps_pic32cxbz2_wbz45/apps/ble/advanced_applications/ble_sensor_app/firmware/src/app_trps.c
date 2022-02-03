@@ -48,8 +48,8 @@
 // *****************************************************************************
 #include <string.h>
 #include <stdint.h>
-#include "api/stack_mgr.h"
-#include "ble_trsps.h"
+#include "stack_mgr.h"
+#include "ble_trsps/ble_trsps.h"
 #include "app_trps.h"
 #include "app_error_defs.h"
 
