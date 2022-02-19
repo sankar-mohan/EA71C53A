@@ -109,7 +109,7 @@ void APP_Initialize ( void )
 void uart_cb(SERCOM_USART_EVENT event, uintptr_t context)
 {
   // If RX data from UART reached threshold (previously set to 1)
-  if( event == SERCOM_USART_EVENT_READ_THRESHOLD_REACHED )
+  if( event != SERCOM_USART_EVENT_READ_ERROR )
   {
       
       APP_Msg_T   appMsg;
@@ -143,9 +143,14 @@ void APP_Tasks ( void )
             // Enable UART Read
             SERCOM0_USART_ReadNotificationEnable(true, true);
             // Set UART RX notification threshold to be 1
-            SERCOM0_USART_ReadThresholdSet(1);
+            SERCOM0_USART_ReadThresholdSet(0);
             // Register the UART RX callback function
             SERCOM0_USART_ReadCallbackRegister(uart_cb, (uintptr_t)NULL);
+            
+            for(uint8_t i = 0; i<MAX_CONNECTED_DEVICE; i++ )
+            {
+                conn_hdl[i] = 0xFFFF;
+            }
             APP_BleStackInit();
             // Start Advertisement
             BLE_GAP_SetAdvEnable(0x01, 0x00);
@@ -170,15 +175,20 @@ void APP_Tasks ( void )
                 }
                 if(p_appMsg->msgId==APP_MSG_UART_RX_EVT)
                 {
-                    uint8_t data;
+                    uint8_t count;
                     // Read 1 byte data from UART
-                    SERCOM0_USART_Read(&data, 1);
-                    for(uint8_t i = 0; i<MAX_CONNECTED_DEVICE; i++ )
+                    memset(uart_rx_buffer, 0, sizeof(uart_rx_buffer));
+                    count = SERCOM0_USART_ReadCountGet();
+                    if(count > 0)
                     {
-                        // Send the data from UART to connected devices through Transparent service
-                        if(conn_hdl[i] != 0xFFFF )
+                        SERCOM0_USART_Read(uart_rx_buffer, count);
+                        for(uint8_t i = 0; i<MAX_CONNECTED_DEVICE; i++ )
                         {
-                            BLE_TRSPS_SendData(conn_hdl[i], 1, &data);
+                            // Send the data from UART to connected devices through Transparent service
+                            if(conn_hdl[i] != 0xFFFF )
+                            {
+                                BLE_TRSPS_SendData(conn_hdl[i], count, uart_rx_buffer);
+                            }
                         }
                     }
                 }
