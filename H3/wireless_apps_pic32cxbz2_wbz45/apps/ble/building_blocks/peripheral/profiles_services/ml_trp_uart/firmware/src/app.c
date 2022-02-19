@@ -146,6 +146,11 @@ void APP_Tasks ( void )
             SERCOM0_USART_ReadThresholdSet(1);
             // Register the UART RX callback function
             SERCOM0_USART_ReadCallbackRegister(uart_cb, (uintptr_t)NULL);
+            
+            for(uint8_t i = 0; i<MAX_CONNECTED_DEVICE; i++ )
+            {
+                conn_hdl[i] = 0xFFFF;
+            }
             APP_BleStackInit();
             // Start Advertisement
             BLE_GAP_SetAdvEnable(0x01, 0x00);
