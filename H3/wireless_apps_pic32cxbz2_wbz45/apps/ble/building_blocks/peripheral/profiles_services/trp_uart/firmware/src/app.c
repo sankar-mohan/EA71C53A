@@ -108,11 +108,11 @@ void uart_cb(SERCOM_USART_EVENT event, uintptr_t context)
   // If RX data from UART reached threshold (previously set to 1)
   if( event == SERCOM_USART_EVENT_READ_THRESHOLD_REACHED )
   {
-    uint8_t data;
-    // Read 1 byte data from UART
-    SERCOM0_USART_Read(&data, 1);
-    // Send the data from UART to connected device through Transparent service
-    ret = BLE_TRSPS_SendData(conn_hdl, 1, &data);
+      
+      APP_Msg_T   appMsg;
+      
+      appMsg.msgId = APP_MSG_UART_RX_EVT;
+      OSAL_QUEUE_SendISR(&appData.appQueue, &appMsg);
   }
 }
 /******************************************************************************
@@ -163,6 +163,14 @@ void APP_Tasks ( void )
                 {
                     // Pass BLE Stack Event Message to User Application for handling
                     APP_BleStackEvtHandler((STACK_Event_T *)p_appMsg->msgData);
+                }
+                if(p_appMsg->msgId==APP_MSG_UART_RX_EVT)
+                {
+                    uint8_t data;
+                    // Read 1 byte data from UART
+                    SERCOM0_USART_Read(&data, 1);
+                    // Send the data from UART to connected device through Transparent service
+                    BLE_TRSPS_SendData(conn_hdl, 1, &data);
                 }
             }
             break;
